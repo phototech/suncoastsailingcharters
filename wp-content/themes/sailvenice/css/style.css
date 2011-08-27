@@ -1,0 +1,253 @@
+/* Fonts */
+
+@import: url('http://fonts.googleapis.com/css?family=Cabin:regular,regularitalic,bold,bolditalic');
+
+/* Clearfix */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* Overall Styles */
+body {
+	background-color: #fff;
+	font-family: 'Cabin', 'Arial', serif;
+	color: #333;
+	font-size: 12px;
+}
+
+section {
+	width: 760px;
+	margin: 0 auto 1em auto;
+}
+
+header {
+	padding: 0 0 7px 0;
+	margin: 0;
+	height: 55px;
+}
+
+header img {
+	max-height: 55px;
+	float: left;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	color: #555;
+}
+
+p {
+	font-size: 13px;
+	line-height: 1.6em;
+}
+
+/* Slideshow Styles */
+#slideshowcontainer {
+	position: relative;
+	height: 161px;
+	width: 760px;
+	margin: 0;
+	padding:0;
+}
+
+#slideshowcontainer .shadow {
+	background: url('../img/shadow.png') 0 0 repeat-x;
+	position: absolute;
+	height: 161px;
+	width: 760px;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+#slideshowcontainer .title {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	bottom: -3px;
+	left: 10px;
+	z-index: 3;
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 30px;
+	line-height: 30px;
+}
+
+article {
+	padding: 0 10px;
+}
+
+h2 {
+	margin-bottom: 0;
+}
+
+/* Home */
+
+.page-template-services-php .entry-summary p {
+	margin-top: 0;
+}
+
+.page-template-services-php div.services {
+	width: 48%;
+}
+
+.page-template-services-php div.services:nth-child(even)  {
+	float: right;
+}
+
+.page-template-services-php div.services:nth-child(odd)  {
+	float: left;
+	clear: both;
+}
+
+/* Archive */
+.archive .entry-summary p {
+	margin-top: 0;
+}
+
+/* Menu */
+header nav {
+	float: right;
+	margin: 25px 0 0 0;
+	text-transform: lowercase;
+	font-size: 14px;
+	padding: 0;
+}
+
+header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	display: block;
+	float: left;
+	margin: 0 0 0 20px;
+	position: relative;
+
+}
+
+header nav ul li a {
+	cursor: pointer;
+	color: #555;
+}
+
+header nav ul li a:hover {
+	color: #000;
+}
+
+header nav ul li.current-menu-item a, header nav ul li.current-menu-ancestor a, header nav ul.sub-menu li.current-menu-item a {
+	color: #000000;
+
+}
+
+header nav ul.sub-menu {
+	position: absolute;
+	left: 0;
+	margin: 0 0 0 -12px;
+	padding: 3px 12px 8px 12px;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+}
+
+
+header nav ul.sub-menu li {
+	padding: 0;
+	margin: 0;
+	white-space: nowrap;
+	float: none;
+}
+
+header nav ul.sub-menu li a {
+	display: block;
+	width: 100%;
+	color: #555;
+}
+
+header nav ul.sub-menu li a:hover {
+	color: #000;
+}
+
+header nav ul li ul.sub-menu {
+	display: none;
+}
+
+
+header nav ul li:hover ul.sub-menu {
+	display: block;
+}
+
+/* Images */
+img {border:0}
+article img.alignright {float:right; margin:0.5em 0 1em 1em}
+article img.alignleft {float:left; margin:0.5em 1em 1em 0}
+article img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+article a img.alignright {float:right; margin:0.5em 0 1em 1em}
+article a img.alignleft {float:left; margin:0.5em 1em 1em 0}
+article a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+/* Footer */
+footer {
+	clear: both;
+	border-top: 1px solid #999;
+	margin: 1em 0 0 0;
+	color: #999;
+	padding: 0;
+}
+
+footer nav {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+footer nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer nav li {
+	display: block;
+	float: left;
+	margin: 0;
+}
+
+footer nav a {
+	color: #666;
+	display: none;
+}
+
+footer nav a[href] {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+footer nav a:hover {
+	color: #888;
+}
+
+footer nav li.current-menu-item a, .home footer nav li:first-child a {
+	color: #888;
+}
+
+/* Comments */
+input, textarea {
+	display: block;
+}
+
+p.form-allowed-tags {
+	display: none;
+}

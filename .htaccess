@@ -1,2 +1,6 @@
 
 AddHandler php5-script .php
+
+# BEGIN WordPress
+
+# END WordPress
