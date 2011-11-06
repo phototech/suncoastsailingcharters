@@ -1,1 +1,5 @@
 wp-config.php
+slideshowpro/albums/*/cache/
+slideshowpro/config/conf.php
+slideshowpro/app/tmp/
+slideshowpro/xml_cache/

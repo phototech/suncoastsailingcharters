@@ -4,8 +4,8 @@
 
 					<div class="entry-content">
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'phototech' ), 'after' => '</div>' ) ); ?>
-						<?php edit_post_link( __( 'Edit', 'phototech' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'sailvenice' ), 'after' => '</div>' ) ); ?>
+						<?php edit_post_link( __( 'Edit', 'sailvenice' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->
 

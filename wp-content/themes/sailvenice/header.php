@@ -1,6 +1,6 @@
 <?php
 	include('php/director/classes/DirectorPHP.php');
-	$director = new Director('local-6e4e3c2770da6917210906c8128d6770', 'phototechsolutions.com/slideshowpro');
+	$director = new Director('local-2cbbcf7d4f7f17cf375f3e1ba3d7343b', 'localhost/slideshowpro');
 	$director->format->add(array('name' => 'large', 'width' => '760', 'height' => '161', 'crop' => 1, 'quality' => 100, 'sharpening' => 1));
 	// this gets the first random image shouldn't be nessessarry as long as the user doesn't add 'other' images.
 	$img = $director->content->all(array('limit' => 1, 'sort_on' => 'random'));

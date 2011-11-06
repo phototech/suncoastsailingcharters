@@ -1,17 +1,17 @@
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 	<div id="nav-above" class="navigation">
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'phototech' ) ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'phototech' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'sailvenice' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'sailvenice' ) ); ?></div>
 	</div><!-- #nav-above -->
 <?php endif; ?>
 
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if ( ! have_posts() ) : ?>
 	<div id="post-0" class="post error404 not-found">
-		<h1 class="entry-title"><?php _e( 'Not Found', 'phototech' ); ?></h1>
+		<h1 class="entry-title"><?php _e( 'Not Found', 'sailvenice' ); ?></h1>
 		<div class="entry-content">
-			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'phototech' ); ?></p>
+			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'sailvenice' ); ?></p>
 			<?php get_search_form(); ?>
 		</div><!-- .entry-content -->
 	</div><!-- #post-0 -->
@@ -36,9 +36,9 @@
 
 <?php /* How to display posts of the Gallery format. The gallery category is the old way. */ ?>
 
-	<?php if ( ( function_exists( 'get_post_format' ) && 'gallery' == get_post_format( $post->ID ) ) || in_category( _x( 'gallery', 'gallery category slug', 'phototech' ) ) ) : ?>
+	<?php if ( ( function_exists( 'get_post_format' ) && 'gallery' == get_post_format( $post->ID ) ) || in_category( _x( 'gallery', 'gallery category slug', 'sailvenice' ) ) ) : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'phototech' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'sailvenice' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 			<div class="entry-meta">
 			</div><!-- .entry-meta -->
@@ -57,8 +57,8 @@
 						<div class="gallery-thumb">
 							<a class="size-thumbnail" href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
 						</div><!-- .gallery-thumb -->
-						<p><em><?php printf( _n( 'This gallery contains <a %1$s>%2$s photo</a>.', 'This gallery contains <a %1$s>%2$s photos</a>.', $total_images, 'phototech' ),
-								'href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'phototech' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark"',
+						<p><em><?php printf( _n( 'This gallery contains <a %1$s>%2$s photo</a>.', 'This gallery contains <a %1$s>%2$s photos</a>.', $total_images, 'sailvenice' ),
+								'href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'sailvenice' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark"',
 								number_format_i18n( $total_images )
 							); ?></em></p>
 				<?php endif; ?>
@@ -68,20 +68,20 @@
 
 			<div class="entry-utility">
 			<?php if ( function_exists( 'get_post_format' ) && 'gallery' == get_post_format( $post->ID ) ) : ?>
-				<a href="<?php echo get_post_format_link( 'gallery' ); ?>" title="<?php esc_attr_e( 'View Galleries', 'phototech' ); ?>"><?php _e( 'More Galleries', 'phototech' ); ?></a>
+				<a href="<?php echo get_post_format_link( 'gallery' ); ?>" title="<?php esc_attr_e( 'View Galleries', 'sailvenice' ); ?>"><?php _e( 'More Galleries', 'sailvenice' ); ?></a>
 				<span class="meta-sep">|</span>
-			<?php elseif ( in_category( _x( 'gallery', 'gallery category slug', 'phototech' ) ) ) : ?>
-				<a href="<?php echo get_term_link( _x( 'gallery', 'gallery category slug', 'phototech' ), 'category' ); ?>" title="<?php esc_attr_e( 'View posts in the Gallery category', 'phototech' ); ?>"><?php _e( 'More Galleries', 'phototech' ); ?></a>
+			<?php elseif ( in_category( _x( 'gallery', 'gallery category slug', 'sailvenice' ) ) ) : ?>
+				<a href="<?php echo get_term_link( _x( 'gallery', 'gallery category slug', 'sailvenice' ), 'category' ); ?>" title="<?php esc_attr_e( 'View posts in the Gallery category', 'sailvenice' ); ?>"><?php _e( 'More Galleries', 'sailvenice' ); ?></a>
 				<span class="meta-sep">|</span>
 			<?php endif; ?>
-				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'phototech' ), __( '1 Comment', 'phototech' ), __( '% Comments', 'phototech' ) ); ?></span>
-				<?php edit_post_link( __( 'Edit', 'phototech' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'sailvenice' ), __( '1 Comment', 'sailvenice' ), __( '% Comments', 'sailvenice' ) ); ?></span>
+				<?php edit_post_link( __( 'Edit', 'sailvenice' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 			</div><!-- .entry-utility -->
 		</div><!-- #post-## -->
 
 <?php /* How to display posts of the Aside format. The asides category is the old way. */ ?>
 
-	<?php elseif ( ( function_exists( 'get_post_format' ) && 'aside' == get_post_format( $post->ID ) ) || in_category( _x( 'asides', 'asides category slug', 'phototech' ) )  ) : ?>
+	<?php elseif ( ( function_exists( 'get_post_format' ) && 'aside' == get_post_format( $post->ID ) ) || in_category( _x( 'asides', 'asides category slug', 'sailvenice' ) )  ) : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<?php if ( is_archive() || is_search() ) : // Display excerpts for archives and search. ?>
@@ -90,14 +90,14 @@
 			</div><!-- .entry-summary -->
 		<?php else : ?>
 			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'phototech' ) ); ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sailvenice' ) ); ?>
 			</div><!-- .entry-content -->
 		<?php endif; ?>
 
 			<div class="entry-utility">
 				<span class="meta-sep">|</span>
-				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'phototech' ), __( '1 Comment', 'phototech' ), __( '% Comments', 'phototech' ) ); ?></span>
-				<?php edit_post_link( __( 'Edit', 'phototech' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'sailvenice' ), __( '1 Comment', 'sailvenice' ), __( '% Comments', 'sailvenice' ) ); ?></span>
+				<?php edit_post_link( __( 'Edit', 'sailvenice' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 			</div><!-- .entry-utility -->
 		</div><!-- #post-## -->
 
@@ -105,7 +105,7 @@
 
 	<?php else : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'phototech' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'sailvenice' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 			<div class="entry-meta">
 			</div><!-- .entry-meta -->
@@ -116,15 +116,15 @@
 			</div><!-- .entry-summary -->
 	<?php else : ?>
 			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'phototech' ) ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'phototech' ), 'after' => '</div>' ) ); ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sailvenice' ) ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'sailvenice' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
 	<?php endif; ?>
 
 			<div class="entry-utility">
 				<?php if ( count( get_the_category() ) ) : ?>
 					<span class="cat-links">
-						<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'phototech' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
+						<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'sailvenice' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
 					</span>
 					<span class="meta-sep">|</span>
 				<?php endif; ?>
@@ -133,11 +133,11 @@
 					if ( $tags_list ):
 				?>
 					<span class="tag-links">
-						<?php printf( __( '<span class="%1$s">Tags:</span> %2$s', 'phototech' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
+						<?php printf( __( '<span class="%1$s">Tags:</span> %2$s', 'sailvenice' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
 					</span>
 				<?php endif; ?>
 				
-				<?php edit_post_link( __( 'Edit', 'phototech' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+				<?php edit_post_link( __( 'Edit', 'sailvenice' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 			</div><!-- .entry-utility -->
 		</div><!-- #post-## -->
 
@@ -150,7 +150,7 @@
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
 				<div id="nav-below" class="navigation">
-					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'phototech' ) ); ?></div>
-					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'phototech' ) ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'sailvenice' ) ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'sailvenice' ) ); ?></div>
 				</div><!-- #nav-below -->
 <?php endif; ?>

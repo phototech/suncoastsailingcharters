@@ -15,7 +15,7 @@
 						auto: false
 					},
 					params: {
-						bgcolor: "#000000",
+						bgcolor: "#ffffff",
 						allowfullscreen: false,
 						wmode: "transparent"
 					},
