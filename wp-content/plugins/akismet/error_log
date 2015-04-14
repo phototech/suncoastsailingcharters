@@ -1,0 +1,2 @@
+[28-May-2013 00:33:45 America/New_York] PHP Fatal error:  Call to undefined function add_action() in /home/sail/www/web/wp-content/plugins/akismet/legacy.php on line 356
+[29-Dec-2013 14:49:23 America/New_York] PHP Fatal error:  Call to undefined function plugin_dir_url() in /home/sail/www/web/wp-content/plugins/akismet/akismet.php on line 32
