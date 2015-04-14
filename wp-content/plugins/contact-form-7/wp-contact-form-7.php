@@ -5,12 +5,12 @@ Plugin URI: http://contactform7.com/
 Description: Just another contact form plugin. Simple but flexible.
 Author: Takayuki Miyoshi
 Author URI: http://ideasilo.wordpress.com/
-Text Domain: wpcf7
+Text Domain: contact-form-7
 Domain Path: /languages/
-Version: 3.0.1
+Version: 3.6
 */
 
-/*  Copyright 2007-2011 Takayuki Miyoshi (email: takayukister at gmail.com)
+/*  Copyright 2007-2013 Takayuki Miyoshi (email: takayukister at gmail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -27,7 +27,9 @@ Version: 3.0.1
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-define( 'WPCF7_VERSION', '3.0.1' );
+define( 'WPCF7_VERSION', '3.6' );
+
+define( 'WPCF7_REQUIRED_WP_VERSION', '3.6' );
 
 if ( ! defined( 'WPCF7_PLUGIN_BASENAME' ) )
 	define( 'WPCF7_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
@@ -36,10 +38,10 @@ if ( ! defined( 'WPCF7_PLUGIN_NAME' ) )
 	define( 'WPCF7_PLUGIN_NAME', trim( dirname( WPCF7_PLUGIN_BASENAME ), '/' ) );
 
 if ( ! defined( 'WPCF7_PLUGIN_DIR' ) )
-	define( 'WPCF7_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . WPCF7_PLUGIN_NAME );
+	define( 'WPCF7_PLUGIN_DIR', untrailingslashit( dirname( __FILE__ ) ) );
 
 if ( ! defined( 'WPCF7_PLUGIN_URL' ) )
-	define( 'WPCF7_PLUGIN_URL', WP_PLUGIN_URL . '/' . WPCF7_PLUGIN_NAME );
+	define( 'WPCF7_PLUGIN_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 
 if ( ! defined( 'WPCF7_PLUGIN_MODULES_DIR' ) )
 	define( 'WPCF7_PLUGIN_MODULES_DIR', WPCF7_PLUGIN_DIR . '/modules' );
@@ -56,15 +58,14 @@ if ( ! defined( 'WPCF7_AUTOP' ) )
 if ( ! defined( 'WPCF7_USE_PIPE' ) )
 	define( 'WPCF7_USE_PIPE', true );
 
-/* If you or your client hate to see about donation, set this value false. */
-if ( ! defined( 'WPCF7_SHOW_DONATION_LINK' ) )
-	define( 'WPCF7_SHOW_DONATION_LINK', true );
-
 if ( ! defined( 'WPCF7_ADMIN_READ_CAPABILITY' ) )
 	define( 'WPCF7_ADMIN_READ_CAPABILITY', 'edit_posts' );
 
 if ( ! defined( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY' ) )
 	define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'publish_pages' );
+
+if ( ! defined( 'WPCF7_VERIFY_NONCE' ) )
+	define( 'WPCF7_VERIFY_NONCE', true );
 
 require_once WPCF7_PLUGIN_DIR . '/settings.php';
 
