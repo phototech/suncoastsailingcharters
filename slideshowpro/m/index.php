@@ -22,7 +22,7 @@
 	<script src="j/mobile.js"></script>
 	<script src="j/<?php echo $glib; ?>.js"></script>
 	<script>
-		if (/iPad|iPhone|iPod|Android 2\.\d/.exec(navigator.userAgent) === null) {
+		if (/iPad|iPhone|iPod|Kindle\sFire|Android [2-9]\.\d/.exec(navigator.userAgent) === null) {
 			// iOS and Android 2.0+ support only
 			window.location.replace('unsupported.html');
 		} else {

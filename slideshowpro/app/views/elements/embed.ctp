@@ -176,8 +176,30 @@
 								<option value="Wipe and Fade"><?php __('Wipe and Fade') ?></option>
 								<option value="Wipe to Background"><?php __('Wipe to Background') ?></option>
 								<option value="Wipe and Fade to Background"><?php __('Wipe and Fade to Background') ?></option>
+							</select> for <select id="duration" onchange="update_embed_code(true);">
+								<option value="0.5">0.5 sec</option>
+								<option value="1">1 sec</option>
+								<option value="2" selected="selected">2 sec</option>
+								<option value="3">3 sec</option>
+								<option value="4">4 sec</option>
 							</select>
 						</fieldset>
+
+						<fieldset>
+							<label class="inline"><?php __('Show each item for') ?>:</label>&nbsp;&nbsp;<select id="pause" onchange="update_embed_code(true);">
+								<option value="1">1 sec</option>
+								<option value="2">2 sec</option>
+								<option value="3">3 sec</option>
+								<option value="4" selected="selected">4 sec</option>
+								<option value="5">5 sec</option>
+								<option value="6">6 sec</option>
+								<option value="7">7 sec</option>
+								<option value="8">8 sec</option>
+								<option value="9">9 sec</option>
+								<option value="10">10 sec</option>
+							</select>
+						</fieldset>
+
 						<fieldset>
 							<label class="inline"><?php __('Preloader') ?>:</label>&nbsp;&nbsp;<select id="preloader" onchange="update_embed_code(true);">
 								<option value="Hidden"><?php __('Hidden') ?></option>
@@ -255,7 +277,7 @@
 	<span class="messenger-bttns" style="margin-top:0;"><div id="<?php e($eid); ?>" style="float:right;"><textarea id="<?php e($eid); ?>_tocopy" style="display:none;"></textarea><button id="<?php e($eid) ?>_button" type="button" title="<?php __('Copy'); ?>" class="primary_lg"><?php __('Copy embed code'); ?></button><div id="<?php e($eid) ?>_target" style="position:absolute;top:0;left:0;z-index:1500;"></div></div><button onclick="Messaging.kill('embed-code');" class="primary_lg nudgeR" title="<?php __('Done') ?>" style="float:right"><?php __('Done') ?></button></span> 
 	
 	<div style="font-size:9px;height:24px;line-height:24px;">
-		<?php printf(__('%s or purchase the %s for more options.', true), '<a href="http://wiki.slideshowpro.net/SSPdir/Tips-EditSlideshowOptions" title="' . __('Edit player embed code', true) . '" target="_blank">' . __('Edit player embed code', true) . '</a>', '<a href="http://slideshowpro.net/products/slideshowpro/" title="SlideShowPro Player" target="_blank">SlideShowPro Player</a>'); ?>
+		<?php printf(__('Additional slideshow options are available by %s.', true), '<a href="http://wiki.slideshowpro.net/SSPdir/Tips-EditSlideshowOptions" title="' . __('editing the player embed code', true) . '" target="_blank">' . __('editing the player embed code', true) . '</a>'); ?>
 	</div>
 
 <script type="text/javascript" charset="utf-8">

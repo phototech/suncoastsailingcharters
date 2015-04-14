@@ -340,11 +340,11 @@ class InstallController extends AppController
 		$version = trim($this->Pigeon->version(true));
 		
 		if ((strpos($version, 'b') !== false || strpos($version, 'a') !== false) && BETA_TEST) {
-			$core =	'http://install.slideshowpro.net/zips/upgrade_beta.zip';
+			$core =	'http://www.sspdirector.com/zips/upgrade_beta.zip';
 		} else {	
-			$core =	'http://install.slideshowpro.net/zips/upgrade.zip';
+			$core =	'http://www.sspdirector.com/zips/upgrade.zip';
 		}
-		$zip_helper = 'http://install.slideshowpro.net/zips/pclzip.lib.txt';
+		$zip_helper = 'http://www.sspdirector.com/zips/pclzip.lib.txt';
 		$local_core = ROOT . DS . 'core.zip';
 		$local_helper = ROOT . DS . 'pclzip.lib.php';
 		if (download_file($core, $local_core) && download_file($zip_helper, $local_helper)) {

@@ -645,8 +645,8 @@ class DirectorComponent extends Object {
 					break;
 				case 'exif:latitude':
 				case 'exif:longitude':
-					if (isset($data['GPS'])) {
-						$gps = $data['GPS'];
+					if (isset($data['Exif']['GPS'])) {
+						$gps = $data['Exif']['GPS'];
 						$type = ucwords(array_pop(explode(':', $template)));
 						return $this->gps_convert($gps["GPS{$type}"], $gps["GPS{$type}Ref"]);
 					}  else {

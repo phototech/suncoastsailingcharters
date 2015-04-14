@@ -12,7 +12,7 @@ class UploadsController extends AppController {
 		$this->loadModel('Image');
 		$this->loadModel('Account');
 		// Make sure this is coming from the flash player and is a POST request
-		if (strpos(strtolower(env('HTTP_USER_AGENT')), 'flash') === false || !$this->RequestHandler->isPost()) {
+		if ((strpos(strtolower(env('HTTP_USER_AGENT')), 'flash') === false && !$this->Session->check('User')) || !$this->RequestHandler->isPost()) {
 			exit;
 		}
 		
@@ -235,7 +235,7 @@ class UploadsController extends AppController {
 		if (!is_dir(WATERMARKS)) {
 			$this->Director->makeDir(WATERMARKS);
 		}
-		if (strpos(strtolower(env('HTTP_USER_AGENT')), 'flash') === false || !$this->RequestHandler->isPost()) {
+		if ((strpos(strtolower(env('HTTP_USER_AGENT')), 'flash') === false && !$this->Session->check('User')) || !$this->RequestHandler->isPost()) {
 			exit;
 		}
 		$file = str_replace(" ", "_", $this->params['form']['Filedata']['name']);
@@ -264,7 +264,7 @@ class UploadsController extends AppController {
 		if (!is_dir(AVATARS . DS . $user_id)) {
 			$this->Director->makeDir(AVATARS . DS . $user_id);
 		}
-		if (strpos(strtolower(env('HTTP_USER_AGENT')), 'flash') === false || !$this->RequestHandler->isPost()) {
+		if ((strpos(strtolower(env('HTTP_USER_AGENT')), 'flash') === false && !$this->Session->check('User')) || !$this->RequestHandler->isPost()) {
 			exit;
 		}
 		$oldies = glob(AVATARS . DS . $user_id . DS . 'original.*');

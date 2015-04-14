@@ -67,7 +67,7 @@ define('DATA_LINK', DIR_HOST . '/images.php');
 define('XML_CACHE', ROOT . DS . 'xml_cache');
 define('THEMES', WWW_ROOT . 'styles');
 define('USER_THEMES', ROOT . DS . 'themes');
-define('DIR_VERSION_FULL', '1.5.4.6705');
+define('DIR_VERSION_FULL', '1.5.4.10265');
 define('DB_VERSION', '1521');
 define('DIR_CACHE', 'director');
 define('PLUGS', APP . 'director_plugins');

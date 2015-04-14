@@ -2,7 +2,7 @@
 if (!defined('E_DEPRECATED')) {
 	define('E_DEPRECATED', 8192);
 }
-error_reporting(E_ALL ^ E_DEPRECATED);
+error_reporting(E_ALL & ~E_DEPRECATED);
 /* SVN FILE: $Id$ */
 /**
  * Object class, allowing __construct and __destruct in PHP4.

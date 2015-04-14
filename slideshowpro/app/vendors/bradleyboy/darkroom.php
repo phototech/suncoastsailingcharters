@@ -48,8 +48,9 @@ class Darkroom {
 						$postion = 'southeast';
 						break;
 				}
-			
-				$cmd .= "$composite -dissolve $water_opacity -gravity $postion $water_path $source $dest";
+				$strip = '';
+				if ($gd > 4) { $strip .= ' -limit thread 1'; }
+				$cmd .= "$composite{$strip} -dissolve $water_opacity -gravity $postion $water_path $source $dest";
 				exec($cmd);
 			} else {
 				$ext = $this->returnExt($source);
@@ -176,8 +177,9 @@ class Darkroom {
 			
 			$original_aspect = $w/$h;
 			$new_aspect = $new_w/$new_h;
-			$strip = '';
-			if ($gd == 4) { $strip = ' -strip'; }
+			$strip = $water_limit = '';
+			if ($gd > 3) { $strip .= ' -strip'; }
+			if ($gd > 4) { $strip .= ' -limit thread 1'; $water_limit = ' -limit thread 1'; }
 			if ($square) {
 				if (($new_w > $w || $new_h > $h) && !$force) {
 					if ($water) {
@@ -277,7 +279,7 @@ class Darkroom {
 							break;
 					}
 					
-					$cmd .= " - | $composite -dissolve $water_opacity -gravity $postion $water_path -";
+					$cmd .= " - | $composite{$water_limit} -dissolve $water_opacity -gravity $postion $water_path -";
 				}
 			}
 			
@@ -332,6 +334,14 @@ class Darkroom {
 			$new_aspect = $new_w/$new_h;
 
 			if ($square) {
+				if (($new_w > $old_x || $new_h > $old_y) && !$force) {
+					if ($water) {
+						$this->watermark_original($name, $filename, $water_id, $water_location, $water_opacity);
+					} else {
+						copy($name, $filename);
+					}
+					return;
+				}
 				if ($original_aspect >= $new_aspect) {
 					$thumb_w = ($new_h*$old_x)/$old_y;
 					$thumb_h = $new_h;				
@@ -490,7 +500,7 @@ class Darkroom {
 		}
 	}
 
-	////
+		////
 	// Check GD
 	////
 	function gdVersion() {
@@ -501,6 +511,11 @@ class Darkroom {
 				$bits = explode(' ', $test);
 				$version = $bits[2];
 				if (version_compare($version, '6.0.0', '>')) {
+					exec(str_replace('convert', 'identify', MAGICK_PATH_FINAL) . ' -list resource', $limits);
+					if (strpos(strtolower($limits[0]), 'thread') !== false)
+					{
+						return 5;
+					}	
 					return 4;
 				} else {
 					return 3;

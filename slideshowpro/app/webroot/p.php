@@ -16,7 +16,7 @@
 		$var = trim($var);
 		if (is_numeric($var)) {
 			return $var;
-		} else if ($default) {
+		} else if (is_numeric($default)) {
 			return $default;
 		} else {
 			exit;
@@ -43,7 +43,7 @@
 	$file = $fn = basename($a[0]);
 	
 	// Make sure supplied filename contains only approved chars
-	if (preg_match("/[^A-Za-z0-9._- ]/", $file)) {
+	if (preg_match("/[^A-Za-z0-9._-\s]/", $file)) {
 		header('HTTP/1.1 403 Forbidden'); 
 		exit;
 	}

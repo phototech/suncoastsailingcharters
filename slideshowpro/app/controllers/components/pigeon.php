@@ -8,8 +8,8 @@
 class PigeonComponent extends Object {
    	var $controller = true;
  	var $curl 		= false;
-	var $host 		= 'slideshowpro.net';
-	var $hole 		= '/pinger/';
+	var $host 		= 'www.sspdirector.com';
+	var $hole 		= '/';
 
     function startup (&$controller) {
         $this->controller = &$controller;
@@ -38,7 +38,7 @@ class PigeonComponent extends Object {
 			$this->host = 'feeds.feedburner.com';
 			$this->hole = '/slideshowpro';
 			list($status, $xml) = $this->_ping('News Ping');
-			if (!preg_match('/not connect to slideshowpro.net/', $xml)) {
+			if (!preg_match('/not connect to feeds.feedburner.com/', $xml)) {
 				$latest = $this->__parseTag('item', $xml);
 				$description = $this->__parseTag('description', $latest);
 				preg_match('/^<!\[CDATA\[(.*)\]\]>$/s', $description, $matches);
@@ -57,7 +57,7 @@ class PigeonComponent extends Object {
 				$news = array();
 				cache('director/news', 'no news');
 			}
-			$this->host = 'slideshowpro.net';
+			$this->host = 'www.sspdirector.com';
 		} else if ($news == 'no news') {
 			$news = array();
 		} else {
@@ -75,7 +75,7 @@ class PigeonComponent extends Object {
 			} else {
 				$v = 2;
 			}
-			$this->hole = '/pinger/?version=' . $v;
+			$this->hole = '/?version=' . $v;
 			list($status, $version) = $this->_ping('Version Ping');
 			if ($status != 2) {
 				cache($cache_dir, trim($version));
@@ -92,7 +92,7 @@ class PigeonComponent extends Object {
 		if (empty($news)) {
 			$this->hole = '/rss/help_spotlight.xml';
 			list($status, $xml) = $this->_ping('Quick Start Ping');
-			if (!preg_match('/not connect to slideshowpro.net/', $xml)) {
+			if (!preg_match('/not connect to sspdirector.com/', $xml)) {
 				$all = $this->__parseTag('item', $xml, true);
 				$quicks = array();
 				foreach($all as $latest) {
@@ -138,7 +138,7 @@ class PigeonComponent extends Object {
 		if ($this->curl) {
 			$handle	= curl_init("http://{$this->host}{$this->hole}");
 			curl_setopt($handle, CURLOPT_HTTPHEADER, array($pinger));
-			curl_setopt($handle, CURLOPT_CONNECTTIMEOUT, 15);
+			curl_setopt($handle, CURLOPT_CONNECTTIMEOUT, 10);
 			curl_setopt($handle, CURLOPT_PORT, 80);
 			curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
 			if (defined('ACTIVATION_PROXY')) {
@@ -156,7 +156,7 @@ class PigeonComponent extends Object {
 			$response = curl_exec($handle);
 			if (curl_errno($handle)) {
 				$status = 2;
-				$response = 'Could not connect to slideshowpro.net (using cURL): ' . curl_error($handle);
+				$response = 'Could not connect to sspdirector.com (using cURL): ' . curl_error($handle);
 			}
 			curl_close($handle);
 		} else {
@@ -169,7 +169,7 @@ class PigeonComponent extends Object {
 			}
 			$headers .= "\r\n";
 			
-			$socket = @fsockopen($this->host, 80, $errno, $errstr, 15);
+			$socket = @fsockopen($this->host, 80, $errno, $errstr, 10);
 			
 			if ($socket) {
 				$towrite = $headers;
@@ -183,7 +183,7 @@ class PigeonComponent extends Object {
 				$response = trim($response[1]);
 			} else {
 				$status = 2;
-				$response = 'Could not connect to slideshowpro.net (using fsockopen): '.$errstr.' ('.$errno.')';
+				$response = 'Could not connect to sspdirector.com (using fsockopen): '.$errstr.' ('.$errno.')';
 			}
 		}
 		return array($status, $response);

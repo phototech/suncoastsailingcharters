@@ -363,7 +363,7 @@ class ApiHelper extends AppHelper {
 		
 		$info = pathinfo($local_path);
 		
-		if (array_key_exists($info['extension'], $mimes)) {
+		if (array_key_exists(strtolower($info['extension']), $mimes)) {
 			$data['mime_type'] = $mimes[$info['extension']];
 		} else if (function_exists('mime_content_type')) {
 			$data['mime_type'] = mime_content_type($local_path);
