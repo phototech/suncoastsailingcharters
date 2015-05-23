@@ -30,30 +30,38 @@ function wpcf7_textarea_shortcode_handler( $tag ) {
 	$atts['cols'] = $tag->get_cols_option( '40' );
 	$atts['rows'] = $tag->get_rows_option( '10' );
 	$atts['maxlength'] = $tag->get_maxlength_option();
+	$atts['minlength'] = $tag->get_minlength_option();
+
+	if ( $atts['maxlength'] && $atts['minlength'] && $atts['maxlength'] < $atts['minlength'] ) {
+		unset( $atts['maxlength'], $atts['minlength'] );
+	}
+
 	$atts['class'] = $tag->get_class_option( $class );
-	$atts['id'] = $tag->get_option( 'id', 'id', true );
+	$atts['id'] = $tag->get_id_option();
 	$atts['tabindex'] = $tag->get_option( 'tabindex', 'int', true );
 
-	if ( $tag->has_option( 'readonly' ) )
+	if ( $tag->has_option( 'readonly' ) ) {
 		$atts['readonly'] = 'readonly';
+	}
 
-	if ( $tag->is_required() )
+	if ( $tag->is_required() ) {
 		$atts['aria-required'] = 'true';
+	}
 
 	$atts['aria-invalid'] = $validation_error ? 'true' : 'false';
 
-	$value = (string) reset( $tag->values );
-
-	if ( '' !== $tag->content )
-		$value = $tag->content;
+	$value = empty( $tag->content )
+		? (string) reset( $tag->values )
+		: $tag->content;
 
 	if ( $tag->has_option( 'placeholder' ) || $tag->has_option( 'watermark' ) ) {
 		$atts['placeholder'] = $value;
 		$value = '';
 	}
 
-	if ( wpcf7_is_posted() && isset( $_POST[$tag->name] ) )
-		$value = stripslashes_deep( $_POST[$tag->name] );
+	$value = $tag->get_default_option( $value );
+
+	$value = wpcf7_get_hangover( $tag->name, $value );
 
 	$atts['name'] = $tag->name;
 
@@ -61,7 +69,8 @@ function wpcf7_textarea_shortcode_handler( $tag ) {
 
 	$html = sprintf(
 		'<span class="wpcf7-form-control-wrap %1$s"><textarea %2$s>%3$s</textarea>%4$s</span>',
-		$tag->name, $atts, esc_textarea( $value ), $validation_error );
+		sanitize_html_class( $tag->name ), $atts,
+		esc_textarea( $value ), $validation_error );
 
 	return $html;
 }
@@ -80,10 +89,26 @@ function wpcf7_textarea_validation_filter( $result, $tag ) {
 
 	$value = isset( $_POST[$name] ) ? (string) $_POST[$name] : '';
 
-	if ( 'textarea*' == $type ) {
-		if ( '' == $value ) {
-			$result['valid'] = false;
-			$result['reason'][$name] = wpcf7_get_message( 'invalid_required' );
+	if ( $tag->is_required() && '' == $value ) {
+		$result->invalidate( $tag, wpcf7_get_message( 'invalid_required' ) );
+	}
+
+	if ( ! empty( $value ) ) {
+		$maxlength = $tag->get_maxlength_option();
+		$minlength = $tag->get_minlength_option();
+
+		if ( $maxlength && $minlength && $maxlength < $minlength ) {
+			$maxlength = $minlength = null;
+		}
+
+		$code_units = wpcf7_count_code_units( $value );
+
+		if ( false !== $code_units ) {
+			if ( $maxlength && $maxlength < $code_units ) {
+				$result->invalidate( $tag, wpcf7_get_message( 'invalid_too_long' ) );
+			} elseif ( $minlength && $code_units < $minlength ) {
+				$result->invalidate( $tag, wpcf7_get_message( 'invalid_too_short' ) );
+			}
 		}
 	}
 
@@ -103,7 +128,7 @@ function wpcf7_add_tag_generator_textarea() {
 		'wpcf7-tg-pane-textarea', 'wpcf7_tg_pane_textarea' );
 }
 
-function wpcf7_tg_pane_textarea( &$contact_form ) {
+function wpcf7_tg_pane_textarea( $contact_form ) {
 ?>
 <div id="wpcf7-tg-pane-textarea" class="hidden">
 <form action="">
@@ -143,9 +168,9 @@ function wpcf7_tg_pane_textarea( &$contact_form ) {
 </tr>
 </table>
 
-<div class="tg-tag"><?php echo esc_html( __( "Copy this code and paste it into the form left.", 'contact-form-7' ) ); ?><br /><input type="text" name="textarea" class="tag" readonly="readonly" onfocus="this.select()" /></div>
+<div class="tg-tag"><?php echo esc_html( __( "Copy this code and paste it into the form left.", 'contact-form-7' ) ); ?><br /><input type="text" name="textarea" class="tag wp-ui-text-highlight code" readonly="readonly" onfocus="this.select()" /></div>
 
-<div class="tg-mail-tag"><?php echo esc_html( __( "And, put this code into the Mail fields below.", 'contact-form-7' ) ); ?><br /><span class="arrow">&#11015;</span>&nbsp;<input type="text" class="mail-tag" readonly="readonly" onfocus="this.select()" /></div>
+<div class="tg-mail-tag"><?php echo esc_html( __( "And, put this code into the Mail fields below.", 'contact-form-7' ) ); ?><br /><input type="text" class="mail-tag wp-ui-text-highlight code" readonly="readonly" onfocus="this.select()" /></div>
 </form>
 </div>
 <?php

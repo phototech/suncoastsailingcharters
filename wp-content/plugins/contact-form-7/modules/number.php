@@ -32,7 +32,7 @@ function wpcf7_number_shortcode_handler( $tag ) {
 	$atts = array();
 
 	$atts['class'] = $tag->get_class_option( $class );
-	$atts['id'] = $tag->get_option( 'id', 'id', true );
+	$atts['id'] = $tag->get_id_option();
 	$atts['tabindex'] = $tag->get_option( 'tabindex', 'int', true );
 	$atts['min'] = $tag->get_option( 'min', 'signed_int', true );
 	$atts['max'] = $tag->get_option( 'max', 'signed_int', true );
@@ -53,8 +53,9 @@ function wpcf7_number_shortcode_handler( $tag ) {
 		$value = '';
 	}
 
-	if ( wpcf7_is_posted() && isset( $_POST[$tag->name] ) )
-		$value = stripslashes_deep( $_POST[$tag->name] );
+	$value = $tag->get_default_option( $value );
+
+	$value = wpcf7_get_hangover( $tag->name, $value );
 
 	$atts['value'] = $value;
 
@@ -70,7 +71,7 @@ function wpcf7_number_shortcode_handler( $tag ) {
 
 	$html = sprintf(
 		'<span class="wpcf7-form-control-wrap %1$s"><input %2$s />%3$s</span>',
-		$tag->name, $atts, $validation_error );
+		sanitize_html_class( $tag->name ), $atts, $validation_error );
 
 	return $html;
 }
@@ -96,17 +97,13 @@ function wpcf7_number_validation_filter( $result, $tag ) {
 	$max = $tag->get_option( 'max', 'signed_int', true );
 
 	if ( $tag->is_required() && '' == $value ) {
-		$result['valid'] = false;
-		$result['reason'][$name] = wpcf7_get_message( 'invalid_required' );
+		$result->invalidate( $tag, wpcf7_get_message( 'invalid_required' ) );
 	} elseif ( '' != $value && ! wpcf7_is_number( $value ) ) {
-		$result['valid'] = false;
-		$result['reason'][$name] = wpcf7_get_message( 'invalid_number' );
+		$result->invalidate( $tag, wpcf7_get_message( 'invalid_number' ) );
 	} elseif ( '' != $value && '' != $min && (float) $value < (float) $min ) {
-		$result['valid'] = false;
-		$result['reason'][$name] = wpcf7_get_message( 'number_too_small' );
+		$result->invalidate( $tag, wpcf7_get_message( 'number_too_small' ) );
 	} elseif ( '' != $value && '' != $max && (float) $max < (float) $value ) {
-		$result['valid'] = false;
-		$result['reason'][$name] = wpcf7_get_message( 'number_too_large' );
+		$result->invalidate( $tag, wpcf7_get_message( 'number_too_large' ) );
 	}
 
 	return $result;
@@ -151,11 +148,11 @@ function wpcf7_add_tag_generator_number() {
 		'wpcf7-tg-pane-range', 'wpcf7_tg_pane_range' );
 }
 
-function wpcf7_tg_pane_number( &$contact_form ) {
+function wpcf7_tg_pane_number( $contact_form ) {
 	wpcf7_tg_pane_number_and_relatives( 'number' );
 }
 
-function wpcf7_tg_pane_range( &$contact_form ) {
+function wpcf7_tg_pane_range( $contact_form ) {
 	wpcf7_tg_pane_number_and_relatives( 'range' );
 }
 
@@ -202,9 +199,9 @@ function wpcf7_tg_pane_number_and_relatives( $type = 'number' ) {
 </tr>
 </table>
 
-<div class="tg-tag"><?php echo esc_html( __( "Copy this code and paste it into the form left.", 'contact-form-7' ) ); ?><br /><input type="text" name="<?php echo $type; ?>" class="tag" readonly="readonly" onfocus="this.select()" /></div>
+<div class="tg-tag"><?php echo esc_html( __( "Copy this code and paste it into the form left.", 'contact-form-7' ) ); ?><br /><input type="text" name="<?php echo $type; ?>" class="tag wp-ui-text-highlight code" readonly="readonly" onfocus="this.select()" /></div>
 
-<div class="tg-mail-tag"><?php echo esc_html( __( "And, put this code into the Mail fields below.", 'contact-form-7' ) ); ?><br /><span class="arrow">&#11015;</span>&nbsp;<input type="text" class="mail-tag" readonly="readonly" onfocus="this.select()" /></div>
+<div class="tg-mail-tag"><?php echo esc_html( __( "And, put this code into the Mail fields below.", 'contact-form-7' ) ); ?><br /><input type="text" class="mail-tag wp-ui-text-highlight code" readonly="readonly" onfocus="this.select()" /></div>
 </form>
 </div>
 <?php
