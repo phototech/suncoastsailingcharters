@@ -1,0 +1,39 @@
+{
+  "name": "phototech/sailvenice",
+  "description": "Sail Venice Website.",
+  "type": "project",
+  "license": "proprietary",
+  "require": {
+    "composer/installers": "^1.0.20",
+    "drupal/core": "~8.0",
+    "drupal/field_group": "dev-8.x-1.x"
+  },
+  "require-dev": {
+    "drupal/devel": "8.1.*"
+  },
+  "replace": {
+    "drupal/drupal": "~8.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:webflo/field_group.git"
+    },
+    {
+      "type": "composer",
+      "url": "http://packagist.drupal-composer.org"
+    }
+  ],
+  "config": {
+    "preferred-install": "dist",
+    "autoloader-suffix": "Drupal8"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/core": ["type:drupal-core"],
+      "web/modules/vendor/{$name}": ["type:drupal-module"]
+    }
+  }
+}

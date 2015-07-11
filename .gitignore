@@ -1,5 +1,17 @@
-wp-config.php
-slideshowpro/albums/*/cache/
-slideshowpro/config/conf.php
-slideshowpro/app/tmp/
-slideshowpro/xml_cache/
+# Ignore core and vendor when managing dependencies with Composer.
+web/core
+web/modules/vendor
+web/themes/vendor
+web/profiles/vendor
+vendor
+
+# Ignore configuration files that may contain sensitive information.
+web/sites/*/settings*.php
+web/sites/*/services*.yml
+
+# Ignore paths that contain user-generated content.
+web/sites/*/files
+web/sites/*/private
+
+# Ignore SimpleTest multi-site environment.
+web/sites/simpletest
