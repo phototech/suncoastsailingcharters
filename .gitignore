@@ -1,8 +1,8 @@
 # Ignore core and vendor when managing dependencies with Composer.
 web/core
-web/modules/vendor
-web/themes/vendor
-web/profiles/vendor
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
 vendor
 
 # Ignore configuration files that may contain sensitive information.

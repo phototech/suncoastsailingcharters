@@ -33,7 +33,7 @@
   "extra": {
     "installer-paths": {
       "web/core": ["type:drupal-core"],
-      "web/modules/vendor/{$name}": ["type:drupal-module"]
+      "web/modules/contrib/{$name}": ["type:drupal-module"]
     }
   }
 }
