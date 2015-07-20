@@ -6,9 +6,11 @@
   "require": {
     "composer/installers": "^1.0.20",
     "drupal/core": "~8.0",
-    "drupal/field_group": "dev-8.x-1.x"
+    "drupal/field_group": "dev-8.x-1.x",
+    "drupal/ds": "8.2.*"
   },
   "require-dev": {
+    "drush/drush": "~8.0",
     "drupal/devel": "8.1.*"
   },
   "replace": {

@@ -1,0 +1,13 @@
+global:
+  css:
+    theme:
+      css/fonts.css: {}
+      css/style.css: {}
+  dependencies:
+    - sailor/fonts
+fonts:
+  remote: https://fonts.googleapis.com
+  license: "OFL-1.1"
+  css:
+    base:
+      "https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Raleway:400,500,600,700&subset=latin,greek,cyrillic,vietnamese": {}
