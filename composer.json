@@ -6,7 +6,7 @@
   "require": {
     "composer/installers": "^1.0.20",
     "drupal/core": "~8.0",
-    "drupal/field_group": "dev-8.x-1.x",
+    "drupal/field_group": "8.1.*",
     "drupal/ds": "8.2.*"
   },
   "require-dev": {
@@ -19,10 +19,6 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@github.com:webflo/field_group.git"
-    },
     {
       "type": "composer",
       "url": "http://packagist.drupal-composer.org"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "22c8332f861c3204e597103aebb1e34c",
+    "hash": "6eb5b9197b25128d0f52b5a313e99b14",
     "packages": [
         {
             "name": "behat/mink",
@@ -722,16 +722,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.0.0-beta13",
+            "version": "8.0.0-beta14",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tstoeckler/drupal-core.git",
-                "reference": "207143e8777db9e846df35f92e87652d93ec3ccb"
+                "url": "https://github.com/drupal-composer/drupal-core.git",
+                "reference": "5ffe3973fccddb676fd983e58f54c6dfd871cda3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tstoeckler/drupal-core/zipball/207143e8777db9e846df35f92e87652d93ec3ccb",
-                "reference": "207143e8777db9e846df35f92e87652d93ec3ccb",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/5ffe3973fccddb676fd983e58f54c6dfd871cda3",
+                "reference": "5ffe3973fccddb676fd983e58f54c6dfd871cda3",
                 "shasum": ""
             },
             "require": {
@@ -876,7 +876,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2015-07-29 18:06:42"
+            "time": "2015-08-03 09:10:38"
         },
         {
             "name": "drupal/ds",
@@ -918,37 +918,44 @@
             "version": "dev-8.x-1.x",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webflo/field_group.git",
-                "reference": "fc02a31d543090786797d7268831b1d2aa55eda4"
+                "url": "http://git.drupal.org/project/field_group",
+                "reference": "0d1884eb33e597cfe77daad9c35757b079b3ef3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webflo/field_group/zipball/fc02a31d543090786797d7268831b1d2aa55eda4",
-                "reference": "fc02a31d543090786797d7268831b1d2aa55eda4",
-                "shasum": ""
+                "url": "http://ftp.drupal.org/files/projects/field_group-8.x-1.x-dev.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/field": "8.*"
             },
             "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
-            "description": "Provides the field_group module.",
-            "support": {
-                "source": "https://github.com/webflo/field_group/tree/8.x-1.x",
-                "issues": "https://github.com/webflo/field_group/issues"
-            },
-            "time": "2015-07-30 09:26:06"
+            "description": "Provides the ability to group your fields on both form and display.",
+            "homepage": "https://www.drupal.org/project/field_group",
+            "time": "2015-08-11 21:36:03"
         },
         {
             "name": "drupal/layout_plugin",
-            "version": "8.1.0-alpha12",
+            "version": "8.1.0-alpha14",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/layout_plugin",
-                "reference": "f092084b6781d89ed687ec4e6fd942d891bf5497"
+                "reference": "4bd76300d0e46145ffe26565ce10ba398df5b2f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha12.zip",
+                "url": "http://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha14.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -990,7 +997,7 @@
                 "layout",
                 "php"
             ],
-            "time": "2015-06-30 13:29:07"
+            "time": "2015-07-10 14:21:37"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -1162,12 +1169,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "6692db3cda013e8357330243c33fe1838d0ea6f5"
+                "reference": "d687700d601f8b5f19b99ffc1c0f6af835a3c7b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/6692db3cda013e8357330243c33fe1838d0ea6f5",
-                "reference": "6692db3cda013e8357330243c33fe1838d0ea6f5",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d687700d601f8b5f19b99ffc1c0f6af835a3c7b7",
+                "reference": "d687700d601f8b5f19b99ffc1c0f6af835a3c7b7",
                 "shasum": ""
             },
             "require": {
@@ -1216,20 +1223,20 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-07-30 04:48:33"
+            "time": "2015-08-15 20:48:15"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "2ee5bc7f1a92efecc90da7f6711a53a7be26b5b7"
+                "reference": "97fe7210def29451ec74923b27e552238defd75a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/2ee5bc7f1a92efecc90da7f6711a53a7be26b5b7",
-                "reference": "2ee5bc7f1a92efecc90da7f6711a53a7be26b5b7",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/97fe7210def29451ec74923b27e552238defd75a",
+                "reference": "97fe7210def29451ec74923b27e552238defd75a",
                 "shasum": ""
             },
             "require": {
@@ -1249,7 +1256,7 @@
                     "GuzzleHttp\\Promise\\": "src/"
                 },
                 "files": [
-                    "src/functions.php"
+                    "src/functions_include.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1267,20 +1274,20 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2015-06-24 16:16:25"
+            "time": "2015-08-15 19:37:21"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "af0e1758de355eb113917ad79c3c0e3604bce4bd"
+                "reference": "4ef919b0cf3b1989523138b60163bbcb7ba1ff7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/af0e1758de355eb113917ad79c3c0e3604bce4bd",
-                "reference": "af0e1758de355eb113917ad79c3c0e3604bce4bd",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/4ef919b0cf3b1989523138b60163bbcb7ba1ff7e",
+                "reference": "4ef919b0cf3b1989523138b60163bbcb7ba1ff7e",
                 "shasum": ""
             },
             "require": {
@@ -1304,7 +1311,7 @@
                     "GuzzleHttp\\Psr7\\": "src/"
                 },
                 "files": [
-                    "src/functions.php"
+                    "src/functions_include.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1325,7 +1332,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2015-06-24 19:55:15"
+            "time": "2015-08-15 19:32:36"
         },
         {
             "name": "masterminds/html5",
@@ -1489,16 +1496,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.4.1",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373"
+                "reference": "4745ded9307786b730d7a60df5cb5a6c43cf95f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373",
-                "reference": "3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/4745ded9307786b730d7a60df5cb5a6c43cf95f7",
+                "reference": "4745ded9307786b730d7a60df5cb5a6c43cf95f7",
                 "shasum": ""
             },
             "require": {
@@ -1545,20 +1552,20 @@
                 "spy",
                 "stub"
             ],
-            "time": "2015-04-27 22:15:08"
+            "time": "2015-08-13 10:07:40"
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.2.0",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "e6577d90f61a9adbe94544a6e9a7ca18b5fd9c8f"
+                "reference": "2d7c03c0e4e080901b8f33b2897b0577be18a13c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/e6577d90f61a9adbe94544a6e9a7ca18b5fd9c8f",
-                "reference": "e6577d90f61a9adbe94544a6e9a7ca18b5fd9c8f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/2d7c03c0e4e080901b8f33b2897b0577be18a13c",
+                "reference": "2d7c03c0e4e080901b8f33b2897b0577be18a13c",
                 "shasum": ""
             },
             "require": {
@@ -1566,7 +1573,7 @@
                 "phpunit/php-file-iterator": "~1.3",
                 "phpunit/php-text-template": "~1.2",
                 "phpunit/php-token-stream": "~1.3",
-                "sebastian/environment": "~1.3",
+                "sebastian/environment": "^1.3.2",
                 "sebastian/version": "~1.0"
             },
             "require-dev": {
@@ -1607,7 +1614,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-01 05:09:57"
+            "time": "2015-08-04 03:42:39"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1740,16 +1747,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.3",
+            "version": "1.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "7a9b0969488c3c54fd62b4d504b3ec758fd005d9"
+                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/7a9b0969488c3c54fd62b4d504b3ec758fd005d9",
-                "reference": "7a9b0969488c3c54fd62b4d504b3ec758fd005d9",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
+                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
                 "shasum": ""
             },
             "require": {
@@ -1785,7 +1792,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-06-19 03:43:16"
+            "time": "2015-08-16 08:51:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -2120,16 +2127,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "1.3.0",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "4fe0a44cddd8cc19583a024bdc7374eb2fef0b87"
+                "reference": "6324c907ce7a52478eeeaede764f48733ef5ae44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/4fe0a44cddd8cc19583a024bdc7374eb2fef0b87",
-                "reference": "4fe0a44cddd8cc19583a024bdc7374eb2fef0b87",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/6324c907ce7a52478eeeaede764f48733ef5ae44",
+                "reference": "6324c907ce7a52478eeeaede764f48733ef5ae44",
                 "shasum": ""
             },
             "require": {
@@ -2166,7 +2173,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2015-07-26 06:42:57"
+            "time": "2015-08-03 06:14:51"
         },
         {
             "name": "sebastian/exporter",
@@ -3582,7 +3589,7 @@
         },
         {
             "name": "zendframework/zend-escaper",
-            "version": "2.4.5",
+            "version": "2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-escaper.git",
@@ -3627,7 +3634,7 @@
         },
         {
             "name": "zendframework/zend-feed",
-            "version": "2.4.5",
+            "version": "2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-feed.git",
@@ -3687,7 +3694,7 @@
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "2.4.5",
+            "version": "2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-stdlib.git",
@@ -3782,7 +3789,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/devel",
-                "reference": "fc659e06572ea7da1fc73918cdd17b99e6c36ccc"
+                "reference": "8e745a9b9e027dd18429e747abe3e4c27b3c6442"
             },
             "dist": {
                 "type": "zip",
@@ -3822,20 +3829,20 @@
             ],
             "description": "Various blocks, pages, and functions for developers.",
             "homepage": "http://drupal.org/project/devel",
-            "time": "2015-07-05 11:29:49"
+            "time": "2015-08-09 17:05:54"
         },
         {
             "name": "drush/drush",
-            "version": "8.0.0-beta12",
+            "version": "8.0.0-beta14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "4b25ed350a8f4700b950bbbf375a10bff28e488f"
+                "reference": "3ebcd610947ffc409ee54acac297e8e71baac867"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/4b25ed350a8f4700b950bbbf375a10bff28e488f",
-                "reference": "4b25ed350a8f4700b950bbbf375a10bff28e488f",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/3ebcd610947ffc409ee54acac297e8e71baac867",
+                "reference": "3ebcd610947ffc409ee54acac297e8e71baac867",
                 "shasum": ""
             },
             "require": {
@@ -3909,7 +3916,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2015-07-08 14:14:48"
+            "time": "2015-08-04 18:48:24"
         },
         {
             "name": "pear/console_table",
@@ -4028,9 +4035,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "drupal/field_group": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
