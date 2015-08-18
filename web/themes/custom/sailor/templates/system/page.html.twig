@@ -61,35 +61,26 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
-    {% if logo %}
-      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
-        <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-      </a>
-    {% endif %}
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="wrap">
 
-    {% if site_name or site_slogan %}
-      <div class="name-and-slogan">
+      {% if logo or site_name %}
+        <a href="{{ front_page }}" title="{% if site_name %}{{ site_name }}{% else %}{{ 'Home'|t }}{% endif %}" class="logo">
+          {% if logo %}
+            <img src="{{ logo }}" alt="{% if site_name %}{{ site_name }}{% else %}{{ 'Home'|t }}{% endif %}"/>
+          {% endif %}
+          {% if site_name %}
+            {{ site_name }}
+          {% endif %}
+        </a>
+      {% endif %}
 
-        {# Use h1 when the content title is empty #}
-        {% if title %}
-          <strong class="site-name">
-            <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-          </strong>
-        {% else %}
-          <h1 class="site-name">
-            <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-          </h1>
-        {% endif %}
 
-        {% if site_slogan %}
-          <div class="site-slogan">{{ site_slogan }}</div>
-        {% endif %}
-      </div>{# ./name-and-slogan #}
-    {% endif %}
-
-    {{ page.header }}
+      {{ page.header }}
+    </div>
   </header>
+  <!-- //Header -->
 
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
