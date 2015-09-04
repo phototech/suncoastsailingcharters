@@ -15,3 +15,7 @@ web/sites/*/private
 
 # Ignore SimpleTest multi-site environment.
 web/sites/simpletest
+
+# Ignore the sass cache.
+.sass-cache/
+compiled/

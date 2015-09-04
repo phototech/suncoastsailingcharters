@@ -1,0 +1,18 @@
+/**
+ * @file
+ * Drupal specitic styles.
+ */
+
+/**
+ * Toolbar.
+ */
+.toolbar-fixed,
+.toolbar-vertical {
+  header.header {
+    position: static;
+  }
+}
+
+ul.toolbar-menu {
+  display: block;
+}

@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file
+ * Preprocessing for the Sailor Theme.
+ */
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function sailor_preprocess_block(&$variables) {
+  $storage = \Drupal::entityManager()->getStorage('block');
+  $block = $storage->load($variables['elements']['#id']);
+
+  // Only modify blocks that use theme menu.
+  if (strrpos($variables['content']['#theme'], 'menu') === 0) {
+
+    // Add the `main-nav` and 'jetmenu' class(es) when block is placed in the
+    // primary menu region.
+    if ($block->getRegion() == 'primary_menu') {
+      $variables['attributes']['class'][] = 'main-nav';
+
+      $variables['content']['#attributes']['class'][] = 'jetmenu';
+      $variables['content']['#attributes']['id'] = Html::getUniqueId('jetmenu');
+    }
+
+    // Alter the theme hook suggestions.
+    list($plugin_id, $menu_id) = explode(':', $variables['elements']['#configuration']['id']);
+    $variables['content']['#theme'] = 'menu__' . $block->getRegion() . '__' . $menu_id;
+  }
+
+}
