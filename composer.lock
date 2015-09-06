@@ -3784,7 +3784,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/devel",
-                "reference": "02e26ecb83ad33489858698c21596df4f3ef44ed"
+                "reference": "c3810218e469ca876e6309481f74ad397b8f1655"
             },
             "dist": {
                 "type": "zip",
@@ -3824,7 +3824,7 @@
             ],
             "description": "Various blocks, pages, and functions for developers.",
             "homepage": "http://drupal.org/project/devel",
-            "time": "2015-09-03 19:59:02"
+            "time": "2015-09-06 03:28:29"
         },
         {
             "name": "drush/drush",
