@@ -83,15 +83,13 @@
   </header>
   <!-- //Header -->
 
-  {{ page.secondary_menu }}
-
   {{ page.breadcrumb }}
 
   {{ page.highlighted }}
 
   {{ page.help }}
 
-  <main role="main">
+	<main class="main" role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
@@ -101,12 +99,6 @@
         <h1>{{ title }}</h1>
       {% endif %}
       {{ title_suffix }}
-
-      {{ tabs }}
-
-      {% if action_links %}
-        <nav class="action-links">{{ action_links }}</nav>
-      {% endif %}
 
       {{ page.content }}
     </div>{# /.layout-content #}
@@ -125,9 +117,52 @@
 
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
+  <!-- Footer -->
+  {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth or page.footer_copy %}
+  	<footer class="footer" role="contentinfo">
+
+      {% if page.footer_first or page.footer_second or page.footer_third or page.footer_forth %}
+    		<div class="wrap">
+    			<div class="row">
+
+            {% if page.footer_first %}
+              <!-- OneFourth -->
+              <div class="one-fourth">
+                {{ page.footer_first }}
+              </div>
+            {% endif %}
+
+            {% if page.footer_second %}
+              <!-- OneFourth -->
+              <div class="one-fourth">
+                {{ page.footer_second }}
+              </div>
+            {% endif %}
+
+            {% if page.footer_third %}
+              <!-- OneFourth -->
+              <div class="one-fourth">
+                {{ page.footer_third }}
+              </div>
+            {% endif %}
+
+            {% if page.footer_fourth %}
+              <!-- OneFourth -->
+              <div class="one-fourth">
+                {{ page.footer_fourth }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.footer_copy %}
+      <div class="copy">
+        <div class="wrap">
+          {{ page.footer_copy }}
+        </div>
+      </div>
+      {% endif %}
     </footer>
   {% endif %}
 

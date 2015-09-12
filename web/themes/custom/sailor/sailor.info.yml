@@ -6,3 +6,17 @@ core: 8.x
 libraries:
   - sailor/global
   - sailor/fonts
+regions:
+  primary_menu: 'Primary Menu'
+  header: Header
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  sidebar_first: 'First sidebar'
+  sidebar_second: 'Second sidebar'
+  footer_first: 'First footer'
+  footer_second: 'Second footer'
+  footer_third: 'Third footer'
+  footer_fourth: 'Fourth footer'
+  footer_copy: 'Copyright'

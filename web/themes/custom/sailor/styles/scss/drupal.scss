@@ -4,6 +4,19 @@
  */
 
 /**
+ * Fonts
+ */
+$fa-font-path: "awesome/";
+
+@import "font-awesome-compass";
+@import "font-awesome";
+
+/**
+ * Theme Styles
+ */
+ @import "style";
+
+/**
  * Toolbar.
  */
 .toolbar-fixed,
@@ -15,4 +28,49 @@
 
 ul.toolbar-menu {
   display: block;
+}
+
+/**
+ * Footer
+ */
+footer.footer a[href*="facebook.com"] {
+  @extend .circle;
+  @extend .fa;
+  @extend .fa-facebook;
+  @extend .fa-fw;
+}
+
+footer.footer a[href*="twitter.com"] {
+  @extend .circle;
+  @extend .fa;
+  @extend .fa-twitter;
+  @extend .fa-fw;
+}
+
+footer.footer a[href*="plus.google.com"] {
+  @extend .circle;
+  @extend .fa;
+  @extend .fa-google-plus;
+  @extend .fa-fw;
+}
+
+footer.footer a[href*="youtube.com"] {
+  @extend .circle;
+  @extend .fa;
+  @extend .fa-youtube-play;
+  @extend .fa-fw;
+}
+
+footer.footer a[href*="linkedin.com"] {
+  @extend .circle;
+  @extend .fa;
+  @extend .fa-linkedin;
+  @extend .fa-fw;
+}
+
+footer.footer a[href*="pinterest.com"] {
+  @extend .circle;
+  @extend .fa;
+  @extend .fa-pinterest-p;
+  @extend .fa-fw;
 }

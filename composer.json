@@ -11,8 +11,7 @@
     "drupal/ds": "8.2.*"
   },
   "require-dev": {
-    "drush/drush": "~8.0",
-    "drupal/devel": "8.1.*"
+    "drush/drush": "~8.0"
   },
   "replace": {
     "drupal/drupal": "~8.0"

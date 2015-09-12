@@ -1,8 +1,6 @@
 global:
   css:
     theme:
-      styles/css/fonts.css: {}
-      styles/css/style.css: {}
       styles/compiled/drupal.css: {}
   dependencies:
     - sailor/fonts

@@ -1,0 +1,10 @@
+sailor_follow_block:
+  label: Follow Block
+  category: Display Suite
+  type: partial
+  theme: sailor_follow_block
+  regions:
+    content:
+      label: Content
+    links:
+      label: Social Links
