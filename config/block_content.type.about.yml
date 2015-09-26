@@ -1,0 +1,8 @@
+uuid: 83892ca5-2bad-4e25-bc00-b85124cd22d1
+langcode: en
+status: true
+dependencies: {  }
+id: about
+label: About
+revision: 1
+description: ''

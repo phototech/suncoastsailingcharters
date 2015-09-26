@@ -1,0 +1,26 @@
+uuid: 60ae4221-bef8-4f7b-9700-cb40e89df0f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.yacht.body
+    - node.type.yacht
+  module:
+    - text
+    - user
+id: node.yacht.teaser
+targetEntityType: node
+bundle: yacht
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden: {  }

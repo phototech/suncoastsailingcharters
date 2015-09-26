@@ -229,7 +229,7 @@ table td:first-child   {background:#eee;color:#444;}
 .ui-datepicker             {z-index:99999 !important;}
 .ui-datepicker th          {font-size:13px;padding:10px 15px;}
 .ui-datepicker td          {font-size:14px;}
-#startDate              {background:#fff url(../images/datepicker.png) 90% 13px no-repeat;}
+#startDate              {background:#fff url(../../images/datepicker.png) 90% 13px no-repeat;}
 .advanced-search .selector,
 .advanced-search .selector span,
 .advanced-search input         {font-size:13px;text-transform:uppercase;color:#515E64;}
@@ -301,7 +301,7 @@ section        {float:left;width:100%;}
 section.white     {background:#fff;color:#515E64;padding:50px 0;}
 section.white h2    {padding-bottom:38px;}
 
-.hero            {overflow:hidden;min-height:500px;height:100vh;width:100%;color:#fff;display:table;background:url(../uploads/hero.jpg) 50% 50% no-repeat;background-size:cover;}
+.hero            {overflow:hidden;min-height:500px;height:100vh;width:100%;color:#fff;display:table;background:url(../../uploads/hero.jpg) 50% 50% no-repeat;background-size:cover;}
 .hero article           {display:table-cell;vertical-align:middle;position:relative;z-index:2;text-shadow:0 2px 2px rgba(0, 0, 0,.15);}
 .hero h1            {font-size:40px;font-weight:300;padding:0 0 115px;}
 .hero .button.medium     {height:60px;line-height:58px;padding:0 25px;}
@@ -310,13 +310,13 @@ section.white h2    {padding-bottom:38px;}
 .home nav.tabs     {height:260px;margin:0;}
 .home nav.tabs li    {font-size:19px;line-height:1.32;}
 
-.white.app      {background:#fff url(../uploads/app.jpg) 0 100% no-repeat;padding-bottom:500px;}
+.white.app      {background:#fff url(../../uploads/app.jpg) 0 100% no-repeat;padding-bottom:500px;}
 .app p         {font-size:17px;padding:0 0 50px;}
 .app img       {margin:0 -60px 0 -100px;}
 .app ol.custom    {margin-top:10px;}
 .app ol.custom strong   {font-size:17px;}
 
-.photo        {overflow:hidden;position:static !important;padding:70px 0 80px;color:#fff;background:url(../uploads/ship.jpg) 50% 50% no-repeat;background-size:cover; background-attachment: fixed;-webkit-background-size: cover !important;}
+.photo        {overflow:hidden;position:static !important;padding:70px 0 80px;color:#fff;background:url(../../uploads/ship.jpg) 50% 50% no-repeat;background-size:cover; background-attachment: fixed;-webkit-background-size: cover !important;}
 .photo .wrap.center   {position:relative;z-index:2;max-width:50%;}
 .photo h2      {color:#fff;padding:0 0 40px !important;}
 .photo p       {font-size:18px;font-weight:600;padding:0 0 50px;}
@@ -337,8 +337,8 @@ section.icons    {padding-bottom:10px;}
 /* 14 CONTENT */
 .content    {float:left;width:100%;}
 
-.intro       {background:url(../images/gold-bg.png) 0 0 repeat;float:left;width:100%;color:#fff;padding:31px 0 5px;}
-.intro.dark    {background-image:url(../images/dark-bg.png);}
+.intro       {background:url(../../images/gold-bg.png) 0 0 repeat;float:left;width:100%;color:#fff;padding:31px 0 5px;}
+.intro.dark    {background-image:url(../../images/dark-bg.png);}
 .intro .wrap   {text-align:center;max-width:65%;}
 .intro p     {font-size:17px;font-weight:500;padding:0 0 35px;}
 .intro .button   {margin-bottom:37px;}
@@ -350,7 +350,7 @@ section.icons    {padding-bottom:10px;}
 .cta p         {font-size:17px;font-weight:500;padding:0 0 35px;}
 .cta .button     {margin-bottom:25px;}
 .cta .center .button   {margin-bottom:37px;}
-.cta.gold       {background:url(../images/gold-bg.png) 0 0 repeat;}
+.cta.gold       {background:url(../../images/gold-bg.png) 0 0 repeat;}
 .cta.grey       {background:#515E64;}
 
 nav.tabs         {float:left;width:100%;height:130px;background:#2B3A42;padding:25px 0;margin-bottom:45px;}
@@ -525,7 +525,7 @@ div.border img   {margin:0 auto;}
 .pager2 a:focus     {background:#C4A981;color:#fff;}
 
 /* 18 TESTIMONIALS */
-.testimonials   {background:#e5e5e5 url(../images/map-bg.jpg) 50% 0 no-repeat;background-size:100% auto;display:inline-block;width:100%;padding:80px 0 60px;color:#2B3941;-webkit-box-shadow:inset 0 0 3px rgba(0,0,0,.2);-moz-box-shadow:inset 0 0 3px rgba(0,0,0,.2);box-shadow:inset 0 0 3px rgba(0,0,0,.2);}
+.testimonials   {background:#e5e5e5 url(../../images/map-bg.jpg) 50% 0 no-repeat;background-size:100% auto;display:inline-block;width:100%;padding:80px 0 60px;color:#2B3941;-webkit-box-shadow:inset 0 0 3px rgba(0,0,0,.2);-moz-box-shadow:inset 0 0 3px rgba(0,0,0,.2);box-shadow:inset 0 0 3px rgba(0,0,0,.2);}
 .testimonials h6  {font-size:30px;font-weight:500;padding:0 0 25px;}
 .testimonials p   {font-size:18px;font-weight:500;}
 

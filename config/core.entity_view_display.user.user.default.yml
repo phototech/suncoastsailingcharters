@@ -1,0 +1,75 @@
+uuid: da6892b9-0da9-4b4f-9608-8a58c857a461
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_name
+    - field.field.user.user.field_picture
+  module:
+    - ds
+    - image
+    - name
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_account
+      path: ''
+      library: ''
+      disable_css: false
+      settings:
+        classes: {  }
+        wrappers:
+          intro: div
+          sidebar_left: div
+          content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      intro:
+        - field_picture
+        - field_name
+      sidebar_left:
+        - 'dynamic_block_field:user-tabs'
+      content:
+        - member_for
+    fields:
+      'dynamic_block_field:user-tabs':
+        plugin_id: 'dynamic_block_field:user-tabs'
+        weight: 2
+        label: hidden
+        formatter: default
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_name:
+    weight: 1
+    label: hidden
+    settings:
+      format: default
+      output: default
+      multiple: default
+      multiple_delimiter: ', '
+      multiple_and: text
+      multiple_delimiter_precedes_last: never
+      multiple_el_al_min: '3'
+      multiple_el_al_first: '1'
+    third_party_settings: {  }
+    type: name_default
+  field_picture:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: square
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  member_for:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

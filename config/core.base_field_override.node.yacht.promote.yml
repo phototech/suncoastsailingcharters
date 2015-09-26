@@ -1,0 +1,22 @@
+uuid: f07cf673-9a53-42a0-9f37-55a83f75238c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.yacht
+id: node.yacht.promote
+field_name: promote
+entity_type: node
+bundle: yacht
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,5 +1,5 @@
 sailor_follow_block:
-  label: Follow Block
+  label: Sailor: Follow Block
   category: Display Suite
   type: partial
   theme: sailor_follow_block
@@ -8,3 +8,16 @@ sailor_follow_block:
       label: Content
     links:
       label: Social Links
+
+sailor_account:
+  label: Sailor: Account
+  category: Display Suite
+  type: partial
+  theme: sailor_account
+  regions:
+    intro:
+      label: Intro
+    sidebar_left:
+      label: Sidebar Left
+    content:
+      label: Content

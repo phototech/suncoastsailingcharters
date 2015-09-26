@@ -1,0 +1,38 @@
+uuid: a41362c2-9135-4436-ba02-02878be117a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_picture
+  module:
+    - image
+    - user
+id: user.user.field_picture
+field_name: field_picture
+entity_type: user
+bundle: user
+label: Picture
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: ''
+  max_filesize: ''
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: image

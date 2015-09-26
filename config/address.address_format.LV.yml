@@ -1,0 +1,19 @@
+uuid: b39cfb5f-a0e7-41c8-a704-4e957c16b4ce
+langcode: en
+status: true
+dependencies: {  }
+countryCode: LV
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%locality, %postalCode"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+  - postalCode
+uppercaseFields:
+  - locality
+administrativeAreaType: null
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: 'LV-\d{4}'
+postalCodePrefix: null

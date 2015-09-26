@@ -15,7 +15,19 @@ function sailor_theme() {
     'sailor_follow_block' => [
       'render element' => 'content',
     ],
+    'sailor_account' => [
+      'render element' => 'content',
+    ],
   ];
+}
+
+/**
+ * Implements hook_theme_suggestions_form_alter().
+ *
+ * Add a suggestion for the form id.
+ */
+function sailor_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__one_half_modal';
 }
 
 /**
@@ -40,7 +52,7 @@ function sailor_theme_suggestions_block_alter(array &$suggestions, array $variab
 /**
  * Implements template_preprocess_block().
  */
-function sailor_preprocess_block(&$variables) {
+function sailor_preprocess_block(array &$variables) {
   $storage = \Drupal::entityManager()->getStorage('block');
   $block = $storage->load($variables['elements']['#id']);
 
@@ -69,17 +81,21 @@ function sailor_preprocess_block(&$variables) {
 }
 
 /**
- * Implments template_preprocess_block__footer().
+ * Implments template_preprocess_sailor_follow_block().
  *
  * Remove the title from link fields, since the title messes up the display of
  * the icons.
  */
-function sailor_preprocess_sailor_follow_block(&$variables) {
+function sailor_preprocess_sailor_follow_block(array &$variables) {
   if (!empty($variables['content']['#ds_configuration']['regions']['links'])) {
-    foreach ($variables['content']['#ds_configuration']['regions']['links'] as $field_name) {
+    $region = $variables['content']['#ds_configuration']['regions']['links'];
+    foreach ($region as $field_name) {
       if (!empty($variables['content'][$field_name])) {
         foreach (Element::children($variables['content'][$field_name]) as $delta) {
-          if (!empty($variables['content'][$field_name][$delta]['#title'])) {
+          $item = &$variables['content'][$field_name][$delta];
+
+          // Link Field.
+          if (!empty($item['#type']) && $item['#type'] == 'link') {
             $variables['content'][$field_name][$delta]['#title'] = '';
           }
         }
@@ -89,7 +105,91 @@ function sailor_preprocess_sailor_follow_block(&$variables) {
 }
 
 /**
+ * Implments template_preprocess_sailor_account().
+ */
+function sailor_preprocess_sailor_account(array &$variables) {
+  if (!empty($variables['content']['#ds_configuration']['regions']['intro'])) {
+    $region = $variables['content']['#ds_configuration']['regions']['intro'];
+    foreach ($region as $field_name) {
+      if (!empty($variables['content'][$field_name])) {
+        $field = &$variables['content'][$field_name];
+
+        if ($field['#field_type'] == 'name') {
+          $field['#theme'] = 'field__name';
+        }
+
+        foreach (Element::children($field) as $delta) {
+          $item = &$variables['content'][$field_name][$delta];
+
+          // Add the `profile-pic` class to the images in the intro.
+          if ($item['#theme'] == 'image_formatter') {
+            $item['#item_attributes']['class'][] = 'profile-pic';
+          }
+        }
+      }
+    }
+  }
+
+  if (!empty($variables['content']['#ds_configuration']['regions']['sidebar_left'])) {
+    $region = $variables['content']['#ds_configuration']['regions']['sidebar_left'];
+    foreach ($region as $field_name) {
+      if (!empty($variables['content'][$field_name])) {
+        foreach (Element::children($variables['content'][$field_name]) as $delta) {
+          $item = &$variables['content'][$field_name][$delta];
+
+          // Change the theme of the sidebar "tabs".
+          if (!empty($item[0]['#theme']) && $item[0]['#theme'] == 'menu_local_tasks') {
+            $item[0]['#theme'] = 'menu_local_tasks__sidebar';
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implmenets template_preprocess_menu_local_tasks__sidebar().
+ *
+ * Add the 'current' class to the current menu item.
+ */
+function sailor_preprocess_menu_local_tasks__sidebar(array &$variables) {
+  foreach (['primary', 'secondary'] as $tasks) {
+    if (empty($variables[$tasks])) {
+      continue;
+    }
+
+    foreach ($variables[$tasks] as &$task) {
+      if ($task['#active'] == TRUE) {
+        $task['#attributes']['class'][] = 'current';
+      }
+    }
+  }
+}
+
+/**
+ * Implmeents template_preprocess_form__one_half_modal().
+ *
+ * Add the title as a variable for the form.
+ */
+function sailor_preprocess_form__one_half_modal(array &$variables) {
+  $variables['title'] = sailor_get_title();
+}
+
+/**
+ * Implmeents template_preprocess_form_element().
+ *
+ * Add the classes to the form.
+ */
+function sailor_preprocess_form_element(array &$variables) {
+  dump($variables);
+  $variables['element']['#attributes']['class'][] = 'full-width';
+}
+
+/**
  * Returns the Sailor Footer Regions
+ *
+ * @return array
+ *   Collection of regions that are in the "footer".
  */
 function sailor_footer_regions() {
   return [
@@ -99,4 +199,16 @@ function sailor_footer_regions() {
     'footer_fourth',
     'footer_copy'
   ];
+}
+
+/**
+ * Sailor Get Page Title.
+ *
+ * @return string
+ *   Title of the Page.
+ */
+function sailor_get_title() {
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  return \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
 }

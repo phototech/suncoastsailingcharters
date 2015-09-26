@@ -1,0 +1,54 @@
+uuid: ff30652e-3dc1-4174-a100-a704c0d8ed48
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.follow
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.follow.body
+    - field.field.block_content.follow.field_links
+  module:
+    - ds
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col_wrapper
+      path: modules/contrib/ds
+      library: ''
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - body
+        - field_links
+id: block_content.follow.full
+targetEntityType: block_content
+bundle: follow
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_links:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+hidden: {  }

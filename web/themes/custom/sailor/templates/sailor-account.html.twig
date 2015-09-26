@@ -1,0 +1,31 @@
+{% if intro %}
+  <header class="intro dark">
+    <div class="wrap">
+      {{ intro }}
+    </div>
+  </header>
+{% endif %}
+
+<div class="content static">
+  <div class="wrap">
+    <div class="row">
+
+      {% if sidebar_left %}
+        <aside class="one-fourth sidebar sidebar-left">
+            {{ sidebar_left }}
+        </aside>
+      {% endif %}
+
+      <div class="{% if sidebar_left %}three-fourth{% else %}full-width{% endif %}">
+        <article class="tab-content" id="tab1">
+          <div class="box-white">
+            {% if content %}
+              {{ content }}
+            {% endif %}
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</div>

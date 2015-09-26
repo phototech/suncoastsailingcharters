@@ -1,0 +1,8 @@
+uuid: 4c480464-c536-4ab3-bd00-d2676390e750
+langcode: en
+status: true
+dependencies: {  }
+id: fallback
+label: 'Fallback date format'
+locked: true
+pattern: 'D, m/d/Y - H:i'

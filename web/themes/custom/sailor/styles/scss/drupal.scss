@@ -24,10 +24,21 @@ $fa-font-path: "awesome/";
   header.header {
     position: static;
   }
+
+  .main {
+    margin-top: 0;
+  }
 }
 
 ul.toolbar-menu {
   display: block;
+}
+
+/**
+ * Intro
+ */
+.intro {
+  float: none;
 }
 
 /**

@@ -1,0 +1,55 @@
+uuid: 72b88c74-861c-4915-8300-c8dbc0b91d75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.yacht.body
+    - node.type.yacht
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    test:
+      children:
+        - test_tab
+      parent_name: ''
+      weight: '1'
+      label: Test
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: 'test field-group-tabs'
+        id: ''
+    test_tab:
+      children:
+        - body
+      parent_name: test
+      weight: '5'
+      label: 'Test Tab'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        required_fields: 1
+        classes: 'test-tab field-group-tab'
+        id: ''
+      collapsible: true
+      collapsed: true
+id: node.yacht.default
+targetEntityType: node
+bundle: yacht
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

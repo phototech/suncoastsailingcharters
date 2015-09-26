@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0a351f4a546de9fee48d5bd0bfd9bdb9",
+    "hash": "af8f2267eee24c3561c81e3532265620",
     "packages": [
         {
             "name": "behat/mink",
@@ -1103,15 +1103,15 @@
         },
         {
             "name": "drupal/ds",
-            "version": "8.2.0-alpha10",
+            "version": "dev-8.x-2.x",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/ds",
-                "reference": "435b0b12b20907dc60de94362a381ef132ed9759"
+                "reference": "4ba4874178ce7fefb484174d7be6dbcdacd59acf"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/ds-8.x-2.0-alpha10.zip",
+                "url": "http://ftp.drupal.org/files/projects/ds-8.x-2.x-dev.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1134,7 +1134,8 @@
                 }
             },
             "notification-url": "http://packagist.drupal-composer.org/downloads/",
-            "description": "Extend the display options for every entity type."
+            "description": "Extend the display options for every entity type.",
+            "homepage": "https://www.drupal.org/project/ds"
         },
         {
             "name": "drupal/field_group",
@@ -1221,6 +1222,38 @@
                 "php"
             ],
             "time": "2015-07-10 14:21:37"
+        },
+        {
+            "name": "drupal/name",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/name",
+                "reference": "943321a13b89a2d5269dda168724320b7c3a53e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/name-8.x-1.x-dev.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/field": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Defines a persons name field type.",
+            "homepage": "https://www.drupal.org/project/name",
+            "time": "2015-05-22 09:52:19"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -2819,12 +2852,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Console.git",
+                "url": "git@github.com:symfony/Console.git",
                 "reference": "9ff9032151186bd66ecee727d728f1319f52d1d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/9ff9032151186bd66ecee727d728f1319f52d1d8",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/f1f7376766394f409b9b33a57a5675a52f8aad93",
                 "reference": "9ff9032151186bd66ecee727d728f1319f52d1d8",
                 "shasum": ""
             },

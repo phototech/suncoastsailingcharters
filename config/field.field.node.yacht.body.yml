@@ -1,0 +1,22 @@
+uuid: 494400a5-d585-4a3b-ab14-201edad9aa91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.yacht
+  module:
+    - text
+id: node.yacht.body
+field_name: body
+entity_type: node
+bundle: yacht
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
