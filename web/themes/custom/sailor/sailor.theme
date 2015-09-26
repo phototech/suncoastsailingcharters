@@ -6,6 +6,7 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Render\Element;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_theme().
@@ -28,6 +29,29 @@ function sailor_theme() {
  */
 function sailor_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   $suggestions[] = 'form__one_half_modal';
+}
+
+/**
+ * Impelements hook_form_user_pass_alter().
+ *
+ * Add the class to the password email text.
+ */
+function sailor_form_user_pass_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['mail']['#prefix'] = '<p class="full-width">';
+}
+
+/**
+ * Impelements hook_form_alter().
+ *
+ * Add classes to submit button.
+ */
+function sailor_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (!empty($form['actions']['submit'])) {
+    $form['actions']['submit']['#attributes']['class'][] = 'button';
+    $form['actions']['submit']['#attributes']['class'][] = 'gold';
+    $form['actions']['submit']['#attributes']['class'][] = 'medium';
+    $form['actions']['submit']['#attributes']['class'][] = 'full';
+  }
 }
 
 /**
@@ -181,8 +205,16 @@ function sailor_preprocess_form__one_half_modal(array &$variables) {
  * Add the classes to the form.
  */
 function sailor_preprocess_form_element(array &$variables) {
-  dump($variables);
-  $variables['element']['#attributes']['class'][] = 'full-width';
+  $variables['attributes']['class'][] = 'full-width';
+}
+
+/**
+ * Implmeents template_preprocess_container().
+ *
+ * Add the classes to the form.
+ */
+function sailor_preprocess_container(array &$variables) {
+  $variables['attributes']['class'][] = 'full-width';
 }
 
 /**

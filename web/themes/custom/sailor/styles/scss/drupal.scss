@@ -85,3 +85,10 @@ footer.footer a[href*="pinterest.com"] {
   @extend .fa-pinterest-p;
   @extend .fa-fw;
 }
+
+/**
+ * Form
+ */
+.form-item {
+  margin: 0;
+}
