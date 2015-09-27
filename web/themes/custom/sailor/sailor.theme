@@ -47,33 +47,95 @@ function sailor_form_user_pass_alter(&$form, FormStateInterface $form_state, $fo
  * Add help text and links.
  */
 function sailor_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $url = Url::fromRoute('user.pass');
-  if ($url->access()) {
-    $form['forgot'] = [
+  $pass = Url::fromRoute('user.pass');
+  $register = Url::fromRoute('user.register');
+  if ($pass->access() || $register->access()) {
+    $form['links'] = [
       '#type' => 'container',
       '#weight'=> 1000,
-      'link' => [
-        '#type' => 'link',
-        '#title' => t('Forgotten Password?'),
-        '#url' => Url::fromRoute('user.pass'),
+      '#attributes' => [
+        'class' => [
+          'full-width',
+        ],
       ],
     ];
-  }
 
-  $url = Url::fromRoute('user.register');
-  if ($url->access()) {
-    $form['signup'] = [
+    if ($pass->access()) {
+      $form['links']['pass'] = [
+        '@type' => 'container',
+        'link' => [
+          '#type' => 'link',
+          '#title' => t('Forgotten Password?'),
+          '#url' => $pass,
+        ],
+      ];
+    }
+
+    if ($register->access()) {
+      $form['links']['register'] = [
+        '#type' => 'container',
+        'text' => [
+          '#type' => 'html_tag',
+          '#tag' => 'span',
+          '#value' => t('Dont have an account yet?')
+        ],
+        'link' => [
+          '#type' => 'link',
+          '#title' => t('Sign up'),
+          '#url' => $register,
+        ],
+      ];
+    }
+  }
+}
+
+/**
+ * Impelements hook_form_user_pass_reset_alter().
+ *
+ * Ensures that every item has the proper class.
+ */
+function sailor_form_user_pass_reset_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['wrapper'] = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => [
+        'full-width',
+      ],
+    ],
+  ];
+
+  $form['wrapper']['message'] = $form['message'];
+  $form['wrapper']['help'] = $form['help'];
+
+  unset($form['message']);
+  unset($form['help']);
+}
+
+/**
+ * Impelements hook_form_user_register_form_alter().
+ *
+ * Add login links.
+ */
+function sailor_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $login = Url::fromRoute('user.login');
+  if ($login->access()) {
+    $form['login'] = [
       '#type' => 'container',
       '#weight'=> 1000,
+      '#attributes' => [
+        'class' => [
+          'full-width',
+        ],
+      ],
       'text' => [
         '#type' => 'html_tag',
         '#tag' => 'span',
-        '#value' => t('Dont have an account yet?')
+        '#value' => t('Already have an account? ')
       ],
       'link' => [
         '#type' => 'link',
-        '#title' => t('Sign up'),
-        '#url' => Url::fromRoute('user.register'),
+        '#title' => t('Login'),
+        '#url' => $login,
       ],
     ];
   }
@@ -244,11 +306,6 @@ function sailor_preprocess_form__one_half_modal(array &$variables) {
  * Add the classes to the form.
  */
 function sailor_preprocess_form_element(array &$variables) {
-  if (!empty($variables['element']['#parents'])) {
-    if (count($variables['element']['#parents']) > 1) {
-      return;
-    }
-  }
   $variables['attributes']['class'][] = 'full-width';
 }
 
@@ -258,6 +315,9 @@ function sailor_preprocess_form_element(array &$variables) {
  * Add the classes to the form.
  */
 function sailor_preprocess_container(array &$variables) {
+  if ($variables['element']['#type'] != 'actions') {
+    return;
+  }
   $variables['attributes']['class'][] = 'full-width';
 }
 

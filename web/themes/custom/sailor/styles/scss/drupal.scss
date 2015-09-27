@@ -17,6 +17,13 @@ $fa-font-path: "awesome/";
  @import "style";
 
 /**
+ * Drupal Overrides
+ */
+.layout-container {
+  margin: 0;
+}
+
+/**
  * Toolbar.
  */
 .toolbar-fixed,
@@ -89,6 +96,38 @@ footer.footer a[href*="pinterest.com"] {
 /**
  * Form
  */
-.form-item {
+.form-item,
+.form-actions {
   margin: 0;
+}
+
+.file-widget img {
+  margin: 0;
+}
+
+/**
+ * Status Messages
+ */
+.region-highlighted a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.error_message {
+  &.box-yellow {
+    color: #000;
+    a {
+      color: #000;
+    }
+  }
+  &.box {
+    margin-bottom: 0;
+  }
+
+  ul > li {
+    padding: 0;
+    &:before {
+      content: none;
+    }
+  }
 }

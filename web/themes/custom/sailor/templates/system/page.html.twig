@@ -83,16 +83,17 @@
   </header>
   <!-- //Header -->
 
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
-  {{ page.tabs }}
-
 	<main class="main" role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    {{ page.highlighted }}
+
+    {{ page.breadcrumb }}
+
+    {{ page.help }}
+
+    {{ page.tabs }}
+
     {{ page.content }}
   </main>
 
