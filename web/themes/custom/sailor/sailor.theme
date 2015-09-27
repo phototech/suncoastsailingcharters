@@ -7,6 +7,7 @@
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Render\Element;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_theme().
@@ -38,6 +39,44 @@ function sailor_theme_suggestions_form_alter(array &$suggestions, array $variabl
  */
 function sailor_form_user_pass_alter(&$form, FormStateInterface $form_state, $form_id) {
   $form['mail']['#prefix'] = '<p class="full-width">';
+}
+
+/**
+ * Impelements hook_form_user_login_form_alter().
+ *
+ * Add help text and links.
+ */
+function sailor_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $url = Url::fromRoute('user.pass');
+  if ($url->access()) {
+    $form['forgot'] = [
+      '#type' => 'container',
+      '#weight'=> 1000,
+      'link' => [
+        '#type' => 'link',
+        '#title' => t('Forgotten Password?'),
+        '#url' => Url::fromRoute('user.pass'),
+      ],
+    ];
+  }
+
+  $url = Url::fromRoute('user.register');
+  if ($url->access()) {
+    $form['signup'] = [
+      '#type' => 'container',
+      '#weight'=> 1000,
+      'text' => [
+        '#type' => 'html_tag',
+        '#tag' => 'span',
+        '#value' => t('Dont have an account yet?')
+      ],
+      'link' => [
+        '#type' => 'link',
+        '#title' => t('Sign up'),
+        '#url' => Url::fromRoute('user.register'),
+      ],
+    ];
+  }
 }
 
 /**
@@ -205,6 +244,11 @@ function sailor_preprocess_form__one_half_modal(array &$variables) {
  * Add the classes to the form.
  */
 function sailor_preprocess_form_element(array &$variables) {
+  if (!empty($variables['element']['#parents'])) {
+    if (count($variables['element']['#parents']) > 1) {
+      return;
+    }
+  }
   $variables['attributes']['class'][] = 'full-width';
 }
 
