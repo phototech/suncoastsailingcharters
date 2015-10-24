@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "af8f2267eee24c3561c81e3532265620",
-    "content-hash": "ec155286d13d6fbcd9d091c7c77d46e7",
+    "hash": "6e5cf5317496207a544841e7a05d6210",
+    "content-hash": "af236ffd5b40d3333e442c73bf42ce24",
     "packages": [
         {
             "name": "commerceguys/addressing",
