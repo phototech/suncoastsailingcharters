@@ -26,16 +26,7 @@
  *   slogan has been disabled in theme settings.
  *
  * Page content (in order of occurrence in the default page.html.twig):
- * - title_prefix: Additional output populated by modules, intended to be
- *   displayed in front of the main title tag that appears in the template.
- * - title: The page title, for use in the actual content.
- * - title_suffix: Additional output populated by modules, intended to be
- *   displayed after the main title tag that appears in the template.
  * - messages: Status and error messages. Should be displayed prominently.
- * - tabs: Tabs linking to any sub-pages beneath the current page (e.g., the
- *   view and edit tabs when displaying a node).
- * - action_links: Actions local to the page, such as "Add menu" on the menu
- *   administration interface.
  * - node: Fully loaded node, if there is an automatically-loaded node
  *   associated with the page and the node ID is the second argument in the
  *   page's path (e.g. node/12345 and node/12345/revisions, but not
@@ -64,21 +55,8 @@
   <!-- Header -->
   <header class="header" role="banner">
     <div class="wrap">
-
-      {% if logo or site_name %}
-        <a href="{{ front_page }}" title="{% if site_name %}{{ site_name }}{% else %}{{ 'Home'|t }}{% endif %}" class="logo">
-          {% if logo %}
-            <img src="{{ logo }}" alt="{% if site_name %}{{ site_name }}{% else %}{{ 'Home'|t }}{% endif %}"/>
-          {% endif %}
-          {% if site_name %}
-            {{ site_name }}
-          {% endif %}
-        </a>
-      {% endif %}
-
-      {{ page.primary_menu }}
       {{ page.header }}
-
+      {{ page.primary_menu }}
     </div>
   </header>
   <!-- //Header -->

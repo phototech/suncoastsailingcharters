@@ -1,4 +1,4 @@
-uuid: 3422077f-c2ef-4b16-9620-3224b53c7326
+uuid: 31b6524e-a68d-436e-aa12-1854e118f579
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
 id: breadcrumbs
 theme: seven
 region: breadcrumb
-weight: -4
+weight: -3
 provider: null
 plugin: system_breadcrumb_block
 settings:

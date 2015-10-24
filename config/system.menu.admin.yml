@@ -1,8 +1,8 @@
-uuid: cdd5f8ce-378d-463c-ad3e-62dc5c39d5f8
+uuid: 7aa93bfd-4a82-4d9f-9702-2ff93e7c3601
 langcode: en
 status: true
 dependencies: {  }
 id: admin
 label: Administration
-description: 'Contains links to administrative tasks.'
+description: 'Administrative task links'
 locked: true

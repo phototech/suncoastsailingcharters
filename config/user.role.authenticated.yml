@@ -1,4 +1,4 @@
-uuid: 91416ec0-907a-4d89-a141-650fc1f63ab4
+uuid: 042e9fbf-1bce-4ccf-8600-e0e660f10040
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,5 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'use text format plain_text'
   - 'access content'
-  - 'use text format filtered_html'
   - 'access user profiles'

@@ -1,4 +1,4 @@
-uuid: 40952764-ee26-49ee-9200-fba88b5ff1cd
+uuid: 32c6db2e-6908-4b85-9000-b75f5a23cbfb
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,5 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'use text format plain_text'
   - 'access content'
-  - 'use text format filtered_html'
   - 'access user profiles'

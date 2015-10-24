@@ -182,25 +182,27 @@ function sailor_preprocess_block(array &$variables) {
   $block = $storage->load($variables['elements']['#id']);
 
   // Only modify blocks that use theme menu.
-  if (strrpos($variables['content']['#theme'], 'menu') === 0) {
+  if (!empty($variables['content']['#theme'])) {
+    if (strrpos($variables['content']['#theme'], 'menu') === 0) {
 
-    // Add the `main-nav` and 'jetmenu' class(es) when block is placed in the
-    // primary menu region.
-    if ($block->getRegion() == 'primary_menu') {
-      $variables['attributes']['class'][] = 'main-nav';
+      // Add the `main-nav` and 'jetmenu' class(es) when block is placed in the
+      // primary menu region.
+      if ($block->getRegion() == 'primary_menu') {
+        $variables['attributes']['class'][] = 'main-nav';
 
-      $variables['content']['#attributes']['class'][] = 'jetmenu';
-      $variables['content']['#attributes']['id'] = Html::getUniqueId('jetmenu');
+        $variables['content']['#attributes']['class'][] = 'jetmenu';
+        $variables['content']['#attributes']['id'] = Html::getUniqueId('jetmenu');
+      }
+
+      // Alter the theme hook suggestions.
+      $region = $block->getRegion();
+      if (in_array($region, sailor_footer_regions())) {
+        $region = 'footer';
+      }
+
+      list($plugin_id, $menu_id) = explode(':', $variables['elements']['#configuration']['id']);
+      $variables['content']['#theme'] = 'menu__' . $region . '__' . $menu_id;
     }
-
-    // Alter the theme hook suggestions.
-    $region = $block->getRegion();
-    if (in_array($region, sailor_footer_regions())) {
-      $region = 'footer';
-    }
-
-    list($plugin_id, $menu_id) = explode(':', $variables['elements']['#configuration']['id']);
-    $variables['content']['#theme'] = 'menu__' . $region . '__' . $menu_id;
   }
 
 }
@@ -247,7 +249,7 @@ function sailor_preprocess_sailor_account(array &$variables) {
           $item = &$variables['content'][$field_name][$delta];
 
           // Add the `profile-pic` class to the images in the intro.
-          if ($item['#theme'] == 'image_formatter') {
+          if (!empty($item['#theme']) && $item['#theme'] == 'image_formatter') {
             $item['#item_attributes']['class'][] = 'profile-pic';
           }
         }

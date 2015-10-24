@@ -1,14 +1,14 @@
 name: Sailor
-type: theme
 description: 'Yacht Charter Booking Theme'
+type: theme
 package: Themeenergy
 core: 8.x
 libraries:
   - sailor/global
   - sailor/fonts
 regions:
-  primary_menu: 'Primary Menu'
   header: Header
+  primary_menu: 'Primary Menu'
   breadcrumb: Breadcrumb
   highlighted: Highlighted
   help: Help

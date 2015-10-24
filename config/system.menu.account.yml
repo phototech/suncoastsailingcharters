@@ -1,8 +1,8 @@
-uuid: 390380c8-0cd3-462f-bf08-8b70dc221619
+uuid: 07069b1b-bd69-4394-be00-a58dc047cbbe
 langcode: en
 status: true
 dependencies: {  }
 id: account
 label: 'User account menu'
-description: 'Links related to the user account.'
+description: 'Links related to the active user account'
 locked: true

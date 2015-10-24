@@ -1,8 +1,8 @@
-uuid: 266d0e1b-f88f-4ff0-a941-6538ad1ff15f
+uuid: 159969d6-9edb-45ba-a800-b315ca5247a2
 langcode: en
 status: true
 dependencies: {  }
 id: tools
 label: Tools
-description: 'Contains links for site visitors. Some modules add their links here.'
+description: 'User tool links, often added by modules'
 locked: true

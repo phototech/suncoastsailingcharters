@@ -1,0 +1,23 @@
+uuid: 16a1d282-6ac3-42d7-8100-0f870847f9cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sailor
+id: sitebranding
+theme: sailor
+region: header
+weight: -1
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

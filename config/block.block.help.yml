@@ -1,4 +1,4 @@
-uuid: 84bc8282-755c-4946-a342-661d0f06045e
+uuid: dc25b028-2eba-4314-8400-f93b04f4ebd6
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
 id: help
 theme: seven
 region: help
-weight: -5
+weight: -3
 provider: null
 plugin: help_block
 settings:
