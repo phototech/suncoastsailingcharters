@@ -1,4 +1,4 @@
-uuid: b03bf56b-6044-41b9-8324-36adea751438
+uuid: 7fe23c87-9791-40d0-9e07-7d2cac9732e6
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
   module:
     - system
   theme:
-    - sailor
-id: needhelp
-theme: sailor
-region: footer_third
+    - stable
+id: stable_needhelp
+theme: stable
+region: sidebar_first
 weight: -4
 provider: null
 plugin: 'system_menu_block:need-help'

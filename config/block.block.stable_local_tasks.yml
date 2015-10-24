@@ -1,11 +1,11 @@
-uuid: 167c6fca-613b-4d2e-b205-05de5b1a649b
+uuid: 1790dddc-9a01-4d74-8800-e9cdfc48f0ae
 langcode: en
 status: true
 dependencies:
   theme:
-    - sailor
-id: sailor_local_tasks
-theme: sailor
+    - stable
+id: stable_local_tasks
+theme: stable
 region: content
 weight: -3
 provider: null

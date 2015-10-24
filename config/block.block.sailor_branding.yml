@@ -1,0 +1,14 @@
+id: sailor_branding
+region: content
+weight: -50
+plugin: system_branding_block
+settings:
+  label: 'Site branding'
+  label_display: '0'
+visibility: {  }
+langcode: en
+uuid: 9945ae64-9c7c-4c28-b300-a02ec1d4ab34
+theme: sailor
+dependencies:
+  theme:
+    - sailor

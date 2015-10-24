@@ -15,8 +15,6 @@ settings:
   label: 'Primary tabs'
   provider: core
   label_display: '0'
-  cache:
-    max_age: 0
   primary: true
   secondary: false
 visibility: {  }

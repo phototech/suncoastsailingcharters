@@ -1,13 +1,13 @@
-uuid: 138b7741-9325-449b-9c1e-30493a9c1a39
+uuid: 30cb12f1-d93f-4e2b-a40f-1575e154234e
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - seven
-id: seven_messages
-theme: seven
+    - stable
+id: stable_messages
+theme: stable
 region: highlighted
 weight: 0
 provider: null

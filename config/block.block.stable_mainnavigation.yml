@@ -1,4 +1,4 @@
-uuid: 86f2c0bd-f0e0-47b6-b05f-953392d38d04
+uuid: bc05a687-71a1-428c-a500-fc17fbd064d6
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
   module:
     - system
   theme:
-    - sailor
-id: mainnavigation
-theme: sailor
+    - stable
+id: stable_mainnavigation
+theme: stable
 region: primary_menu
 weight: -3
 provider: null

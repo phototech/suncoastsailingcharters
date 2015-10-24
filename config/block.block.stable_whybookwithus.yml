@@ -1,4 +1,4 @@
-uuid: 31502d9d-1e19-4f98-b200-bf9d01094a08
+uuid: 4abb2388-d92e-4902-b601-1faf29d3b7f2
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
   module:
     - system
   theme:
-    - sailor
-id: whybookwithus
-theme: sailor
-region: footer_second
+    - stable
+id: stable_whybookwithus
+theme: stable
+region: sidebar_first
 weight: -3
 provider: null
 plugin: 'system_menu_block:why-book'

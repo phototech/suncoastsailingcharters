@@ -1,4 +1,4 @@
-uuid: dd35003e-591d-4ee6-8c4c-76bf95fefd62
+uuid: cf7e454b-788f-4f18-aa00-bd7f8de8bc0b
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
   module:
     - block_content
   theme:
-    - sailor
-id: copyright
-theme: sailor
-region: footer_copy
+    - stable
+id: stable_copyright
+theme: stable
+region: sidebar_first
 weight: -5
 provider: null
 plugin: 'block_content:1d976402-21aa-48d8-a701-1c6e68a5e742'

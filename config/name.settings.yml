@@ -6,4 +6,4 @@ inline_styles_rtl: 'float: right; margin-left: 1em;'
 sep1: ' '
 sep2: ', '
 sep3: ''
-user_preferred: ~
+user_preferred: null
