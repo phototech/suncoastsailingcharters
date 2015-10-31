@@ -62,7 +62,7 @@ function sailor_form_user_login_form_alter(&$form, FormStateInterface $form_stat
 
     if ($pass->access()) {
       $form['links']['pass'] = [
-        '@type' => 'container',
+        '#type' => 'container',
         'link' => [
           '#type' => 'link',
           '#title' => t('Forgotten Password?'),
