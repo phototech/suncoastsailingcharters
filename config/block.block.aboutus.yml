@@ -1,0 +1,25 @@
+uuid: c9769def-3eed-42ae-8200-ca77aa986d0e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:contact:1b9dcd66-79e7-441f-8561-978ce5597269'
+  module:
+    - block_content
+  theme:
+    - sailor
+id: aboutus
+theme: sailor
+region: footer_first
+weight: -2
+provider: null
+plugin: 'block_content:1b9dcd66-79e7-441f-8561-978ce5597269'
+settings:
+  id: 'block_content:1b9dcd66-79e7-441f-8561-978ce5597269'
+  label: 'About us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

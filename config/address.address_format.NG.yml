@@ -1,0 +1,19 @@
+uuid: 57d80ac7-b426-45bc-b500-fe5f345c0f57
+langcode: en
+status: true
+dependencies: {  }
+countryCode: NG
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%locality %postalCode\n%administrativeArea"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+uppercaseFields:
+  - locality
+  - administrativeArea
+administrativeAreaType: state
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: '(?:\d{6})?'
+postalCodePrefix: null

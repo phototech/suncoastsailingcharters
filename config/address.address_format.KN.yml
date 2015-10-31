@@ -1,0 +1,19 @@
+uuid: c334487f-cacb-46f8-a920-32ad6766fc8c
+langcode: en
+status: true
+dependencies: {  }
+countryCode: KN
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%locality, %administrativeArea"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+  - administrativeArea
+uppercaseFields:
+  - locality
+administrativeAreaType: island
+localityType: city
+dependentLocalityType: null
+postalCodeType: null
+postalCodePattern: null
+postalCodePrefix: null

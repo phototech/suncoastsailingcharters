@@ -1,0 +1,20 @@
+uuid: 52309885-b49c-4b8f-9e39-57c2c1f721ff
+langcode: en
+status: true
+dependencies: {  }
+countryCode: TW
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%locality, %administrativeArea %postalCode"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+  - administrativeArea
+  - postalCode
+uppercaseFields:
+  - locality
+administrativeAreaType: county
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: '\d{3}(\d{2})?'
+postalCodePrefix: null
