@@ -2,8 +2,11 @@ uuid: f79eca23-79cc-4f55-8b00-c59e3fcafc16
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.user.user.field_picture
   module:
     - ds
+    - image
     - user
 third_party_settings:
   ds:
@@ -24,22 +27,42 @@ third_party_settings:
         link_custom: ''
     regions:
       intro:
+        - field_picture
         - username
+      sidebar_left:
+        - 'dynamic_block_field:user-primary_tabs'
       content:
         - member_for
     fields:
-      username:
-        plugin_id: username
-        weight: 0
+      'dynamic_block_field:user-primary_tabs':
+        plugin_id: 'dynamic_block_field:user-primary_tabs'
+        weight: 2
         label: hidden
         formatter: default
+      username:
+        plugin_id: username
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          wrapper: h1
+          class: ''
 id: user.user.default
 targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_picture:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   member_for:
-    weight: 1
+    weight: 3
     settings: {  }
     third_party_settings: {  }
 hidden: {  }

@@ -2,7 +2,10 @@ uuid: e3b4ba3b-a2f1-4245-9100-cc222be1e0ec
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.user.user.field_picture
   module:
+    - image
     - user
 id: user.user.default
 targetEntityType: user
@@ -12,6 +15,13 @@ content:
   account:
     weight: 0
     settings: {  }
+    third_party_settings: {  }
+  field_picture:
+    type: image_image
+    weight: 1
+    settings:
+      progress_indicator: bar
+      preview_image_style: thumbnail
     third_party_settings: {  }
 hidden:
   language: true

@@ -200,8 +200,10 @@ function sailor_preprocess_block(array &$variables) {
         $region = 'footer';
       }
 
-      list($plugin_id, $menu_id) = explode(':', $variables['elements']['#configuration']['id']);
-      $variables['content']['#theme'] = 'menu__' . $region . '__' . $menu_id;
+      if (strrpos($variables['elements']['#configuration']['id'], ':') !== FALSE) {
+        list($plugin_id, $menu_id) = explode(':', $variables['elements']['#configuration']['id']);
+        $variables['content']['#theme'] = 'menu__' . $region . '__' . $menu_id;
+      }
     }
   }
 

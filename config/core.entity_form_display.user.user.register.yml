@@ -1,9 +1,10 @@
 uuid: 5cffc000-21be-4394-b453-83f3195e89d1
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.field_picture
   module:
     - user
 id: user.user.register
@@ -16,5 +17,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_picture: true
   language: true
   timezone: true
