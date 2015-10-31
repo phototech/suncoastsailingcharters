@@ -1,0 +1,18 @@
+uuid: e3b4ba3b-a2f1-4245-9100-cc222be1e0ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  language: true
+  timezone: true
