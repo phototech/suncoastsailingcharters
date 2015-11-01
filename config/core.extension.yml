@@ -13,7 +13,6 @@ module:
   image: 0
   layout_plugin: 0
   link: 0
-  menu_fields: 0
   menu_link_content: 0
   menu_ui: 0
   node: 0

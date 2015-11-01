@@ -1,5 +1,0 @@
-<?php
-
-function menu_fields_entity_type_alter(array &$entity_types) {
-  // $entity_types['menu_link_content']->set('fieldable', TRUE);
-}
