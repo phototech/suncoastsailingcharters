@@ -20,6 +20,9 @@ function sailor_theme() {
     'sailor_account' => [
       'render element' => 'content',
     ],
+    'sailor_error' => [
+      'render element' => 'content',
+    ],
   ];
 }
 
@@ -204,6 +207,9 @@ function sailor_preprocess_block(array &$variables) {
         list($plugin_id, $menu_id) = explode(':', $variables['elements']['#configuration']['id']);
         $variables['content']['#theme'] = 'menu__' . $region . '__' . $menu_id;
       }
+      else {
+        $variables['content']['#theme'] = $variables['content']['#theme'] . '__' . $region;
+      }
     }
   }
 
@@ -277,6 +283,18 @@ function sailor_preprocess_sailor_account(array &$variables) {
 }
 
 /**
+ * Implments template_preprocess_error().
+ *
+ * Add the error image to the tempalte.
+ */
+function sailor_preprocess_sailor_error(array &$variables) {
+  $variables['image'] = [
+    '#theme' => 'image',
+    '#uri' => drupal_get_path('theme', 'sailor') . '/images/ico3-gold.png',
+  ];
+}
+
+/**
  * Implmenets template_preprocess_menu_local_tasks__sidebar().
  *
  * Add the 'current' class to the current menu item.
@@ -287,11 +305,7 @@ function sailor_preprocess_menu_local_tasks__sidebar(array &$variables) {
       continue;
     }
 
-    foreach ($variables[$tasks] as &$task) {
-      if ($task['#active'] == TRUE) {
-        $task['#attributes']['class'][] = 'current';
-      }
-    }
+    $variables[$tasks] = array_map('sailor_task_current_class', $variables[$tasks]);
   }
 }
 
@@ -339,6 +353,24 @@ function sailor_footer_regions() {
     'footer_fourth',
     'footer_copy'
   ];
+}
+
+/**
+ * Add the 'current' class to every active link.
+ *
+ * @param array $task
+ *   A task array.
+ *
+ * @return array
+ *   A task array.
+ *
+ * @see array_map
+ */
+function sailor_task_current_class(array $task) {
+  if (!empty($task['#active']) && $task['#active'] == TRUE) {
+    $task['#attributes']['class'][] = 'current';
+  }
+  return $task;
 }
 
 /**

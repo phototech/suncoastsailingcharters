@@ -1,23 +1,32 @@
 sailor_follow_block:
-  label: Sailor: Follow Block
-  category: Display Suite
+  label: 'Sailor: Follow Block'
+  category: 'Display Suite'
   type: partial
   theme: sailor_follow_block
   regions:
     content:
-      label: Content
+      label: 'Content'
     links:
-      label: Social Links
+      label: 'Social Links'
 
 sailor_account:
-  label: Sailor: Account
-  category: Display Suite
+  label: 'Sailor: Account'
+  category: 'Display Suite'
   type: partial
   theme: sailor_account
   regions:
     intro:
-      label: Intro
+      label: 'Intro'
     sidebar_left:
-      label: Sidebar Left
+      label: 'Sidebar Left'
     content:
-      label: Content
+      label: 'Content'
+
+sailor_error:
+  label: Sailor: Error
+  category: Display Suite
+  type: partial
+  theme: sailor_error
+  regions:
+    content:
+      label: 'Content'

@@ -1,0 +1,10 @@
+{
+  "name": "sailvenice",
+  "description": "Sail Venice Website",
+  "dependencies": {
+    "sailor-html": "git@bitbucket.org:phototech/sailor-html.git#2015.05.01"
+  },
+  "license": "proprietary",
+  "homepage": "http://sailvenice.com",
+  "private": true
+}
