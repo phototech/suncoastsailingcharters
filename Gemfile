@@ -1,2 +1,3 @@
 source 'https://rubygems.org'
-gem 'font-awesome-sass'
+gem 'compass'
+gem 'sass-css-importer'

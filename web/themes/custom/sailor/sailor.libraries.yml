@@ -1,12 +1,9 @@
 global:
   css:
     theme:
-      /vendor/sailor-html/HTML/css/style.css: {}
-      /vendor/sailor-html/HTML/css/fonts.css: {}
       styles/compiled/drupal.css: {}
   dependencies:
     - sailor/animate
-    - sailor/font-awesome
     - sailor/jquery
     - sailor/roboto-slab
 
@@ -15,21 +12,16 @@ animate:
     theme:
       /vendor/animate.css/animate.css: {}
 
-font-awesome:
-  css:
-    theme:
-      /vendor/font-awesome/css/font-awesome.css: {}
-
 jquery:
   remote: https://jquery.com
-  license: 'MIT'
+  license: MIT
   js:
     /vendor/jquery/dist/jquery.min.js:
       minified: true
 
 roboto-slab:
   remote: https://fonts.googleapis.com
-  license: 'OFL-1.1'
+  license: OFL-1.1
   css:
     base:
       https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Raleway:400,500,600,700&subset=latin,greek,cyrillic,vietnamese:

@@ -1,3 +1,6 @@
 {
-  "directory": "web/vendor"
+  "directory": "web/vendor",
+  "scripts": {
+    "postinstall": "./bin/bower/postinstall"
+  }
 }

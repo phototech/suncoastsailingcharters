@@ -2,7 +2,7 @@
   "name": "sailvenice",
   "description": "Sail Venice Website",
   "dependencies": {
-    "sailor-html": "git@bitbucket.org:phototech/sailor-html.git#2015.05.01"
+    "sailor-html": "git@bitbucket.org:phototech/sailor-html.git#2015.5.1.1"
   },
   "license": "proprietary",
   "homepage": "http://sailvenice.com",
