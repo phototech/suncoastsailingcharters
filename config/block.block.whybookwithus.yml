@@ -1,0 +1,24 @@
+uuid: a40d429d-d867-442d-aa00-badd0a0969d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.why-book
+  module:
+    - system
+  theme:
+    - sailor
+id: whybookwithus
+theme: sailor
+region: footer_second
+weight: -2
+provider: null
+plugin: 'system_menu_block:why-book'
+settings:
+  id: 'system_menu_block:why-book'
+  label: 'Why book with us?'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

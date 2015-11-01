@@ -1,0 +1,25 @@
+uuid: c14fee9c-f990-4e11-a100-a781308f2616
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:custom_html:07d4cb7a-9472-417e-a600-f50200f1d575'
+  module:
+    - block_content
+  theme:
+    - sailor
+id: copyright
+theme: sailor
+region: footer_copy
+weight: -4
+provider: null
+plugin: 'block_content:07d4cb7a-9472-417e-a600-f50200f1d575'
+settings:
+  id: 'block_content:07d4cb7a-9472-417e-a600-f50200f1d575'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

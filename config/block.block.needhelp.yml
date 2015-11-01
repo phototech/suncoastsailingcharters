@@ -1,0 +1,24 @@
+uuid: aec0be44-7488-4de9-bc5d-93ba21c071a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.need-help
+  module:
+    - system
+  theme:
+    - sailor
+id: needhelp
+theme: sailor
+region: footer_third
+weight: -3
+provider: null
+plugin: 'system_menu_block:need-help'
+settings:
+  id: 'system_menu_block:need-help'
+  label: 'Need help?'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

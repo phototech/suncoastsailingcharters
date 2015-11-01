@@ -1,0 +1,56 @@
+uuid: 03487645-7bfe-4a63-a400-dff2d24282cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social
+    - field.field.block_content.social.body
+    - field.field.block_content.social.field_social
+  module:
+    - ds
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_follow_block
+      path: ''
+      library: ''
+      disable_css: false
+      settings:
+        classes: {  }
+        wrappers:
+          content: div
+          links: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      content:
+        - body
+      links:
+        - field_social
+id: block_content.social.default
+targetEntityType: block_content
+bundle: social
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_social:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+hidden: {  }

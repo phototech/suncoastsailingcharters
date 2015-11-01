@@ -1,0 +1,8 @@
+uuid: 573a8e02-d75f-4149-8a00-f7b13215157b
+langcode: en
+status: true
+dependencies: {  }
+id: social
+label: Social
+revision: 1
+description: ''

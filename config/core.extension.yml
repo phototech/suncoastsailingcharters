@@ -3,8 +3,10 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  contextual: 0
   dblog: 0
   dynamic_page_cache: 0
+  editor: 0
   field: 0
   field_ui: 0
   file: 0
