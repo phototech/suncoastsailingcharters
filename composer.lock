@@ -300,29 +300,29 @@
         },
         {
             "name": "composer/semver",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "d0e1ccc6d44ab318b758d709e19176037da6b1ba"
+                "reference": "7486d83e924729a2cb7d90a7337da1b291adb706"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/d0e1ccc6d44ab318b758d709e19176037da6b1ba",
-                "reference": "d0e1ccc6d44ab318b758d709e19176037da6b1ba",
+                "url": "https://api.github.com/repos/composer/semver/zipball/7486d83e924729a2cb7d90a7337da1b291adb706",
+                "reference": "7486d83e924729a2cb7d90a7337da1b291adb706",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^5.3.2 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.5",
-                "phpunit/phpunit-mock-objects": "~2.3"
+                "phpunit/phpunit": "^4.5 || ^5.0.5",
+                "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.1-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -336,10 +336,6 @@
             ],
             "authors": [
                 {
-                    "name": "Rob Bast",
-                    "email": "rob.bast@gmail.com"
-                },
-                {
                     "name": "Nils Adermann",
                     "email": "naderman@naderman.de",
                     "homepage": "http://www.naderman.de"
@@ -348,6 +344,11 @@
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
                     "homepage": "http://seld.be"
+                },
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com",
+                    "homepage": "http://robbast.nl"
                 }
             ],
             "description": "Semver library that offers utilities, version constraint parsing and validation.",
@@ -357,7 +358,7 @@
                 "validation",
                 "versioning"
             ],
-            "time": "2015-09-21 09:42:36"
+            "time": "2015-11-03 20:15:49"
         },
         {
             "name": "doctrine/annotations",
@@ -429,16 +430,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.5.0",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "eb8a73619af4f1c8711e2ce482f5de3643258a1f"
+                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/eb8a73619af4f1c8711e2ce482f5de3643258a1f",
-                "reference": "eb8a73619af4f1c8711e2ce482f5de3643258a1f",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
+                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
                 "shasum": ""
             },
             "require": {
@@ -495,7 +496,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-10-28 11:27:45"
+            "time": "2015-11-02 18:35:48"
         },
         {
             "name": "doctrine/collections",
@@ -638,16 +639,16 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "v1.0.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604"
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/0bcb2e79d8571787f18b7eb036ed3d004908e604",
-                "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
                 "shasum": ""
             },
             "require": {
@@ -659,7 +660,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -701,7 +702,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2014-12-20 21:24:13"
+            "time": "2015-11-06 14:35:42"
         },
         {
             "name": "doctrine/lexer",
@@ -794,16 +795,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.0.0-rc2",
+            "version": "8.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "e62f2ffac550c315388548e08e9e7f75daff1b27"
+                "reference": "1c76457cad8c3ac6265575eba181452f72778dd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/e62f2ffac550c315388548e08e9e7f75daff1b27",
-                "reference": "e62f2ffac550c315388548e08e9e7f75daff1b27",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/1c76457cad8c3ac6265575eba181452f72778dd6",
+                "reference": "1c76457cad8c3ac6265575eba181452f72778dd6",
                 "shasum": ""
             },
             "require": {
@@ -884,6 +885,7 @@
                 "drupal/help": "self.version",
                 "drupal/history": "self.version",
                 "drupal/image": "self.version",
+                "drupal/inline_form_errors": "self.version",
                 "drupal/language": "self.version",
                 "drupal/link": "self.version",
                 "drupal/locale": "self.version",
@@ -924,6 +926,8 @@
             "require-dev": {
                 "behat/mink": "~1.6",
                 "behat/mink-goutte-driver": "~1.2",
+                "jcalderonzumba/gastonjs": "^1.1@dev",
+                "jcalderonzumba/mink-phantomjs-driver": "dev-master#10d7c48c9a4129463052321b52450d98983c4332",
                 "mikey179/vfsstream": "~1.2",
                 "phpunit/phpunit": "~4.8",
                 "symfony/css-selector": "2.7.*"
@@ -952,7 +956,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2015-10-21 22:51:01"
+            "time": "2015-11-04 10:15:22"
         },
         {
             "name": "drupal/ds",
@@ -996,7 +1000,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/field_group",
-                "reference": "757c81f7f84b97d71ba5a6ae513dec985831e5c4"
+                "reference": "5cd2e0a41037dc18ae4755e4f02fba773a7ecc49"
             },
             "dist": {
                 "type": "zip",
@@ -1020,11 +1024,11 @@
             ],
             "description": "Provides the ability to group your fields on both form and display.",
             "homepage": "https://www.drupal.org/project/field_group",
-            "time": "2015-10-25 09:08:25"
+            "time": "2015-10-31 16:40:52"
         },
         {
             "name": "drupal/layout_plugin",
-            "version": "8.1.0-alpha17",
+            "version": "8.1.0-alpha18",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/layout_plugin",
@@ -1032,7 +1036,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha17.zip",
+                "url": "http://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha18.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1082,7 +1086,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/name",
-                "reference": "37f5996881d53599a1fac99ed6d608faed80e4ad"
+                "reference": "c161b2b66ee75e364c15eb090313db60cebd8dd3"
             },
             "dist": {
                 "type": "zip",
@@ -1106,7 +1110,7 @@
             ],
             "description": "Defines a persons name field type.",
             "homepage": "https://www.drupal.org/project/name",
-            "time": "2015-09-29 22:35:52"
+            "time": "2015-11-05 10:48:23"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -1338,16 +1342,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "4ef919b0cf3b1989523138b60163bbcb7ba1ff7e"
+                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/4ef919b0cf3b1989523138b60163bbcb7ba1ff7e",
-                "reference": "4ef919b0cf3b1989523138b60163bbcb7ba1ff7e",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/4d0bdbe1206df7440219ce14c972aa57cc5e4982",
+                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982",
                 "shasum": ""
             },
             "require": {
@@ -1392,7 +1396,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2015-08-15 19:32:36"
+            "time": "2015-11-03 01:34:55"
         },
         {
             "name": "masterminds/html5",
@@ -2466,16 +2470,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "5868cd822fd6cf626d5f805439575f9c323cee2a"
+                "reference": "d9b6333ae8dd2c8e3fd256e127548def0bc614c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/5868cd822fd6cf626d5f805439575f9c323cee2a",
-                "reference": "5868cd822fd6cf626d5f805439575f9c323cee2a",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d9b6333ae8dd2c8e3fd256e127548def0bc614c6",
+                "reference": "d9b6333ae8dd2c8e3fd256e127548def0bc614c6",
                 "shasum": ""
             },
             "require": {
@@ -2523,7 +2527,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-10-29 23:29:01"
+            "time": "2015-11-05 12:49:06"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -2829,16 +2833,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "8.0.0-rc2",
+            "version": "8.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "5cb73ea2f51cbfb60ddb2e37b94e4260e8c7d1e7"
+                "reference": "620aa70d055cb8dbe2a3f8aebf8f53fa69832bf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/5cb73ea2f51cbfb60ddb2e37b94e4260e8c7d1e7",
-                "reference": "5cb73ea2f51cbfb60ddb2e37b94e4260e8c7d1e7",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/620aa70d055cb8dbe2a3f8aebf8f53fa69832bf3",
+                "reference": "620aa70d055cb8dbe2a3f8aebf8f53fa69832bf3",
                 "shasum": ""
             },
             "require": {
@@ -2846,11 +2850,11 @@
                 "php": ">=5.4.5",
                 "psy/psysh": "~0.5",
                 "symfony/var-dumper": "^2.6.3",
-                "symfony/yaml": "~2.2"
+                "symfony/yaml": "2.7.*"
             },
             "require-dev": {
                 "phpunit/phpunit": ">=3.5",
-                "symfony/process": "2.4.5"
+                "symfony/process": "2.7.*"
             },
             "suggest": {
                 "drush/config-extra": "Provides configuration workflow commands, such as config-merge.",
@@ -2914,7 +2918,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2015-10-22 19:25:14"
+            "time": "2015-11-04 21:26:14"
         },
         {
             "name": "jakub-onderka/php-console-color",
