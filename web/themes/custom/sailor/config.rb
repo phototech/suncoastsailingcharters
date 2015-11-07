@@ -1,11 +1,13 @@
 # Require any additional compass plugins here.
 require 'compass/import-once/activate'
 require 'sass-css-importer'
+add_import_path Sass::CssImporter::Importer.new('vendor/sailor-html/HTML/css')
+add_import_path 'vendor/font-awesome/scss'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "styles/compiled"
-sass_dir = "styles/scss"
+css_dir = "compiled/css"
+sass_dir = "styles"
 images_dir = "images"
 javascripts_dir = "js"
 
@@ -13,7 +15,7 @@ javascripts_dir = "js"
 # output_style = :expanded or :nested or :compact or :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
-relative_assets = true
+# relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 # line_comments = false

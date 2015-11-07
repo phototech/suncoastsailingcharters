@@ -1,23 +1,15 @@
 global:
   css:
     theme:
-      styles/compiled/drupal.css: {}
+      compiled/css/drupal.css: {}
   dependencies:
     - sailor/animate
-    - sailor/jquery
     - sailor/roboto-slab
 
 animate:
   css:
     theme:
       /vendor/animate.css/animate.css: {}
-
-jquery:
-  remote: https://jquery.com
-  license: MIT
-  js:
-    /vendor/jquery/dist/jquery.min.js:
-      minified: true
 
 roboto-slab:
   remote: https://fonts.googleapis.com
