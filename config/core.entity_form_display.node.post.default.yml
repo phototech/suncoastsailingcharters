@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.post.body
+    - field.field.node.post.field_comments
     - field.field.node.post.field_image
     - node.type.post
   module:
+    - comment
     - image
+    - path
     - text
 id: node.post.default
 targetEntityType: node
@@ -27,13 +30,23 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
+  field_comments:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
   field_image:
-    weight: 1
+    weight: 0
     settings:
       preview_image_style: thumbnail
       progress_indicator: bar
     third_party_settings: {  }
     type: image_image
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
@@ -42,7 +55,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''

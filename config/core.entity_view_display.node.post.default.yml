@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.post.body
+    - field.field.node.post.field_comments
     - field.field.node.post.field_image
     - node.type.post
   module:
+    - comment
     - image
     - text
     - user
@@ -21,6 +23,13 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+  field_comments:
+    weight: 3
+    label: above
+    settings:
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
   field_image:
     weight: 0
     label: hidden
