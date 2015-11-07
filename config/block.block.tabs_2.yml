@@ -1,0 +1,29 @@
+uuid: 063547d7-9a7b-480c-a641-65df2c3d64e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - sailor
+id: tabs_2
+theme: sailor
+region: tabs
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      error: error
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -3,8 +3,8 @@ name: 'Sail Venice'
 mail: admin@sailvenice.com
 slogan: ''
 page:
-  403: ''
-  404: ''
+  403: /node/2
+  404: /node/1
   front: /user/login
 admin_compact_mode: false
 weight_select_max: 100

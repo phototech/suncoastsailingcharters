@@ -340,6 +340,71 @@ function sailor_preprocess_container(array &$variables) {
 }
 
 /**
+ * Implmements template_preprocess_menu_local_tasks__tabs().
+ *
+ * Count number of tabs and add class.
+ */
+function sailor_preprocess_menu_local_tasks__tabs(&$variables) {
+  $variables['attributes']['role'] = 'navigation';
+  $variables['attributes']['class'][] = 'tabs';
+  $variables['attributes']['class'][] = sailor_number_converter(count($variables['primary']));
+
+  foreach ($variables['primary'] as &$link) {
+    if (!$link['#active']) {
+      continue;
+    }
+
+    $link['#attributes']['class'][] = 'current';
+  }
+}
+
+/**
+ * Implmements template_preprocess_region().
+ *
+ * Add the region name as a class.
+ */
+function sailor_preprocess_region(&$variables) {
+  $variables['attributes']['class'][] = 'region-' . $variables['region'];
+}
+
+/**
+ * Converts a number to a string.
+ *
+ * @param int $number
+ *   Number to be converted.
+ *
+ * @return string
+ *   Number in string format.
+ */
+function sailor_number_converter($number) {
+  $strings = sailor_number_strings();
+
+  return isset($strings[$number]) ? $strings[$number] : '';
+}
+
+/**
+ * Number strings.
+ *
+ * @return array
+ *   An array of number strings.
+ */
+function sailor_number_strings() {
+  return [
+    'zero',
+    'one',
+    'two',
+    'three',
+    'four',
+    'five',
+    'six',
+    'seven',
+    'eight',
+    'nine',
+    'ten',
+  ];
+}
+
+/**
  * Returns the Sailor Footer Regions
  *
  * @return array
