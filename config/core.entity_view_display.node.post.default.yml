@@ -9,9 +9,74 @@ dependencies:
     - node.type.post
   module:
     - comment
+    - ds
     - image
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_blog_single
+      path: ''
+      library: ''
+      disable_css: false
+      settings:
+        classes: {  }
+        wrappers:
+          image: div
+          title: div
+          meta: div
+          content: div
+          author: div
+          comments: div
+          sidebar_right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      image:
+        - field_image
+      title:
+        - node_title
+      meta:
+        - node_author
+        - node_post_date
+        - node_links
+      content:
+        - body
+      author:
+        - user
+      comments:
+        - field_comments
+    fields:
+      node_author:
+        plugin_id: node_author
+        weight: 2
+        label: hidden
+        formatter: author
+      node_links:
+        plugin_id: node_links
+        weight: 4
+        label: hidden
+        formatter: default
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 3
+        label: hidden
+        formatter: ds_post_date_medium
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+      user:
+        plugin_id: user
+        weight: 6
+        label: hidden
+        formatter: default
+        settings:
+          entity_view_mode: post
 id: node.post.default
 targetEntityType: node
 bundle: post
@@ -20,11 +85,11 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 5
     settings: {  }
     third_party_settings: {  }
   field_comments:
-    weight: 3
+    weight: 7
     label: above
     settings:
       pager_id: 0
@@ -34,12 +99,9 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: post
       image_link: ''
     third_party_settings: {  }
     type: image
-  links:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  links: true

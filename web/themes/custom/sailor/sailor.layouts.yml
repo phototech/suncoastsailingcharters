@@ -1,5 +1,5 @@
 sailor_follow_block:
-  label: 'Sailor: Follow Block'
+  label: 'Follow Block'
   category: 'Display Suite'
   type: partial
   theme: sailor_follow_block
@@ -10,7 +10,7 @@ sailor_follow_block:
       label: 'Social Links'
 
 sailor_account:
-  label: 'Sailor: Account'
+  label: 'Account'
   category: 'Display Suite'
   type: partial
   theme: sailor_account
@@ -23,10 +23,42 @@ sailor_account:
       label: 'Content'
 
 sailor_error:
-  label: Sailor: Error
-  category: Display Suite
+  label: 'Error'
+  category: 'Display Suite'
   type: partial
   theme: sailor_error
   regions:
+    content:
+      label: 'Content'
+
+sailor_blog_single:
+  label: 'Blog Single'
+  category: 'Display Suite'
+  type: 'partial'
+  theme: sailor_blog_single
+  regions:
+    image:
+      label: 'Image'
+    title:
+      label: 'Title'
+    meta:
+      label: 'Meta'
+    content:
+      label: 'Content'
+    author:
+      label: 'Author'
+    comments:
+      label: 'Comments'
+    sidebar_right:
+      label: 'Sidebar Right'
+
+sailor_blog_single_account:
+  label: 'Blog Single Account'
+  category: 'Display Suite'
+  type: 'partial'
+  theme: sailor_blog_single_account
+  regions:
+    avatar:
+      label: 'Avatar'
     content:
       label: 'Content'

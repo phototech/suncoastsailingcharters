@@ -9,3 +9,6 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access user profiles'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'access comments'

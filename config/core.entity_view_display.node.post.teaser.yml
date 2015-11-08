@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.post.body
+    - field.field.node.post.field_comments
     - field.field.node.post.field_image
     - node.type.post
   module:
@@ -25,4 +26,5 @@ content:
   links:
     weight: 100
 hidden:
+  field_comments: true
   field_image: true

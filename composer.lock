@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6e5cf5317496207a544841e7a05d6210",
-    "content-hash": "af236ffd5b40d3333e442c73bf42ce24",
+    "hash": "e8e54e42c453b9ce63a4e6fd5d28585d",
+    "content-hash": "c0a6e0bc8074a03f6437659a1b0a6392",
     "packages": [
         {
             "name": "commerceguys/addressing",
@@ -960,17 +960,11 @@
         },
         {
             "name": "drupal/ds",
-            "version": "8.2.0-alpha11",
+            "version": "dev-8.x-2.x",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/ds",
-                "reference": "fa41fc89b3670bdc42b6e0afce00fb543b641c63"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/ds-8.x-2.0-alpha11.zip",
-                "reference": null,
-                "shasum": null
+                "reference": "90963e5d23c918ffae5be6f97c0132af19338dea"
             },
             "require": {
                 "drupal/core": "8.*",
@@ -978,10 +972,11 @@
             },
             "replace": {
                 "drupal/ds_devel": "self.version",
-                "drupal/ds_extras": "self.version"
+                "drupal/ds_extras": "self.version",
+                "drupal/ds_switch_view_mode": "self.version"
             },
             "suggest": {
-                "drupal/core": "Required by drupal/ds_devel, drupal/ds_extras",
+                "drupal/core": "Required by drupal/ds_devel, drupal/ds_extras, drupal/ds_switch_view_mode",
                 "drupal/devel": "Required by drupal/ds_devel"
             },
             "type": "drupal-module",
@@ -992,7 +987,8 @@
             },
             "notification-url": "http://packagist.drupal-composer.org/downloads/",
             "description": "Extend the display options for every entity type.",
-            "homepage": "https://www.drupal.org/project/ds"
+            "homepage": "https://www.drupal.org/project/ds",
+            "time": "2015-11-07 12:20:39"
         },
         {
             "name": "drupal/field_group",

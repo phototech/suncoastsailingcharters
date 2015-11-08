@@ -1,0 +1,55 @@
+<div class="content static">
+  <!-- Wrapper -->
+  <div class="wrap">
+    <div class="row">
+      <!-- ThreeFourth -->
+      <div class="three-fourth hentry">
+        <!-- Post Image -->
+        {% if image %}
+          <div class="entry-featured">
+            {{ image }}
+          </div>
+        {% endif %}
+        <!-- //Post Image -->
+
+        <!-- Post Content -->
+        <div class="entry-content">
+          <div class="box-white">
+            {{ title }}
+
+            {% if meta %}
+              <div class="meta">
+                {{ meta }}
+              </div>
+            {% endif %}
+
+            {{ content }}
+          </div>
+
+          {% if author %}
+            <div class="box-white">
+              {{ author }}
+            </div>
+          {% endif %}
+        </div>
+        <!-- //Post Content -->
+
+        <!-- Comments -->
+        {% if comments %}
+          <div class="comments box-white" id="comments">
+            {{ comments }}
+          </div>
+        {% endif %}
+        <!-- //Comments -->
+      </div>
+      <!-- //ThreeFourth -->
+
+      <!-- OneFourth -->
+      <aside class="one-fourth sidebar sidebar-right">
+        {{ sidebar_right }}
+      </aside>
+      <!-- //OneFourth -->
+    </div>
+  </div>
+  <!-- //Wrapper -->
+</div>

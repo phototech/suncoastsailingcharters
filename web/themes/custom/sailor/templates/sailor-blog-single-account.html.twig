@@ -1,0 +1,11 @@
+{% if avatar %}
+  <div class="avatar left-pic">
+    {{ avatar }}
+  </div>
+{% endif %}
+{% if content %}
+  <div>
+    <h6>{{ 'About the author'|t }}</h6>
+    {{ content }}
+  </div>
+{% endif %}

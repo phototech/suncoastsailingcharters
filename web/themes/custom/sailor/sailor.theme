@@ -23,6 +23,12 @@ function sailor_theme() {
     'sailor_error' => [
       'render element' => 'content',
     ],
+    'sailor_blog_single' => [
+      'render element' => 'content',
+    ],
+    'sailor_blog_single_account' => [
+      'render element' => 'content',
+    ],
   ];
 }
 
@@ -32,6 +38,19 @@ function sailor_theme() {
  * Add a suggestion for the form id.
  */
 function sailor_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['element']['#form_id'])) {
+    if (strpos($variables['element']['#form_id'], 'comment') !== FALSE) {
+      $routes = [
+        'comment.reply',
+        'entity.comment.edit_form',
+      ];
+
+      if (!in_array(\Drupal::routeMatch()->getRouteName(), $routes)) {
+        return;
+      }
+    }
+  }
+
   $suggestions[] = 'form__one_half_modal';
 }
 
@@ -151,10 +170,18 @@ function sailor_form_user_register_form_alter(&$form, FormStateInterface $form_s
  */
 function sailor_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (!empty($form['actions']['submit'])) {
+    $build_info = $form_state->getBuildInfo();
+
     $form['actions']['submit']['#attributes']['class'][] = 'button';
     $form['actions']['submit']['#attributes']['class'][] = 'gold';
-    $form['actions']['submit']['#attributes']['class'][] = 'medium';
-    $form['actions']['submit']['#attributes']['class'][] = 'full';
+
+    if ($build_info['base_form_id'] == 'comment_form') {
+      $form['actions']['submit']['#attributes']['class'][] = 'large';
+    }
+    else {
+      $form['actions']['submit']['#attributes']['class'][] = 'medium';
+      $form['actions']['submit']['#attributes']['class'][] = 'full';
+    }
   }
 }
 
@@ -249,7 +276,7 @@ function sailor_preprocess_sailor_account(array &$variables) {
       if (!empty($variables['content'][$field_name])) {
         $field = &$variables['content'][$field_name];
 
-        if ($field['#field_type'] == 'name') {
+        if (!empty($field['#field_type']) && $field['#field_type'] == 'name') {
           $field['#theme'] = 'field__name';
         }
 

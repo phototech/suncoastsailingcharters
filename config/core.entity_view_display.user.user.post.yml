@@ -1,8 +1,9 @@
-uuid: f79eca23-79cc-4f55-8b00-c59e3fcafc16
+uuid: 7f62176c-78a1-4396-8201-1ad0abf37504
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.user.post
     - field.field.user.user.field_picture
   module:
     - ds
@@ -11,54 +12,39 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: sailor_account
+      id: sailor_blog_single_account
       path: themes/custom/sailor
       library: ''
       disable_css: false
       settings:
         classes: {  }
         wrappers:
-          intro: div
-          sidebar_left: div
+          avatar: div
           content: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
         link_custom: ''
     regions:
-      intro:
+      avatar:
         - field_picture
-        - username
-      sidebar_left:
-        - 'dynamic_block_field:user-primary_tabs'
       content:
         - member_for
-    fields:
-      'dynamic_block_field:user-primary_tabs':
-        plugin_id: 'dynamic_block_field:user-primary_tabs'
-        weight: 2
-        label: hidden
-        formatter: default
-      username:
-        plugin_id: username
-        weight: 1
-        label: hidden
-        formatter: default
-id: user.user.default
+id: user.user.post
 targetEntityType: user
 bundle: user
-mode: default
+mode: post
 content:
   field_picture:
     weight: 0
     label: hidden
     settings:
-      image_style: medium
-      image_link: ''
+      image_style: post_author
+      image_link: content
     third_party_settings: {  }
     type: image
   member_for:
-    weight: 3
+    weight: 1
     settings: {  }
     third_party_settings: {  }
 hidden: {  }
