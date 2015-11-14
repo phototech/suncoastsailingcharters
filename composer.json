@@ -6,10 +6,10 @@
   "require": {
     "composer/installers": "^1.0.20",
     "drupal/core": "~8.0",
-    "drupal/address": "8.1.*",
-    "drupal/field_group": "8.1.*",
-    "drupal/ds": ">8.2.0-alpha11",
-    "drupal/name": "8.1.*"
+    "drupal/address": "~8.1.0",
+    "drupal/field_group": "~8.1.0",
+    "drupal/ds": "~8.2.0-alpha12",
+    "drupal/name": "~8.1.0"
   },
   "require-dev": {
     "drush/drush": "~8.0"
