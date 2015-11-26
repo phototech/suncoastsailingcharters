@@ -16,14 +16,7 @@ third_party_settings:
       path: themes/custom/sailor
       library: ''
       disable_css: false
-      settings:
-        classes: {  }
-        wrappers:
-          main: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
+      settings: {  }
     regions:
       main:
         - node_title

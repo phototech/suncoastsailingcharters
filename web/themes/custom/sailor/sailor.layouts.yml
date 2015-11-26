@@ -1,6 +1,7 @@
 sailor_follow_block:
   label: Follow Block
-  category: Display Suite
+  category: Sailor
+  class: '\Drupal\ds\Plugin\DsLayout'
   type: partial
   template: templates/sailor-follow-block
   regions:
@@ -11,7 +12,8 @@ sailor_follow_block:
 
 sailor_account:
   label: Account
-  category: Display Suite
+  category: Sailor
+  class: '\Drupal\ds\Plugin\DsLayout'
   type: partial
   template: templates/sailor-account
   regions:
@@ -24,7 +26,8 @@ sailor_account:
 
 sailor_error:
   label: Error
-  category: Display Suite
+  category: Sailor
+  class: '\Drupal\ds\Plugin\DsLayout'
   type: partial
   template: templates/sailor-error
   regions:
@@ -33,7 +36,8 @@ sailor_error:
 
 sailor_blog_single:
   label: Blog Single
-  category: Display Suite
+  category: Sailor
+  class: '\Drupal\ds\Plugin\DsLayout'
   type: partial
   template: templates/sailor-blog-single
   regions:
@@ -54,7 +58,8 @@ sailor_blog_single:
 
 sailor_blog_single_account:
   label: Blog Single Account
-  category: Display Suite
+  category: Sailor
+  class: '\Drupal\ds\Plugin\DsLayout'
   type: partial
   template: templates/sailor-blog-single-account
   regions:

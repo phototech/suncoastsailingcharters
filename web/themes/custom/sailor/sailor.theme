@@ -226,17 +226,14 @@ function sailor_preprocess_block(array &$variables) {
  * the icons.
  */
 function sailor_preprocess_sailor_follow_block(array &$variables) {
-  if (!empty($variables['content']['#ds_configuration']['regions']['links'])) {
-    $region = $variables['content']['#ds_configuration']['regions']['links'];
-    foreach ($region as $field_name) {
-      if (!empty($variables['content'][$field_name])) {
-        foreach (Element::children($variables['content'][$field_name]) as $delta) {
-          $item = &$variables['content'][$field_name][$delta];
+  if (!empty($variables['content']['links'])) {
+    foreach ($variables['content']['links'] as &$field) {
+      foreach (Element::children($field) as $delta) {
+        $item = &$field[$delta];
 
-          // Link Field.
-          if (!empty($item['#type']) && $item['#type'] == 'link') {
-            $variables['content'][$field_name][$delta]['#title'] = '';
-          }
+        // Link Field.
+        if (!empty($item['#type']) && $item['#type'] == 'link') {
+          $item['#title'] = '';
         }
       }
     }
@@ -247,39 +244,32 @@ function sailor_preprocess_sailor_follow_block(array &$variables) {
  * Implments template_preprocess_sailor_account().
  */
 function sailor_preprocess_sailor_account(array &$variables) {
-  if (!empty($variables['content']['#ds_configuration']['regions']['intro'])) {
-    $region = $variables['content']['#ds_configuration']['regions']['intro'];
-    foreach ($region as $field_name) {
-      if (!empty($variables['content'][$field_name])) {
-        $field = &$variables['content'][$field_name];
+  if (!empty($variables['content']['intro'])) {
+    foreach ($variables['content']['intro']as &$field) {
+      if (!empty($field['#field_type']) && $field['#field_type'] == 'name') {
+        $field['#theme'] = 'field__name';
+      }
 
-        if (!empty($field['#field_type']) && $field['#field_type'] == 'name') {
-          $field['#theme'] = 'field__name';
-        }
+      foreach (Element::children($field) as $delta) {
+        $item = &$field[$delta];
 
-        foreach (Element::children($field) as $delta) {
-          $item = &$variables['content'][$field_name][$delta];
-
-          // Add the `profile-pic` class to the images in the intro.
-          if (!empty($item['#theme']) && $item['#theme'] == 'image_formatter') {
-            $item['#item_attributes']['class'][] = 'profile-pic';
-          }
+        // Add the `profile-pic` class to the images in the intro.
+        if (!empty($item['#theme']) && $item['#theme'] == 'image_formatter') {
+          $item['#item_attributes']['class'][] = 'profile-pic';
+          $item['#item_attributes']['data-hello'] = 'world';
         }
       }
     }
   }
 
-  if (!empty($variables['content']['#ds_configuration']['regions']['sidebar_left'])) {
-    $region = $variables['content']['#ds_configuration']['regions']['sidebar_left'];
-    foreach ($region as $field_name) {
-      if (!empty($variables['content'][$field_name])) {
-        foreach (Element::children($variables['content'][$field_name]) as $delta) {
-          $item = &$variables['content'][$field_name][$delta];
+  if (!empty($variables['content']['sidebar_left'])) {
+    foreach ($variables['content']['sidebar_left'] as &$field) {
+      foreach (Element::children($field) as $delta) {
+        $item = &$field[$delta];
 
-          // Change the theme of the sidebar "tabs".
-          if (!empty($item[0]['#theme']) && $item[0]['#theme'] == 'menu_local_tasks') {
-            $item[0]['#theme'] = 'menu_local_tasks__sidebar';
-          }
+        // Change the theme of the sidebar "tabs".
+        if (!empty($item[0]['#theme']) && $item[0]['#theme'] == 'menu_local_tasks') {
+          $item[0]['#theme'] = 'menu_local_tasks__sidebar';
         }
       }
     }
