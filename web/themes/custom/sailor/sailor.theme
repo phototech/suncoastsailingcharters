@@ -10,29 +10,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
 /**
- * Implements hook_theme().
- */
-function sailor_theme() {
-  return [
-    'sailor_follow_block' => [
-      'render element' => 'content',
-    ],
-    'sailor_account' => [
-      'render element' => 'content',
-    ],
-    'sailor_error' => [
-      'render element' => 'content',
-    ],
-    'sailor_blog_single' => [
-      'render element' => 'content',
-    ],
-    'sailor_blog_single_account' => [
-      'render element' => 'content',
-    ],
-  ];
-}
-
-/**
  * Implements hook_theme_suggestions_form_alter().
  *
  * Add a suggestion for the form id.

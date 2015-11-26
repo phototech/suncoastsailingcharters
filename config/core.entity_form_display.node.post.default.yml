@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.post.body
-    - field.field.node.post.field_comments
     - field.field.node.post.field_image
     - node.type.post
   module:
-    - comment
     - image
     - path
     - text
@@ -30,11 +28,6 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
-  field_comments:
-    weight: 31
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
   field_image:
     weight: 0
     settings:

@@ -20,7 +20,7 @@ third_party_settings:
         classes: {  }
         wrappers:
           avatar: div
-          content: div
+          main: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
@@ -28,7 +28,7 @@ third_party_settings:
     regions:
       avatar:
         - field_picture
-      content:
+      main:
         - member_for
 id: user.user.post
 targetEntityType: user

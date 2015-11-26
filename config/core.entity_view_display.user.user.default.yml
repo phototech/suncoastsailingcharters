@@ -20,7 +20,7 @@ third_party_settings:
         wrappers:
           intro: div
           sidebar_left: div
-          content: div
+          main: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
@@ -31,7 +31,7 @@ third_party_settings:
         - username
       sidebar_left:
         - 'dynamic_block_field:user-primary_tabs'
-      content:
+      main:
         - member_for
     fields:
       'dynamic_block_field:user-primary_tabs':

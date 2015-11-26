@@ -14,20 +14,20 @@ third_party_settings:
   ds:
     layout:
       id: sailor_follow_block
-      path: ''
+      path: themes/custom/sailor
       library: ''
       disable_css: false
       settings:
         classes: {  }
         wrappers:
-          content: div
+          main: div
           links: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
         link_custom: ''
     regions:
-      content:
+      main:
         - body
       links:
         - field_social

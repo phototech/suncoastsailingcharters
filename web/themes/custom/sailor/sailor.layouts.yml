@@ -1,64 +1,64 @@
 sailor_follow_block:
-  label: 'Follow Block'
-  category: 'Display Suite'
+  label: Follow Block
+  category: Display Suite
   type: partial
-  theme: sailor_follow_block
+  template: templates/sailor-follow-block
   regions:
-    content:
-      label: 'Content'
+    main:
+      label: Main
     links:
-      label: 'Social Links'
+      label: Social Links
 
 sailor_account:
-  label: 'Account'
-  category: 'Display Suite'
+  label: Account
+  category: Display Suite
   type: partial
-  theme: sailor_account
+  template: templates/sailor-account
   regions:
     intro:
-      label: 'Intro'
+      label: Intro
     sidebar_left:
-      label: 'Sidebar Left'
-    content:
-      label: 'Content'
+      label: Sidebar Left
+    main:
+      label: Main
 
 sailor_error:
-  label: 'Error'
-  category: 'Display Suite'
+  label: Error
+  category: Display Suite
   type: partial
-  theme: sailor_error
+  template: templates/sailor-error
   regions:
-    content:
-      label: 'Content'
+    main:
+      label: Main
 
 sailor_blog_single:
-  label: 'Blog Single'
-  category: 'Display Suite'
-  type: 'partial'
-  theme: sailor_blog_single
+  label: Blog Single
+  category: Display Suite
+  type: partial
+  template: templates/sailor-blog-single
   regions:
     image:
-      label: 'Image'
+      label: Image
     title:
-      label: 'Title'
+      label: Title
     meta:
-      label: 'Meta'
-    content:
-      label: 'Content'
+      label: Meta
+    main:
+      label: Main
     author:
-      label: 'Author'
+      label: Author
     comments:
-      label: 'Comments'
+      label: Comments
     sidebar_right:
-      label: 'Sidebar Right'
+      label: Sidebar Right
 
 sailor_blog_single_account:
-  label: 'Blog Single Account'
-  category: 'Display Suite'
-  type: 'partial'
-  theme: sailor_blog_single_account
+  label: Blog Single Account
+  category: Display Suite
+  type: partial
+  template: templates/sailor-blog-single-account
   regions:
     avatar:
-      label: 'Avatar'
-    content:
-      label: 'Content'
+      label: Avatar
+    main:
+      label: Main
