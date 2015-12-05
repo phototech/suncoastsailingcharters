@@ -8,8 +8,10 @@
     "drupal/core": "~8.0",
     "drupal/address": "~8.1.0",
     "drupal/field_group": "~8.1.0",
-    "drupal/ds": "~8.2.0-alpha12",
-    "drupal/name": "~8.1.0"
+    "drupal/ds": "~8.2.0",
+    "drupal/name": "~8.1.0",
+    "drupal/contact_storage": "~8.1.0-beta1",
+    "sailvenice/patches": "^1.0.0"
   },
   "require-dev": {
     "drush/drush": "~8.0"
@@ -23,6 +25,27 @@
     {
       "type": "composer",
       "url": "http://packagist.drupal-composer.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "type": "metapackage",
+        "name": "sailvenice/patches",
+        "version": "1.0.2",
+        "require": {
+          "netresearch/composer-patches-plugin": "~1.0"
+        },
+        "extra": {
+          "patches": {
+            "drupal/contact_storage": [
+              {
+                "title": "Issue #2615112: Add a view builder for contact_form",
+                "url": "https://www.drupal.org/files/issues/2615112-contact-storage-12.patch"
+              }
+            ]
+          }
+        }
+      }
     }
   ],
   "config": {
