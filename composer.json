@@ -6,11 +6,11 @@
   "require": {
     "composer/installers": "^1.0.20",
     "drupal/core": "~8.0",
-    "drupal/address": "~8.1.0",
-    "drupal/field_group": "~8.1.0",
-    "drupal/ds": "~8.2.0",
-    "drupal/name": "~8.1.0",
-    "drupal/contact_storage": "~8.1.0-beta1",
+    "drupal/address": "^8.1.0",
+    "drupal/field_group": "^8.1.0",
+    "drupal/ds": "^8.2.0",
+    "drupal/name": "^8.1.0",
+    "drupal/contact_storage": "^8.1.0-beta1",
     "sailvenice/patches": "^1.0.0"
   },
   "require-dev": {
