@@ -11,6 +11,7 @@
     "drupal/ds": "^8.2.0",
     "drupal/name": "^8.1.0",
     "drupal/contact_storage": "^8.1.0-beta1",
+    "drupal/simple_gmap": "^8.1.0",
     "sailvenice/patches": "^1.0.0"
   },
   "require-dev": {
@@ -31,7 +32,7 @@
       "package": {
         "type": "metapackage",
         "name": "sailvenice/patches",
-        "version": "1.0.2",
+        "version": "1.1.0",
         "require": {
           "netresearch/composer-patches-plugin": "~1.0"
         },
@@ -41,6 +42,10 @@
               {
                 "title": "Issue #2615112: Add a view builder for contact_form",
                 "url": "https://www.drupal.org/files/issues/2615112-contact-storage-12.patch"
+              },
+              {
+                "title": "Issue #2629630: When no Redirect Page is specified; redirect to parent entity",
+                "url": "https://www.drupal.org/files/issues/contact_storage-default_redirect-2629630-2.patch"
               }
             ]
           }

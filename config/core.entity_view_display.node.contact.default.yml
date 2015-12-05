@@ -1,0 +1,91 @@
+uuid: 6f41ce35-a5e6-4cc8-9202-2d5f6f5398c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact.body
+    - field.field.node.contact.field_contact
+    - field.field.node.contact.field_map
+    - node.type.contact
+  module:
+    - ds
+    - simple_gmap
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_contact
+      path: themes/custom/sailor
+      library: ''
+      disable_css: false
+      settings:
+        wrappers:
+          intro: div
+          main: div
+          map: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      intro:
+        - node_title
+        - body
+      main:
+        - field_contact
+      map:
+        - field_map
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+id: node.contact.default
+targetEntityType: node
+bundle: contact
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  field_contact:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_map:
+    weight: 3
+    label: hidden
+    settings:
+      include_map: '1'
+      iframe_width: '1000'
+      iframe_height: '950'
+      link_text: 'View larger map'
+      zoom_level: '17'
+      information_bubble: '1'
+      map_type: m
+      langcode: en
+      include_static_map: 0
+      include_link: 0
+      include_text: 0
+    third_party_settings: {  }
+    type: simple_gmap
+  links:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

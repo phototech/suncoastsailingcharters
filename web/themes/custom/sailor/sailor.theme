@@ -5,9 +5,20 @@
  */
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Asset\AttachedAssetsInterface;
 use Drupal\Core\Render\Element;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+
+/**
+ * Implements hook_css_alter().
+ *
+ * Remove conflicting CSS.
+ */
+function sailor_css_alter(&$css, AttachedAssetsInterface $assets) {
+  unset($css['core/assets/vendor/jquery.ui/themes/base/datepicker.css']);
+  unset($css['core/assets/vendor/jquery.ui/themes/base/theme.css']);
+}
 
 /**
  * Implements hook_theme_suggestions_form_alter().
@@ -16,7 +27,11 @@ use Drupal\Core\Url;
  */
 function sailor_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   if (!empty($variables['element']['#form_id'])) {
-    if (strpos($variables['element']['#form_id'], 'comment') !== FALSE) {
+    if (strpos($variables['element']['#form_id'], 'contact_message') !== FALSE) {
+      $suggestions[] = 'form__contact';
+      return;
+    }
+    else if (strpos($variables['element']['#form_id'], 'comment') !== FALSE) {
       $routes = [
         'comment.reply',
         'entity.comment.edit_form',
@@ -159,6 +174,14 @@ function sailor_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       $form['actions']['submit']['#attributes']['class'][] = 'medium';
       $form['actions']['submit']['#attributes']['class'][] = 'full';
     }
+  }
+
+  if (!empty($form['actions']['preview'])) {
+    $form['actions']['preview']['#access'] = FALSE;
+  }
+
+  if (strpos($form['#form_id'], 'contact_message') !== FALSE) {
+    $form['langcode']['#access'] = FALSE;
   }
 }
 
@@ -313,6 +336,17 @@ function sailor_preprocess_form__one_half_modal(array &$variables) {
 }
 
 /**
+ * Implmeents template_preprocess_form().
+ *
+ * Add an id to the contact form.
+ */
+function sailor_preprocess_form(array &$variables) {
+  if (strpos($variables['element']['#form_id'], 'contact_message') !== FALSE) {
+    $variables['attributes']['id'] = Html::getUniqueId('contactform');
+  }
+}
+
+/**
  * Implmeents template_preprocess_form_element().
  *
  * Add the classes to the form.
@@ -328,9 +362,11 @@ function sailor_preprocess_form_element(array &$variables) {
  */
 function sailor_preprocess_container(array &$variables) {
   if ($variables['element']['#type'] != 'actions') {
-    return;
+    $variables['attributes']['class'][] = 'full-width';
   }
-  $variables['attributes']['class'][] = 'full-width';
+  if (!empty($variables['element']['widget'])) {
+    $variables['attributes']['class'][] = 'full-width';
+  }
 }
 
 /**

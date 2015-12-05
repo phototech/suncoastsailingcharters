@@ -23,6 +23,7 @@ visibility:
   node_type:
     id: node_type
     bundles:
+      contact: contact
       error: error
       post: post
     negate: false

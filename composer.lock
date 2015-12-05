@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a5d9dc583faa94a5e72ce2644271109f",
-    "content-hash": "446ec5c2fd671a91c91956a21bb8bf77",
+    "hash": "941258bd4eb50b6b2095f08981662353",
+    "content-hash": "aefd9f2d622a7a7dd26a6d6dabc11609",
     "packages": [
         {
             "name": "commerceguys/addressing",
@@ -1168,6 +1168,35 @@
             "time": "2015-11-11 10:37:28"
         },
         {
+            "name": "drupal/simple_gmap",
+            "version": "8.1.0",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/simple_gmap",
+                "reference": "55ff3e75bfc2d91225aa56d8a9b9ff9fc47eaa72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/simple_gmap-8.x-1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/field": "8.*",
+                "drupal/text": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Provides a Google Maps link/map formatter for simple Text fields.",
+            "homepage": "https://www.drupal.org/project/simple_gmap"
+        },
+        {
             "name": "easyrdf/easyrdf",
             "version": "0.9.1",
             "source": {
@@ -1657,7 +1686,7 @@
         },
         {
             "name": "sailvenice/patches",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "require": {
                 "netresearch/composer-patches-plugin": "~1.0"
             },
@@ -1668,6 +1697,10 @@
                         {
                             "title": "Issue #2615112: Add a view builder for contact_form",
                             "url": "https://www.drupal.org/files/issues/2615112-contact-storage-12.patch"
+                        },
+                        {
+                            "title": "Issue #2629630: When no Redirect Page is specified; redirect to parent entity",
+                            "url": "https://www.drupal.org/files/issues/contact_storage-default_redirect-2629630-2.patch"
                         }
                     ]
                 }

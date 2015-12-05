@@ -12,3 +12,5 @@ permissions:
   - 'post comments'
   - 'skip comment approval'
   - 'access comments'
+  - 'access site-wide contact form'
+  - 'submitcontact eform'

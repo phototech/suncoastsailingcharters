@@ -1,0 +1,24 @@
+uuid: da9e71e3-2568-491b-a200-e5846eafa464
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.storage.contact_message.field_date
+  module:
+    - datetime
+id: contact_message.contact.field_date
+field_name: field_date
+entity_type: contact_message
+bundle: contact
+label: 'When would you like to sail?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+1 days'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

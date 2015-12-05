@@ -1,0 +1,9 @@
+uuid: cefca90d-bc65-4b29-a000-cfe4cadd662b
+langcode: en
+status: true
+dependencies: {  }
+id: personal
+label: 'Personal contact form'
+recipients: {  }
+reply: ''
+weight: 0

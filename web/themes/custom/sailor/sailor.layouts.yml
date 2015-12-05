@@ -67,3 +67,17 @@ sailor_blog_single_account:
       label: Avatar
     main:
       label: Main
+
+sailor_contact:
+  label: Contact
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-contact
+  regions:
+    intro:
+      label: Intro
+    main:
+      label: Main
+    map:
+      label: Map

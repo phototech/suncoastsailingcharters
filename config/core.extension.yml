@@ -3,7 +3,10 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  contact: 0
+  contact_storage: 0
   contextual: 0
+  datetime: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
@@ -22,6 +25,7 @@ module:
   path: 0
   rdf: 0
   search: 0
+  simple_gmap: 0
   system: 0
   telephone: 0
   text: 0

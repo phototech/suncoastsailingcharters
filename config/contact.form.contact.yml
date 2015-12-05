@@ -1,0 +1,10 @@
+uuid: f35ddc3c-85c2-4e9b-8b00-e49dcc28afd2
+langcode: en
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+recipients:
+  - david@davidwbarratt.com
+reply: 'Your submissions has been received. We will contact you soon.'
+weight: 0
