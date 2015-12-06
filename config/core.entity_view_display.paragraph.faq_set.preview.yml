@@ -1,0 +1,25 @@
+uuid: 4640d9b6-25a7-4265-9900-f048f945f800
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.faq_set.field_faq
+    - field.field.paragraph.faq_set.field_title
+    - paragraphs.paragraphs_type.faq_set
+id: paragraph.faq_set.preview
+targetEntityType: paragraph
+bundle: faq_set
+mode: preview
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  field_faq: true
+  uid: true

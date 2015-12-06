@@ -1,0 +1,23 @@
+{% if intro %}
+<header class="intro">
+  <div class="wrap">
+    {{ intro }}
+  </div>
+</header>
+{% endif %}
+
+<div class="content static">
+  <div class="wrap">
+    <div class="row">
+      <div class="{% if sidebar %}three-fourth{% else %}full-width{% endif %}">
+        {{ main }}
+      </div>
+
+      {% if sidebar %}
+        <aside class="one-fourth sidebar sidebar-right">
+          {{ sidebar }}
+        </aside>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-uuid: a30822eb-e939-4a19-9310-168df921dbe2
+uuid: 06897653-0126-4134-9a00-f3f8c6a65c1d
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Post
-type: post
+name: FAQ
+type: faq
 description: ''
 help: ''
-new_revision: true
-preview_mode: 1
-display_submitted: true
+new_revision: false
+preview_mode: 0
+display_submitted: false

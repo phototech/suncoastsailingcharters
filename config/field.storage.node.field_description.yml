@@ -1,16 +1,16 @@
-uuid: 325f7c4f-5796-40ff-8e4f-7984878495fe
+uuid: 372e80e2-41a2-428a-9308-8c45577e8778
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_contact_2
-field_name: field_contact_2
+    - text
+id: node.field_description
+field_name: field_description
 entity_type: node
-type: entity_reference
-settings:
-  target_type: node
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

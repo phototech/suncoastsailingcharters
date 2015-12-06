@@ -81,3 +81,41 @@ sailor_contact:
       label: Main
     map:
       label: Map
+
+sailor_faq_page:
+  label: FAQ Page
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-faq-page
+  regions:
+    intro:
+      label: Intro
+    main:
+      label: Main
+    sidebar:
+      label: Sidebar
+
+sailor_faq_set:
+  label: FAQ Set
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-faq-set
+  regions:
+    intro:
+      label: Intro
+    accordion:
+      label: Accordion
+
+sailor_faq:
+  label: FAQ
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-faq
+  regions:
+    question:
+      label: Question
+    answer:
+      label: Answer

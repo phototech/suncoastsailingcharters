@@ -1,18 +1,18 @@
-uuid: 82ac43d3-9d0c-4dfa-a53c-60743f520f45
+uuid: f3f352b9-d4e2-4c34-bb00-a3a58f62caf3
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.post.body
-    - field.field.node.post.field_image
-    - node.type.post
+    - field.field.node.faq.body
+    - field.field.node.faq.field_faq
+    - node.type.faq
   module:
     - text
     - user
-id: node.post.teaser
+id: node.faq.teaser
 targetEntityType: node
-bundle: post
+bundle: faq
 mode: teaser
 content:
   body:
@@ -25,4 +25,4 @@ content:
   links:
     weight: 100
 hidden:
-  field_image: true
+  field_faq: true

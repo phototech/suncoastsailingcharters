@@ -25,7 +25,7 @@ visibility:
     bundles:
       contact: contact
       error: error
-      post: post
+      faq: faq
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

@@ -135,6 +135,7 @@ footer.footer a[href*="pinterest.com"] {
 .region-tabs .tabs {
   height: 80px;
   margin-bottom: 0;
+  float: none;
 }
 
 /**
@@ -163,4 +164,8 @@ form .description {
 
 .ui-datepicker-calendar td.ui-datepicker-unselectable {
   background: #eee;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-today {
+  background: #515E64;
 }

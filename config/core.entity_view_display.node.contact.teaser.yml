@@ -6,7 +6,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.contact.body
     - field.field.node.contact.field_contact
+    - field.field.node.contact.field_description
     - field.field.node.contact.field_map
+    - field.field.node.contact.field_title
     - node.type.contact
   module:
     - text
@@ -27,4 +29,6 @@ content:
     weight: 100
 hidden:
   field_contact: true
+  field_description: true
   field_map: true
+  field_title: true

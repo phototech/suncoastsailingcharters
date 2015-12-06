@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "941258bd4eb50b6b2095f08981662353",
-    "content-hash": "aefd9f2d622a7a7dd26a6d6dabc11609",
+    "hash": "f29bd6397c03442ecffd0eb2dbc77daa",
+    "content-hash": "cceb8ac19f2072c59a4be7e48aeade39",
     "packages": [
         {
             "name": "commerceguys/addressing",
@@ -1050,6 +1050,33 @@
             "time": "2015-11-30 21:03:39"
         },
         {
+            "name": "drupal/entity_reference_revisions",
+            "version": "8.1.0-rc4",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/entity_reference_revisions.git",
+                "reference": "6a811cd957fa3cd0f22ac9a9f788fae1fd79d520"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.0-rc4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Adds a Entity Reference field type with revision support.",
+            "homepage": "https://www.drupal.org/project/entity_reference_revisions"
+        },
+        {
             "name": "drupal/field_group",
             "version": "8.1.0-rc3",
             "source": {
@@ -1166,6 +1193,48 @@
             "description": "Defines a persons name field type.",
             "homepage": "https://www.drupal.org/project/name",
             "time": "2015-11-11 10:37:28"
+        },
+        {
+            "name": "drupal/paragraphs",
+            "version": "8.1.0-rc4",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/paragraphs",
+                "reference": "740874bacb56a6a90683e7818c06ba77a638125c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/paragraphs-8.x-1.0-rc4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/entity_reference_revisions": "8.*"
+            },
+            "replace": {
+                "drupal/paragraphs_demo": "self.version",
+                "drupal/paragraphs_type_permissions": "self.version"
+            },
+            "suggest": {
+                "drupal/block": "Required by drupal/paragraphs_demo",
+                "drupal/content_translation": "Required by drupal/paragraphs_demo",
+                "drupal/core": "Required by drupal/paragraphs_demo, drupal/paragraphs_type_permissions",
+                "drupal/field": "Required by drupal/paragraphs_demo",
+                "drupal/field_ui": "Required by drupal/paragraphs_demo",
+                "drupal/image": "Required by drupal/paragraphs_demo",
+                "drupal/language": "Required by drupal/paragraphs_demo",
+                "drupal/node": "Required by drupal/paragraphs_demo"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Implements the Paragraphs entity types, Entity Reference selection type and Entity Reference field widget.",
+            "homepage": "https://www.drupal.org/project/paragraphs"
         },
         {
             "name": "drupal/simple_gmap",

@@ -9,7 +9,7 @@ id: node.contact.field_contact
 field_name: field_contact
 entity_type: node
 bundle: contact
-label: Contact
+label: 'Contact Form'
 description: ''
 required: false
 translatable: false

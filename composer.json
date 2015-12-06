@@ -12,6 +12,7 @@
     "drupal/name": "^8.1.0",
     "drupal/contact_storage": "^8.1.0-beta1",
     "drupal/simple_gmap": "^8.1.0",
+    "drupal/paragraphs": "~8.1.0",
     "sailvenice/patches": "^1.0.0"
   },
   "require-dev": {

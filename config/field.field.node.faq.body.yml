@@ -1,16 +1,16 @@
-uuid: 7b7d0ff2-49ad-4a37-9403-3e198588406d
+uuid: 180e440d-e670-4116-ab50-8077d4883714
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.post
+    - node.type.faq
   module:
     - text
-id: node.post.body
+id: node.faq.body
 field_name: body
 entity_type: node
-bundle: post
+bundle: faq
 label: Body
 description: ''
 required: false
