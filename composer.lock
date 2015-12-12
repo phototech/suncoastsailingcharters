@@ -990,15 +990,15 @@
         },
         {
             "name": "drupal/ds",
-            "version": "8.2.1",
+            "version": "8.2.2",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/ds",
-                "reference": "6d349a054ccc1a44d89542f04b77f31a3ad12168"
+                "reference": "3cb9f7c7e70154c2eced27cec99b87fe95cc4a24"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/ds-8.x-2.1.zip",
+                "url": "http://ftp.drupal.org/files/projects/ds-8.x-2.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1047,7 +1047,7 @@
                 "layout",
                 "php"
             ],
-            "time": "2015-11-30 21:03:39"
+            "time": "2015-12-10 19:50:51"
         },
         {
             "name": "drupal/entity_reference_revisions",
@@ -1078,15 +1078,15 @@
         },
         {
             "name": "drupal/field_group",
-            "version": "8.1.0-rc3",
+            "version": "8.1.0-rc4",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/field_group",
-                "reference": "e62de786a4fb7a3b6d91d48fe3516acbfd92c291"
+                "reference": "54354bfa0c7736ee2c9f6a289dba8aa03c059aaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/field_group-8.x-1.0-rc3.zip",
+                "url": "http://ftp.drupal.org/files/projects/field_group-8.x-1.0-rc4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1112,7 +1112,7 @@
             ],
             "description": "Provides the ability to group your fields on both form and display.",
             "homepage": "https://www.drupal.org/project/field_group",
-            "time": "2015-11-12 21:35:24"
+            "time": "2015-12-10 12:36:16"
         },
         {
             "name": "drupal/layout_plugin",
