@@ -9,11 +9,10 @@ libraries:
 regions:
   header: Header
   primary_menu: 'Primary Menu'
-  breadcrumb: Breadcrumb
   highlighted: Highlighted
-  help: Help
   tabs: Tabs
   content: Content
+  bottom: Bottom
   footer_first: 'First footer'
   footer_second: 'Second footer'
   footer_third: 'Third footer'

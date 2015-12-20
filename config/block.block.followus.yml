@@ -1,4 +1,4 @@
-uuid: 2f80d151-0349-4ca6-9100-bcf7ad5ce16a
+uuid: fcd0a7c4-57c6-48a0-8b00-ab8bf6d86cfc
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: followus
 theme: sailor
 region: footer_fourth
-weight: -3
+weight: -5
 provider: null
 plugin: 'block_content:0f4c9613-f943-4d9f-b65b-91d4057e8dbf'
 settings:

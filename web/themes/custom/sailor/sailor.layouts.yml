@@ -119,3 +119,13 @@ sailor_faq:
       label: Question
     answer:
       label: Answer
+
+sailor_quote:
+  label: Quote
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-quote
+  regions:
+    main:
+      label: Main

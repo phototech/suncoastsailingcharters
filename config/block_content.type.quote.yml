@@ -1,0 +1,8 @@
+uuid: 1550d10f-e047-4b2d-9400-d274e794e44a
+langcode: en
+status: true
+dependencies: {  }
+id: quote
+label: Quote
+revision: 1
+description: ''

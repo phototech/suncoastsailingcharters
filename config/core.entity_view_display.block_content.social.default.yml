@@ -18,7 +18,6 @@ third_party_settings:
       library: ''
       disable_css: false
       settings:
-        classes: {  }
         wrappers:
           main: div
           links: div
@@ -26,6 +25,8 @@ third_party_settings:
         attributes: ''
         link_attribute: ''
         link_custom: ''
+        classes:
+          layout_class: {  }
     regions:
       main:
         - body
