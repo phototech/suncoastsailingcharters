@@ -9,7 +9,27 @@ dependencies:
     - field.field.block_content.contact.field_phone
   module:
     - address
+    - ds
     - telephone
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_follow_block
+      path: themes/custom/sailor
+      library: ''
+      disable_css: false
+      settings:
+        classes: {  }
+        wrappers: {  }
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      main:
+        - field_address
+        - field_phone
+        - field_email
 id: block_content.contact.default
 targetEntityType: block_content
 bundle: contact
