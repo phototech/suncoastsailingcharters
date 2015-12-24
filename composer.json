@@ -2,7 +2,7 @@
   "name": "phototech/sailvenice",
   "description": "Sail Venice Website.",
   "type": "project",
-  "license": "proprietary",
+  "license": "AGPL-3.0",
   "require": {
     "composer/installers": "^1.0.20",
     "drupal/core": "~8.0",
