@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6f5791f3460e5cac1f29e1d019cdb877",
-    "content-hash": "dc4688b6fc9e227d8b2e421f26a70f4a",
+    "hash": "9f581c4fb9e27a29fbd0d283cf07bece",
+    "content-hash": "ccc0dee78f3093ceb9ecf5ae39a33ee5",
     "packages": [
         {
             "name": "commerceguys/addressing",
@@ -1755,7 +1755,7 @@
         },
         {
             "name": "sailvenice/patches",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "require": {
                 "netresearch/composer-patches-plugin": "~1.0"
             },
@@ -1766,6 +1766,12 @@
                         {
                             "title": "Issue #2629630: When no Redirect Page is specified; redirect to parent entity",
                             "url": "https://www.drupal.org/files/issues/contact_storage-default_redirect-2629630-2.patch"
+                        }
+                    ],
+                    "drupal/ds": [
+                        {
+                            "title": "Issue #2633728: Multiple Custom Blocks on a page renderes the first block's content",
+                            "url": "https://www.drupal.org/files/issues/2633728-9.patch"
                         }
                     ]
                 }

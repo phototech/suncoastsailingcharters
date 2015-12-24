@@ -33,7 +33,7 @@
       "package": {
         "type": "metapackage",
         "name": "sailvenice/patches",
-        "version": "1.1.1",
+        "version": "1.2.0",
         "require": {
           "netresearch/composer-patches-plugin": "~1.0"
         },
@@ -43,6 +43,12 @@
               {
                 "title": "Issue #2629630: When no Redirect Page is specified; redirect to parent entity",
                 "url": "https://www.drupal.org/files/issues/contact_storage-default_redirect-2629630-2.patch"
+              }
+            ],
+            "drupal/ds": [
+              {
+                "title": "Issue #2633728: Multiple Custom Blocks on a page renderes the first block's content",
+                "url": "https://www.drupal.org/files/issues/2633728-9.patch"
               }
             ]
           }
