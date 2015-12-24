@@ -3,8 +3,7 @@ web/core
 web/modules/contrib
 web/themes/contrib
 web/profiles/contrib
-/vendor
-/web/vendor
+vendor
 
 # Ignore configuration files that may contain sensitive information.
 web/sites/*/settings*.php
