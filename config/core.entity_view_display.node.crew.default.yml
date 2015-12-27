@@ -1,0 +1,83 @@
+uuid: 776cb0d6-854a-484c-b92e-468660b541b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.crew.body
+    - field.field.node.crew.field_crew
+    - node.type.crew
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_crew
+      path: themes/custom/sailor
+      library: ''
+      disable_css: false
+      settings:
+        wrappers:
+          intro: div
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      intro:
+        - node_title
+        - body
+      main:
+        - field_crew
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.crew.default
+targetEntityType: node
+bundle: crew
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  field_crew:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: crew
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+  links:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

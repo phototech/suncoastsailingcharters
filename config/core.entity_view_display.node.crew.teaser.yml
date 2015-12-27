@@ -1,0 +1,28 @@
+uuid: e7049725-9409-482b-8336-54139f65dec6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.crew.body
+    - field.field.node.crew.field_crew
+    - node.type.crew
+  module:
+    - text
+    - user
+id: node.crew.teaser
+targetEntityType: node
+bundle: crew
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_crew: true

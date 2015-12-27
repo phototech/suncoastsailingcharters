@@ -129,3 +129,31 @@ sailor_quote:
   regions:
     main:
       label: Main
+
+sailor_crew:
+  label: Crew
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-crew
+  regions:
+    intro:
+      label: Intro
+    main:
+      label: Main
+
+sailor_crew_member:
+  label: Crew Member
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-crew-member
+  regions:
+    image:
+      label: Image
+    name:
+      label: Name & Title
+    skills:
+      label: Skills
+    main:
+      label: Main

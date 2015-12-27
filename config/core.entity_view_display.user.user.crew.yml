@@ -1,0 +1,70 @@
+uuid: 3eab38b0-5791-4e15-8901-1a7001167915
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.crew
+    - field.field.user.user.field_picture
+  module:
+    - ds
+    - image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_crew_member
+      path: themes/custom/sailor
+      library: ''
+      disable_css: false
+      settings:
+        wrappers:
+          image: div
+          name: div
+          skills: div
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      image:
+        - field_picture
+      name:
+        - username
+      main:
+        - member_for
+    fields:
+      username:
+        plugin_id: username
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+id: user.user.crew
+targetEntityType: user
+bundle: user
+mode: crew
+content:
+  field_picture:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: image
+  member_for:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

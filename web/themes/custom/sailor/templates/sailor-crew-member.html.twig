@@ -1,0 +1,20 @@
+<article {{ attributes.addClass('item') }}>
+  {% if image %}
+    <figure>
+      {{ image }}
+    </figure>
+  {% endif %}
+  {% if name or skills or main %}
+    <div class="box-white">
+      {{ name }}
+
+      {% if skills %}
+        <div class="skills">
+          {{ skills }}
+        </div>
+      {% endif %}
+
+      {{ main }}
+    </div>
+  {% endif %}
+</article>
