@@ -14,3 +14,4 @@ permissions:
   5: 'access site-wide contact form'
   6: 'submitcontact eform'
   7: 'access user contact forms'
+  8: 'access user profiles'
