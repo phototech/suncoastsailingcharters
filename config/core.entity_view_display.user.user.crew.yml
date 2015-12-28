@@ -4,10 +4,17 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.crew
+    - field.field.user.user.field_name
+    - field.field.user.user.field_phone
     - field.field.user.user.field_picture
+    - field.field.user.user.field_social
+    - field.field.user.user.field_title
   module:
     - ds
     - image
+    - link
+    - name
+    - telephone
     - user
 third_party_settings:
   ds:
@@ -32,29 +39,77 @@ third_party_settings:
       image:
         - field_picture
       name:
-        - username
+        - field_name
+        - field_title
       main:
-        - member_for
-    fields:
-      username:
-        plugin_id: username
-        weight: 1
-        label: hidden
-        formatter: default
-        settings:
-          wrapper: h1
-          class: ''
-          link: false
+        - field_phone
+        - field_social
 id: user.user.crew
 targetEntityType: user
 bundle: user
 mode: crew
 content:
+  field_name:
+    type: name_default
+    weight: 1
+    label: hidden
+    settings:
+      format: short_full
+      output: default
+      multiple: default
+      multiple_delimiter: ', '
+      multiple_and: text
+      multiple_delimiter_precedes_last: never
+      multiple_el_al_min: '3'
+      multiple_el_al_first: '1'
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+  field_phone:
+    type: telephone_link
+    weight: 3
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_picture:
     weight: 0
     label: hidden
     settings:
-      image_style: medium
+      image_style: crew_member
       image_link: ''
     third_party_settings:
       ds:
@@ -63,8 +118,61 @@ content:
           settings:
             lb: ''
     type: image
-  member_for:
+  field_social:
+    type: link
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_title:
+    type: string
     weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: span
+            fi-cl: sub
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+  member_for:
+    weight: 5
     settings: {  }
     third_party_settings: {  }
 hidden: {  }

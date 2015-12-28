@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.post
+    - field.field.user.user.field_name
     - field.field.user.user.field_picture
   module:
     - ds
@@ -47,4 +48,5 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_name: true

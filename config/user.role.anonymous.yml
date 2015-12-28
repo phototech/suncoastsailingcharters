@@ -7,10 +7,10 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access content'
-  - 'access user profiles'
-  - 'post comments'
-  - 'skip comment approval'
-  - 'access comments'
-  - 'access site-wide contact form'
-  - 'submitcontact eform'
+  0: 'access content'
+  2: 'post comments'
+  3: 'skip comment approval'
+  4: 'access comments'
+  5: 'access site-wide contact form'
+  6: 'submitcontact eform'
+  7: 'access user contact forms'
