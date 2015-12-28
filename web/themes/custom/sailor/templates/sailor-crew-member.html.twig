@@ -1,4 +1,4 @@
-<article {{ attributes.addClass('item') }}>
+<article {{ attributes }}>
   {% if image %}
     <figure>
       {{ image }}
@@ -11,6 +11,13 @@
       {% if skills %}
         <div class="skills">
           {{ skills }}
+        </div>
+      {% endif %}
+
+      {% if contact %}
+        <div class="contact">
+          <h3>{% trans %}Get in touch{% endtrans %}</h3>
+          {{ contact }}
         </div>
       {% endif %}
 

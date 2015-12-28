@@ -28,6 +28,7 @@ third_party_settings:
           image: div
           name: div
           skills: div
+          contact: div
           main: div
         outer_wrapper: div
         attributes: ''
@@ -41,7 +42,7 @@ third_party_settings:
       name:
         - field_name
         - field_title
-      main:
+      contact:
         - field_phone
         - field_social
 id: user.user.crew
@@ -100,11 +101,9 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: default
+          id: reset
           settings:
             lb: ''
-            lb-col: false
-            classes: {  }
   field_picture:
     weight: 0
     label: hidden
@@ -132,11 +131,9 @@ content:
       ds:
         ds_limit: ''
         ft:
-          id: default
+          id: reset
           settings:
             lb: ''
-            lb-col: false
-            classes: {  }
   field_title:
     type: string
     weight: 2
@@ -173,7 +170,7 @@ content:
             fis-def-at: false
             fi-def-at: false
   member_for:
-    weight: 5
+    weight: 7
     settings: {  }
     third_party_settings: {  }
 hidden: {  }

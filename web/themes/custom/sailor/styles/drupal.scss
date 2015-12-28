@@ -46,6 +46,49 @@ ul.toolbar-menu {
 }
 
 /**
+ * Crew
+ */
+.crew article .contact {
+  a {
+    @extend .circle;
+    @extend .small;
+    @extend .fa;
+    @extend .fa-fw;
+    &[href^="tel"] {
+      @extend .fa-phone;
+    }
+    &[href*="facebook.com"] {
+      @extend .fa-facebook;
+    }
+    &[href*="twitter.com"] {
+      @extend .fa-twitter;
+    }
+    &[href*="plus.google.com"] {
+      @extend .fa-google-plus;
+    }
+    &[href*="youtube.com"] {
+      @extend .fa-youtube-play;
+    }
+    &[href*="linkedin.com"] {
+      @extend .fa-linkedin;
+    }
+    &[href*="pinterest.com"] {
+      @extend .fa-pinterest-p;
+    }
+    &[href*="github.com"] {
+      @extend .fa-github;
+    }
+    &[href*="drupal.org"] {
+      @extend .fa-drupal;
+    }
+  }
+}
+
+.crew article figure img {
+  margin: 0 auto;
+}
+
+/**
  * Footer
  */
 footer.footer a[href*="facebook.com"] {

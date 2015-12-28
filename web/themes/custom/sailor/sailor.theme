@@ -269,6 +269,68 @@ function sailor_preprocess_sailor_follow_block(array &$variables) {
 }
 
 /**
+ * Implments template_preprocess_sailor_crew().
+ *
+ * Add size icons for field values in the crew section.
+ */
+function sailor_preprocess_sailor_crew(array &$variables) {
+  if (!empty($variables['content']['main'])) {
+    foreach ($variables['content']['main'] as &$field) {
+      $children = Element::children($field);
+      $count = count($children);
+      $class = 'one-fourth';
+
+      switch ($count) {
+        case 1:
+          $class = 'full-width';
+          break;
+
+        case 2:
+          $class = 'one-half';
+          break;
+
+        case 3:
+          $class = 'one-third';
+          break;
+
+        default:
+          $class = 'one-fourth';
+          break;
+      }
+
+      foreach ($children as $delta) {
+        $item = &$field[$delta];
+
+        $item['#attributes']['class'][] = 'item';
+        $item['#attributes']['class'][] = $class;
+      }
+
+    }
+  }
+}
+
+/**
+ * Implments template_preprocess_sailor_crew_member().
+ *
+ * Remove the title from link fields, since the title messes up the display of
+ * the icons.
+ */
+function sailor_preprocess_sailor_crew_member(array &$variables) {
+  if (!empty($variables['content']['contact'])) {
+    foreach ($variables['content']['contact'] as &$field) {
+      foreach (Element::children($field) as $delta) {
+        $item = &$field[$delta];
+
+        // Link Field.
+        if (!empty($item['#type']) && $item['#type'] == 'link') {
+          $item['#title'] = '';
+        }
+      }
+    }
+  }
+}
+
+/**
  * Implments template_preprocess_sailor_account().
  */
 function sailor_preprocess_sailor_account(array &$variables) {

@@ -70,11 +70,9 @@ content:
       ds:
         ds_limit: ''
         ft:
-          id: default
+          id: reset
           settings:
             lb: ''
-            lb-col: false
-            classes: {  }
     type: entity_reference_entity_view
   links:
     weight: 10

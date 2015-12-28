@@ -155,5 +155,7 @@ sailor_crew_member:
       label: Name & Title
     skills:
       label: Skills
+    contact:
+      label: Contact
     main:
       label: Main
