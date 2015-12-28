@@ -90,6 +90,20 @@ footer.footer a[href*="pinterest.com"] {
   @extend .fa-fw;
 }
 
+footer.footer a[href*="github.com"] {
+  @extend .circle;
+  @extend .fa;
+  @extend .fa-github;
+  @extend .fa-fw;
+}
+
+footer.footer a[href*="drupal.org"] {
+  @extend .circle;
+  @extend .fa;
+  @extend .fa-drupal;
+  @extend .fa-fw;
+}
+
 /**
  * Form
  */
