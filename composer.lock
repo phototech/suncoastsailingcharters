@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9f581c4fb9e27a29fbd0d283cf07bece",
-    "content-hash": "ccc0dee78f3093ceb9ecf5ae39a33ee5",
+    "hash": "ae00d8bfa6d1db02ec82662fad79bc56",
+    "content-hash": "2d9e95aac3224fd3e7bad4878ccda8e1",
     "packages": [
         {
             "name": "commerceguys/addressing",
@@ -792,6 +792,33 @@
             "description": "Provides functionality for handling postal addresses.",
             "homepage": "http://drupal.org/project/address",
             "time": "2015-11-13 21:06:23"
+        },
+        {
+            "name": "drupal/config_installer",
+            "version": "8.1.2",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/config_installer.git",
+                "reference": "5e23c37c3c723ace5d5bae3b0c0051172e4f3994"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/config_installer-8.x-1.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-profile",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Use configuration from another Drupal site to install a Drupal instance. Suitable for advanced users.",
+            "homepage": "https://www.drupal.org/project/config_installer"
         },
         {
             "name": "drupal/contact_storage",
