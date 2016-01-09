@@ -172,7 +172,7 @@ function sailor_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     $form['actions']['submit']['#attributes']['class'][] = 'button';
     $form['actions']['submit']['#attributes']['class'][] = 'gold';
 
-    if ($build_info['base_form_id'] == 'comment_form') {
+    if (isset($build_info['base_form_id']) && $build_info['base_form_id'] == 'comment_form') {
       $form['actions']['submit']['#attributes']['class'][] = 'large';
     }
     else {
