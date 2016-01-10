@@ -14,11 +14,13 @@
     "drupal/simple_gmap": "^8.1.0",
     "drupal/paragraphs": "^8.1.0",
     "drupal/config_installer": "^8.1.2",
-    "sailvenice/patches": "~1.0",
-    "drupal/coder": "~8.2.5"
+    "sailvenice/patches": "~1.0"
   },
   "require-dev": {
-    "drush/drush": "~8.0"
+    "drush/drush": "~8.0",
+    "drupal/coder": "~8.2.5",
+    "mikey179/vfsStream": "~1.2",
+    "phpunit/phpunit": "~4.8"
   },
   "replace": {
     "drupal/drupal": "~8.0"
