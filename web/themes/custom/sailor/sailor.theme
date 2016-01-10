@@ -171,11 +171,6 @@ function sailor_form_user_register_form_alter(&$form, FormStateInterface $form_s
  * Add classes to submit button.
  */
 function sailor_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  foreach (Element::children($form) as $field_name) {
-    $field = &$form[$field_name];
-    $field['#attributes']['class'][] = 'full-width';
-  }
-
   if (!empty($form['actions']['submit'])) {
     $build_info = $form_state->getBuildInfo();
 
@@ -197,6 +192,26 @@ function sailor_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
   if (strpos($form['#form_id'], 'contact_message') !== FALSE) {
     $form['langcode']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Impelements template_preprocess_form_element().
+ *
+ * Add the full-width class.
+ */
+function sailor_preprocess_form_element(&$variables) {
+  $variables['attributes']['class'][] = 'full-width';
+}
+
+/**
+ * Impelements template_preprocess_container().
+ *
+ * Add the full-width class.
+ */
+function sailor_preprocess_container(&$variables) {
+  if (!$variables['has_parent'] || $variables['element']['#type'] == 'actions') {
+    $variables['attributes']['class'][] = 'full-width';
   }
 }
 
