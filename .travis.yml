@@ -5,6 +5,7 @@ php:
   - '7.0'
 
 install:
+  - composer self-update
   - composer config -g github-oauth.github.com $GITHUB_API_TOKEN
   - composer install --no-interaction
 
