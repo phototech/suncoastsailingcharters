@@ -71,7 +71,7 @@ function sailor_form_user_login_form_alter(&$form, FormStateInterface $form_stat
   if ($pass->access() || $register->access()) {
     $form['links'] = [
       '#type' => 'container',
-      '#weight'=> 1000,
+      '#weight' => 1000,
       '#attributes' => [
         'class' => [
           'full-width',
@@ -96,7 +96,7 @@ function sailor_form_user_login_form_alter(&$form, FormStateInterface $form_stat
         'text' => [
           '#type' => 'html_tag',
           '#tag' => 'span',
-          '#value' => t('Dont have an account yet?')
+          '#value' => t('Dont have an account yet?'),
         ],
         'link' => [
           '#type' => 'link',
@@ -140,7 +140,7 @@ function sailor_form_user_register_form_alter(&$form, FormStateInterface $form_s
   if ($login->access()) {
     $form['login'] = [
       '#type' => 'container',
-      '#weight'=> 1000,
+      '#weight' => 1000,
       '#attributes' => [
         'class' => [
           'full-width',
@@ -149,7 +149,12 @@ function sailor_form_user_register_form_alter(&$form, FormStateInterface $form_s
       'text' => [
         '#type' => 'html_tag',
         '#tag' => 'span',
-        '#value' => t('Already have an account? ')
+        '#value' => t('Already have an account?'),
+      ],
+      'space' => [
+        '#type' => 'html_tag',
+        '#tag' => 'span',
+        '#value' => ' ',
       ],
       'link' => [
         '#type' => 'link',
@@ -335,7 +340,7 @@ function sailor_preprocess_sailor_crew_member(array &$variables) {
  */
 function sailor_preprocess_sailor_account(array &$variables) {
   if (!empty($variables['content']['intro'])) {
-    foreach ($variables['content']['intro']as &$field) {
+    foreach ($variables['content']['intro'] as &$field) {
       foreach (Element::children($field) as $delta) {
         $item = &$field[$delta];
 
@@ -423,7 +428,7 @@ function sailor_preprocess_form_element(array &$variables) {
  * Add the classes to the form.
  */
 function sailor_preprocess_container(array &$variables) {
-  if ($variables['element']['#type'] != 'actions') {
+  if (!$variables['has_parent'] || $variables['element']['#type'] == 'actions') {
     $variables['attributes']['class'][] = 'full-width';
   }
   if (!empty($variables['element']['widget'])) {
@@ -497,7 +502,7 @@ function sailor_number_strings() {
 }
 
 /**
- * Returns the Sailor Footer Regions
+ * Returns the Sailor Footer Regions.
  *
  * @return array
  *   Collection of regions that are in the "footer".
@@ -508,7 +513,7 @@ function sailor_footer_regions() {
     'footer_second',
     'footer_third',
     'footer_fourth',
-    'footer_copy'
+    'footer_copy',
   ];
 }
 
