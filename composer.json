@@ -14,7 +14,8 @@
     "drupal/simple_gmap": "^8.1.0",
     "drupal/paragraphs": "^8.1.0",
     "drupal/config_installer": "^8.1.2",
-    "sailvenice/patches": "~1.0"
+    "sailvenice/patches": "~1.0",
+    "drupal/coder": "~8.2.5"
   },
   "require-dev": {
     "drush/drush": "~8.0"

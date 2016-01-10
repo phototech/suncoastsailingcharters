@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ae00d8bfa6d1db02ec82662fad79bc56",
-    "content-hash": "2d9e95aac3224fd3e7bad4878ccda8e1",
+    "hash": "d729539afe297e21425635054962ba85",
+    "content-hash": "d7834e4781020973573fe1efec8a55b3",
     "packages": [
         {
             "name": "commerceguys/addressing",
@@ -794,6 +794,46 @@
             "time": "2015-11-13 21:06:23"
         },
         {
+            "name": "drupal/coder",
+            "version": "8.2.5",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/coder",
+                "reference": "9ced5f2ad0e77534f6d53c8db43e6c6c3fe1b482"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/coder-8.x-2.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.2.0",
+                "squizlabs/php_codesniffer": ">=2.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.7 <5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-2.x": "8.2.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Coder is a library to review Drupal code.",
+            "homepage": "https://drupal.org/project/coder",
+            "keywords": [
+                "code review",
+                "phpcs",
+                "standards"
+            ],
+            "time": "2015-11-26 09:21:56"
+        },
+        {
             "name": "drupal/config_installer",
             "version": "8.1.2",
             "source": {
@@ -852,16 +892,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.0.1",
+            "version": "8.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "64bb292ced6c3f683b34da53bf1b6373b3bbacc3"
+                "reference": "45cfc0f34191c35ac35d603aa6f3b8a3c632ab8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/64bb292ced6c3f683b34da53bf1b6373b3bbacc3",
-                "reference": "64bb292ced6c3f683b34da53bf1b6373b3bbacc3",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/45cfc0f34191c35ac35d603aa6f3b8a3c632ab8e",
+                "reference": "45cfc0f34191c35ac35d603aa6f3b8a3c632ab8e",
                 "shasum": ""
             },
             "require": {
@@ -984,7 +1024,7 @@
                 "behat/mink": "~1.6",
                 "behat/mink-goutte-driver": "~1.2",
                 "jcalderonzumba/gastonjs": "^1.1@dev",
-                "jcalderonzumba/mink-phantomjs-driver": "dev-master#10d7c48c9a4129463052321b52450d98983c4332",
+                "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
                 "mikey179/vfsstream": "~1.2",
                 "phpunit/phpunit": "~4.8",
                 "symfony/css-selector": "2.7.*"
@@ -1013,7 +1053,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2015-12-02 14:08:29"
+            "time": "2016-01-06 22:36:23"
         },
         {
             "name": "drupal/ds",
@@ -1143,15 +1183,15 @@
         },
         {
             "name": "drupal/layout_plugin",
-            "version": "8.1.0-alpha20",
+            "version": "8.1.0-alpha21",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/layout_plugin",
-                "reference": "993c829961b5b304a0094d7cd33f014edccf859e"
+                "reference": "02c381e9103b2a356dce09602d9c2f723a133c1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha20.zip",
+                "url": "http://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha21.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1193,7 +1233,7 @@
                 "layout",
                 "php"
             ],
-            "time": "2015-12-09 15:05:00"
+            "time": "2016-01-07 17:01:12"
         },
         {
             "name": "drupal/name",
@@ -1645,16 +1685,16 @@
         },
         {
             "name": "netresearch/composer-patches-plugin",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/netresearch/composer-patches-plugin.git",
-                "reference": "2076b23ddb7bc34c747a6acc4a6309181b9381db"
+                "reference": "3a3de792955eb7e6bad2b5e892b63a1f6d9be000"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/netresearch/composer-patches-plugin/zipball/2076b23ddb7bc34c747a6acc4a6309181b9381db",
-                "reference": "2076b23ddb7bc34c747a6acc4a6309181b9381db",
+                "url": "https://api.github.com/repos/netresearch/composer-patches-plugin/zipball/3a3de792955eb7e6bad2b5e892b63a1f6d9be000",
+                "reference": "3a3de792955eb7e6bad2b5e892b63a1f6d9be000",
                 "shasum": ""
             },
             "require": {
@@ -1691,7 +1731,7 @@
                 "patches",
                 "plugin"
             ],
-            "time": "2015-09-11 12:50:17"
+            "time": "2016-01-06 11:59:02"
         },
         {
             "name": "psr/http-message",
@@ -1803,6 +1843,83 @@
                     ]
                 }
             }
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "e4fb41d5d0387d556e2c25534d630b3cce90ea67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/e4fb41d5d0387d556e2c25534d630b3cce90ea67",
+                "reference": "e4fb41d5d0387d556e2c25534d630b3cce90ea67",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.1.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "bin": [
+                "scripts/phpcs",
+                "scripts/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "CodeSniffer.php",
+                    "CodeSniffer/CLI.php",
+                    "CodeSniffer/Exception.php",
+                    "CodeSniffer/File.php",
+                    "CodeSniffer/Fixer.php",
+                    "CodeSniffer/Report.php",
+                    "CodeSniffer/Reporting.php",
+                    "CodeSniffer/Sniff.php",
+                    "CodeSniffer/Tokens.php",
+                    "CodeSniffer/Reports/",
+                    "CodeSniffer/Tokenizers/",
+                    "CodeSniffer/DocGenerators/",
+                    "CodeSniffer/Standards/AbstractPatternSniff.php",
+                    "CodeSniffer/Standards/AbstractScopeSniff.php",
+                    "CodeSniffer/Standards/AbstractVariableSniff.php",
+                    "CodeSniffer/Standards/IncorrectPatternException.php",
+                    "CodeSniffer/Standards/Generic/Sniffs/",
+                    "CodeSniffer/Standards/MySource/Sniffs/",
+                    "CodeSniffer/Standards/PEAR/Sniffs/",
+                    "CodeSniffer/Standards/PSR1/Sniffs/",
+                    "CodeSniffer/Standards/PSR2/Sniffs/",
+                    "CodeSniffer/Standards/Squiz/Sniffs/",
+                    "CodeSniffer/Standards/Zend/Sniffs/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "time": "2015-12-11 00:12:46"
         },
         {
             "name": "stack/builder",
@@ -2824,16 +2941,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "4b0e6b9122b9df484a3b2e15e4fd88aa7d8861ad"
+                "reference": "4d54fde709664562eb63356f0250d527824d05de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/4b0e6b9122b9df484a3b2e15e4fd88aa7d8861ad",
-                "reference": "4b0e6b9122b9df484a3b2e15e4fd88aa7d8861ad",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/4d54fde709664562eb63356f0250d527824d05de",
+                "reference": "4d54fde709664562eb63356f0250d527824d05de",
                 "shasum": ""
             },
             "require": {
@@ -2870,7 +2987,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2015-12-22 22:44:06"
+            "time": "2016-01-04 21:37:32"
         },
         {
             "name": "zendframework/zend-escaper",
@@ -3127,27 +3244,28 @@
         },
         {
             "name": "drush/drush",
-            "version": "8.0.1",
+            "version": "8.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "e03a3ef04f559f7ec00df637b4035e09c9cf389e"
+                "reference": "5c90a1d3d201bde1d733afa5d2a1885056a3932f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/e03a3ef04f559f7ec00df637b4035e09c9cf389e",
-                "reference": "e03a3ef04f559f7ec00df637b4035e09c9cf389e",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/5c90a1d3d201bde1d733afa5d2a1885056a3932f",
+                "reference": "5c90a1d3d201bde1d733afa5d2a1885056a3932f",
                 "shasum": ""
             },
             "require": {
                 "pear/console_table": "~1.2.0",
                 "php": ">=5.4.5",
+                "psr/log": "~1.0",
                 "psy/psysh": "~0.6",
                 "symfony/var-dumper": "^2.6.3",
                 "symfony/yaml": "2.7.*"
             },
             "require-dev": {
-                "phpunit/phpunit": ">=3.5",
+                "phpunit/phpunit": "4.*",
                 "symfony/process": "2.7.*"
             },
             "suggest": {
@@ -3220,7 +3338,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2015-11-29 00:43:35"
+            "time": "2016-01-08 18:28:35"
         },
         {
             "name": "jakub-onderka/php-console-color",
