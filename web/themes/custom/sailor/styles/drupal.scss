@@ -57,6 +57,9 @@ ul.toolbar-menu {
     &[href^="tel"] {
       @extend .fa-phone;
     }
+    &[href$="/contact"] {
+      @extend .fa-envelope;
+    }
     &[href*="facebook.com"] {
       @extend .fa-facebook;
     }
