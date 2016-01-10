@@ -246,8 +246,8 @@ function sailor_preprocess_block(array &$variables) {
       }
 
       if (strrpos($variables['elements']['#configuration']['id'], ':') !== FALSE) {
-        list($plugin_id, $menu_id) = explode(':', $variables['elements']['#configuration']['id']);
-        $variables['content']['#theme'] = 'menu__' . $region . '__' . $menu_id;
+        $pieces = explode(':', $variables['elements']['#configuration']['id']);
+        $variables['content']['#theme'] = 'menu__' . $region . '__' . $pieces[1];
       }
       else {
         $variables['content']['#theme'] = $variables['content']['#theme'] . '__' . $region;
