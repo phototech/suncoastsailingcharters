@@ -218,6 +218,10 @@ form .description {
   color: #555;
 }
 
+.js-form-type-checkbox {
+  @extend .checkbox;
+}
+
 .ui-datepicker-calendar td.ui-datepicker-week-end  {
   background: #fff;
 }
