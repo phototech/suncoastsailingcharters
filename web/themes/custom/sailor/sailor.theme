@@ -171,9 +171,6 @@ function sailor_form_user_register_form_alter(&$form, FormStateInterface $form_s
  * Add classes to submit button.
  */
 function sailor_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  foreach (Element::children($form) as $field_name) {
-    // $form[$field_name]['#attributes']['class'][] = 'full-width';
-  }
   if (!empty($form['actions']['submit'])) {
     $build_info = $form_state->getBuildInfo();
 
