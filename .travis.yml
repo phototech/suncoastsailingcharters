@@ -13,7 +13,7 @@ script:
 
 deploy:
   provider: script
-  script: bin/deploy
+  script: ./bin/deploy
   on:
     branch: develop
 

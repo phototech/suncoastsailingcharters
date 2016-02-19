@@ -1,5 +1,5 @@
 eval "$(ssh-agent -s)" #start the ssh agent
-chmod 600 ../.travis/deploy_key # this key should have push access
-ssh-add ../.travis/deploy_key
+chmod 600 .travis/deploy_key # this key should have push access
+ssh-add .travis/deploy_key
 git remote add deploy phototech@origin.sailvenice.com:git/sailvenice
 git push deploy TRAVIS_BRANCH
