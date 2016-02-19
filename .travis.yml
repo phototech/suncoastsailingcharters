@@ -1,15 +1,12 @@
 language: php
 php: '5.5'
-
 before_install:
   - echo -e "Host origin.sailvenice.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - openssl aes-256-cbc -K $encrypted_063d800574c6_key -iv $encrypted_063d800574c6_iv -in .travis/deploy_key.enc -out .travis/deploy_key -d
-
 install:
   - composer self-update
   - composer config -g github-oauth.github.com $GITHUB_API_TOKEN
   - composer install --no-interaction
-
 script:
   - ./vendor/bin/phpcs --report=summary -np .
   - ./vendor/bin/phpunit --testsuite unit
@@ -19,3 +16,7 @@ deploy:
   script: bin/deploy
   on:
     branch: develop
+
+notifications:
+  slack:
+    secure: CH6gjcwTmBr7t3lduIaadlVN6mM6kdUNm27Zv9bmepo57S6oF1X+wOnhgwoPNPddkQKoh5kWz/0bABFkMWevqMGXWiBJjbvXF460j2DE9KzSvXxNHxzepo96cAdZ1iGCHRKuzuH/EukRjLIKWV2Sjedvi5zRV3FQvLjLd9VYJJ24Rzo4arHvY7AfSxXA54VcL+snRi496isgOx0aABlWyY8PZ03gmVG7r3T4zIaCXJ0Wjselj+4kOjrYmnZuFVIEX80oPk8BnC9bVq3hmOTt3TzrS1ikMz0ZOfQSSprNEX9bbDdQTARX//SQtRtPNArgCXiTTuEewl0vVcGmcgQVOmRAXR5fSJjui7wKoaDOrS5FW13S94gGyN+2S8+XlZjhJzM2J0VKOitBCZDaLKDEfAcGHFZytt17UZ3GN/xK72SqItgiRWsNevPRLIMMDSZ6V8+12i+n7GBVOYtV79o2VkaU7zHaOffrgtqlTXsIO+uIX9IKcMKvtVsiaCLJOrg+sQypW58mCEt/5dXUpZjA2yJXF+WmQpwhXvYB6qVrecfzeNKwnPEcgdXREUiawtr045vnK3HKWGrYS027PaYkjW0EIu+Q91JX6dUHQ2qGvryljUdK9uax4ZGEglEfx74pq8aLCGgy8cDQKyFDp8NpbxJASV63caicxgAVZ3nXuus=
