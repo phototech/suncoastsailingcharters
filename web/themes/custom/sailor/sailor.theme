@@ -531,6 +531,7 @@ function sailor_task_current_class(array $task) {
   if (!empty($task['#active']) && $task['#active'] == TRUE) {
     $task['#attributes']['class'][] = 'current';
   }
+
   return $task;
 }
 
