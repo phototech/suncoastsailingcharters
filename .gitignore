@@ -3,6 +3,7 @@ web/core
 web/modules/contrib
 web/themes/contrib
 web/profiles/contrib
+node_modules
 vendor
 
 # Ignore configuration files that may contain sensitive information.

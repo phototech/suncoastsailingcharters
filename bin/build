@@ -1,0 +1,4 @@
+composer install --no-interaction
+bower install
+bundler install
+./.bundle/vendor/bin/compass compile web/themes/custom/sailor

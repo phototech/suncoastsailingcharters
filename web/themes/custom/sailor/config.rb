@@ -1,8 +1,7 @@
 # Require any additional compass plugins here.
 require 'compass/import-once/activate'
 require 'sass-css-importer'
-add_import_path Sass::CssImporter::Importer.new('vendor/sailor-html/HTML/css')
-add_import_path 'vendor/font-awesome/scss'
+add_import_path Sass::CssImporter::Importer.new(File.dirname(__FILE__) + '/vendor/sailor-html/HTML/css')
 
 # Set this to the root of your project when deployed:
 http_path = "/"
