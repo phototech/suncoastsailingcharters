@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f58d59ab3d23787d94c4b3d2f740e12d",
-    "content-hash": "460a3f0a346eeb32f3219fe3aab3436b",
+    "hash": "5dc34f2c7e37c06320acef63b77e899d",
+    "content-hash": "a332d2b29a246e851611508798b342bc",
     "packages": [
         {
             "name": "commerceguys/addressing",
@@ -1782,7 +1782,7 @@
         },
         {
             "name": "sailvenice/patches",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "require": {
                 "netresearch/composer-patches-plugin": "^1.2.1"
             },
@@ -1792,7 +1792,8 @@
                     "drupal/contact_storage": [
                         {
                             "title": "Issue #2629630: When no Redirect Page is specified; redirect to parent entity",
-                            "url": "https://www.drupal.org/files/issues/contact_storage-default_redirect-2629630-2.patch"
+                            "url": "https://www.drupal.org/files/issues/contact_storage-default_redirect-2629630-2.patch",
+                            "args": "-F 0"
                         }
                     ]
                 }
