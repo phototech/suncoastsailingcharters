@@ -1,4 +1,19 @@
+# Install the dependencies.
 composer install --no-interaction
 bower install
 bundler install
+
+# Compile the SCSS.
 ./.bundle/vendor/bin/compass compile web/themes/custom/sailor
+
+# Clear Drupal's cache.
+./vendor/bin/drush --root=$(pwd)/web/ cr
+
+# Import Drupal's Config.
+./vendor/bin/drush --root=$(pwd)/web/ config-import --yes
+
+# Execute any database updates.
+./vendor/bin/drush --root=$(pwd)/web/ updb --yes
+
+# Execute any entity updates.
+./vendor/bin/drush --root=$(pwd)/web/ entup --yes
