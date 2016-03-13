@@ -201,7 +201,7 @@ function sailor_form_alter(&$form, FormStateInterface $form_state, $form_id) {
  * Add the full-width class.
  */
 function sailor_preprocess_form_element(&$variables) {
-  if (count($variables['element']['#parents']) == 1) {
+  if (isset($variables['element']['#parents']) && count($variables['element']['#parents']) == 1) {
     $variables['attributes']['class'][] = 'full-width';
   }
 }
