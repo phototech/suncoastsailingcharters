@@ -137,7 +137,7 @@ Scroller.prototype.query = function() {
 		scripts        : window.infiniteScroll.settings.scripts,
 		styles         : window.infiniteScroll.settings.styles,
 		query_args     : window.infiniteScroll.settings.query_args,
-		last_post_date : window.infiniteScroll.settings.last_post_date,
+		last_post_date : window.infiniteScroll.settings.last_post_date
 	};
 };
 
@@ -315,7 +315,7 @@ Scroller.prototype.refresh = function() {
 				}
 
 				// stash the response in the page cache
-               			self.pageCache[self.page] = response;
+				self.pageCache[self.page] = response;
 
 				// Increment the page number
 				self.page++;
