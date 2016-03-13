@@ -1,11 +1,13 @@
 <?php
 
 function wpcf7_current_action() {
-	if ( isset( $_REQUEST['action'] ) && -1 != $_REQUEST['action'] )
+	if ( isset( $_REQUEST['action'] ) && -1 != $_REQUEST['action'] ) {
 		return $_REQUEST['action'];
+	}
 
-	if ( isset( $_REQUEST['action2'] ) && -1 != $_REQUEST['action2'] )
+	if ( isset( $_REQUEST['action2'] ) && -1 != $_REQUEST['action2'] ) {
 		return $_REQUEST['action2'];
+	}
 
 	return false;
 }
@@ -15,38 +17,8 @@ function wpcf7_admin_has_edit_cap() {
 }
 
 function wpcf7_add_tag_generator( $name, $title, $elm_id, $callback, $options = array() ) {
-	global $wpcf7_tag_generators;
-
-	$name = trim( $name );
-	if ( '' == $name )
-		return false;
-
-	if ( ! is_array( $wpcf7_tag_generators ) )
-		$wpcf7_tag_generators = array();
-
-	$wpcf7_tag_generators[$name] = array(
-		'title' => $title,
-		'content' => $elm_id,
-		'options' => $options );
-
-	if ( is_callable( $callback ) )
-		add_action( 'wpcf7_admin_footer', $callback );
-
-	return true;
-}
-
-function wpcf7_tag_generators() {
-	global $wpcf7_tag_generators;
-
-	$taggenerators = array();
-
-	foreach ( (array) $wpcf7_tag_generators as $name => $tg ) {
-		$taggenerators[$name] = array_merge(
-			(array) $tg['options'],
-			array( 'title' => $tg['title'], 'content' => $tg['content'] ) );
-	}
-
-	return $taggenerators;
+	$tag_generator = WPCF7_TagGenerator::get_instance();
+	return $tag_generator->add( $name, $title, $callback, $options );
 }
 
 function wpcf7_save_contact_form( $post_id = -1 ) {
@@ -58,8 +30,8 @@ function wpcf7_save_contact_form( $post_id = -1 ) {
 		$contact_form = WPCF7_ContactForm::get_template();
 	}
 
-	if ( isset( $_POST['wpcf7-title'] ) ) {
-		$contact_form->set_title( $_POST['wpcf7-title'] );
+	if ( isset( $_POST['post_title'] ) ) {
+		$contact_form->set_title( $_POST['post_title'] );
 	}
 
 	if ( isset( $_POST['wpcf7-locale'] ) ) {
@@ -95,7 +67,20 @@ function wpcf7_save_contact_form( $post_id = -1 ) {
 	}
 
 	if ( isset( $_POST['wpcf7-mail-additional-headers'] ) ) {
-		$mail['additional_headers'] = trim( $_POST['wpcf7-mail-additional-headers'] );
+		$headers = '';
+		$tempheaders = str_replace(
+			"\r\n", "\n", $_POST['wpcf7-mail-additional-headers'] );
+		$tempheaders = explode( "\n", $tempheaders );
+
+		foreach ( $tempheaders as $header ) {
+			$header = trim( $header );
+
+			if ( '' !== $header ) {
+				$headers .= $header . "\n";
+			}
+		}
+
+		$mail['additional_headers'] = trim( $headers );
 	}
 
 	if ( isset( $_POST['wpcf7-mail-attachments'] ) ) {
@@ -128,8 +113,20 @@ function wpcf7_save_contact_form( $post_id = -1 ) {
 	}
 
 	if ( isset( $_POST['wpcf7-mail-2-additional-headers'] ) ) {
-		$mail_2['additional_headers'] = trim(
-			$_POST['wpcf7-mail-2-additional-headers'] );
+		$headers = '';
+		$tempheaders = str_replace(
+			"\r\n", "\n", $_POST['wpcf7-mail-2-additional-headers'] );
+		$tempheaders = explode( "\n", $tempheaders );
+
+		foreach ( $tempheaders as $header ) {
+			$header = trim( $header );
+
+			if ( '' !== $header ) {
+				$headers .= $header . "\n";
+			}
+		}
+
+		$mail_2['additional_headers'] = trim( $headers );
 	}
 
 	if ( isset( $_POST['wpcf7-mail-2-attachments'] ) ) {
@@ -158,7 +155,11 @@ function wpcf7_save_contact_form( $post_id = -1 ) {
 
 	do_action( 'wpcf7_save_contact_form', $contact_form );
 
-	return $contact_form->save();
-}
+	$post_id = $contact_form->save();
 
-?>
+	if ( wpcf7_validate_configuration() ) {
+		$contact_form->validate_configuration();
+	}
+
+	return $post_id;
+}
