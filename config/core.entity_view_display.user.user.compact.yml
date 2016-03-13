@@ -33,4 +33,7 @@ content:
     type: image
 hidden:
   field_name: true
+  field_phone: true
+  field_social: true
+  field_title: true
   member_for: true

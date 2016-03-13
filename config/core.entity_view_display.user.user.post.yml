@@ -50,3 +50,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_name: true
+  field_phone: true
+  field_social: true
+  field_title: true
