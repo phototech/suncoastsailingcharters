@@ -30,6 +30,7 @@ module:
   rdf: 0
   search: 0
   simple_gmap: 0
+  stage_file_proxy: 0
   system: 0
   telephone: 0
   text: 0
