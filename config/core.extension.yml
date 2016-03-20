@@ -4,6 +4,7 @@ module:
   block_content: 0
   breakpoint: 0
   contact: 0
+  contact_link: 0
   contact_storage: 0
   contextual: 0
   datetime: 0

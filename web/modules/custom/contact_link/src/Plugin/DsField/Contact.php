@@ -1,13 +1,18 @@
 <?php
 /**
  * @file
- * Contains \Drupal\contact_link|Plugin\ds\DsField\User\Contact.
+ * Contains \Drupal\contact_link\Plugin\DsField\Contact.
  */
 
 namespace Drupal\contact_link\Plugin\DsField;
 
+use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Core\StringTranslation\TranslationInterface;
 use Drupal\Core\Url;
 use Drupal\ds\Plugin\DsField\Link;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Plugin that renders a contact form link.
@@ -19,14 +24,47 @@ use Drupal\ds\Plugin\DsField\Link;
  *   provider = "user"
  * )
  */
-class Contact extends Link {
+class Contact extends Link implements ContainerFactoryPluginInterface {
+
+  use StringTranslationTrait;
+
+  /**
+   * Module Handler.
+   *
+   * @var \Drupal\Core\Extension\ModuleHandlerInterface
+   */
+  protected $moduleHandler;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct($configuration,
+                              $plugin_id,
+                              $plugin_definition,
+                              ModuleHandlerInterface $module_handler,
+                              TranslationInterface $string_translation) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->moduleHandler = $module_handler;
+    $this->stringTranslation = $string_translation;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('module_handler'),
+      $container->get('string_translation')
+    );
+  }
 
   /**
    * {@inheritdoc}
    */
   public function build() {
-    $config = $this->getConfiguration();
-
     $url = Url::fromRoute('entity.user.contact_form', [
       'user' => $this->entity()->id(),
     ]);
@@ -37,17 +75,17 @@ class Contact extends Link {
 
     $output = [
       '#type' => 'link',
-      '#title' => $config['link text'],
+      '#title' => $this->configuration['link text'],
       '#url' => $url,
     ];
 
     // Wrapper and class.
-    if (!empty($config['wrapper'])) {
+    if (!empty($this->configuration['wrapper'])) {
       return [
         '#type' => 'html_tag',
-        '#tag' => $config['wrapper'],
+        '#tag' => $this->configuration['wrapper'],
         '#attributes' => [
-          'class' => explode(' ', $config['class']),
+          'class' => explode(' ', $this->configuration['class']),
         ],
         '#value' => $output,
       ];
@@ -62,7 +100,7 @@ class Contact extends Link {
    * {@inheritdoc}
    */
   public function isAllowed() {
-    if (\Drupal::moduleHandler()->moduleExists('contact')) {
+    if ($this->moduleHandler->moduleExists('contact')) {
       return TRUE;
     }
     else {
@@ -75,8 +113,7 @@ class Contact extends Link {
    */
   public function defaultConfiguration() {
     $configuration = parent::defaultConfiguration();
-
-    $configuration['link text'] = \Drupal::translation()->translate('Contact');
+    $configuration['link text'] = $this->t('Contact');
 
     return $configuration;
   }
