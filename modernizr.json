@@ -1,0 +1,4 @@
+{
+  "classPrefix": "modernizr-",
+  "feature-detects": ["elem/details"]
+}

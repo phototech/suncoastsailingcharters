@@ -2,9 +2,13 @@
 composer install --no-interaction
 bower install
 bundler install
+npm install
 
 # Compile the SCSS.
 ./.bundle/vendor/bin/compass compile web/themes/custom/sailor
+
+# Build Modernizr
+./node_modules/.bin/modernizr -c modernizr.json -d ./web/vendor/modernizr/modernizr.js
 
 # Clear Drupal's cache.
 ./vendor/bin/drush --root=$(pwd)/web/ cr

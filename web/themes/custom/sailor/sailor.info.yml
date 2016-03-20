@@ -18,3 +18,7 @@ regions:
   footer_third: 'Third footer'
   footer_fourth: 'Fourth footer'
   footer_copy: 'Copyright'
+libraries-override:
+  core/modernizr:
+    js:
+      /vendor/modernizr/modernizr.js: { preprocess: 0, weight: -21, minified: true }
