@@ -2,7 +2,7 @@
   "name": "sailvenice",
   "description": "Sail Venice Website",
   "dependencies": {
-    "modernizr": "^3.3.1"
+    "modernizr": "^3.1.0"
   },
   "devDependencies": {},
   "repository": {

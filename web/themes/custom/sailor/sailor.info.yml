@@ -6,6 +6,18 @@ core: 8.x
 libraries:
   - sailor/global
   - sailor/fonts
+libraries-override:
+  core/modernizr:
+    js:
+      assets/vendor/modernizr/modernizr.min.js: vendor/modernizr/modernizr.js
+  core/jquery.ui:
+    css:
+      theme:
+        assets/vendor/jquery.ui/themes/base/theme.css: false
+  core/jquery.ui.datepicker:
+    css:
+      component:
+        assets/vendor/jquery.ui/themes/base/datepicker.css: false
 regions:
   header: Header
   primary_menu: 'Primary Menu'
@@ -18,7 +30,3 @@ regions:
   footer_third: 'Third footer'
   footer_fourth: 'Fourth footer'
   footer_copy: 'Copyright'
-libraries-override:
-  core/modernizr:
-    js:
-      /vendor/modernizr/modernizr.js: { preprocess: 0, weight: -21, minified: true }

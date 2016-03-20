@@ -5,20 +5,9 @@
  */
 
 use Drupal\Component\Utility\Html;
-use Drupal\Core\Asset\AttachedAssetsInterface;
 use Drupal\Core\Render\Element;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
-
-/**
- * Implements hook_css_alter().
- *
- * Remove conflicting CSS.
- */
-function sailor_css_alter(&$css, AttachedAssetsInterface $assets) {
-  unset($css['core/assets/vendor/jquery.ui/themes/base/datepicker.css']);
-  unset($css['core/assets/vendor/jquery.ui/themes/base/theme.css']);
-}
 
 /**
  * Implements hook_theme_suggestions_form_alter().
