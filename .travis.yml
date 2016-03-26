@@ -4,16 +4,15 @@ addons:
   ssh_known_hosts: origin.sailvenice.com
 before_install:
   # For some reason, adding the default travis pubkey to the server, does not
-  # permit authentication, swe'll use a custom key instead.
+  # permit authentication, so we'll use a custom key instead.
   - openssl aes-256-cbc -K $encrypted_063d800574c6_key -iv $encrypted_063d800574c6_iv -in .travis/deploy_key.enc -out .travis/deploy_key -d
-# install:
-  # - composer self-update
-  # - composer config -g github-oauth.github.com $GITHUB_API_TOKEN
-  # - composer install --no-interaction
+install:
+  - composer self-update
+  - composer config -g github-oauth.github.com $GITHUB_API_TOKEN
+  - composer install --no-interaction
 script:
-  - ls -la ~/.ssh
-  # - ./vendor/bin/phpcs --report=summary -np .
-  # - ./vendor/bin/phpunit --testsuite unit
+  - ./vendor/bin/phpcs --report=summary -np .
+  - ./vendor/bin/phpunit --testsuite unit
 deploy:
   provider: script
   skip_cleanup: true
