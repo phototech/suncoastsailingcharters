@@ -1,0 +1,25 @@
+uuid: ffecd70e-3f7c-4ca3-9ddd-84403e825622
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.service.field_body
+    - field.field.paragraph.service.field_title
+    - paragraphs.paragraphs_type.service
+id: paragraph.service.preview
+targetEntityType: paragraph
+bundle: service
+mode: preview
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  field_body: true
+  uid: true

@@ -24,8 +24,10 @@ visibility:
     id: node_type
     bundles:
       contact: contact
+      crew: crew
       error: error
       faq: faq
+      services: services
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

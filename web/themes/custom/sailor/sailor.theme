@@ -444,6 +444,14 @@ function sailor_preprocess_menu_local_tasks__tabs(&$variables) {
 }
 
 /**
+ * Implmements template_preprocess_sailor_service().
+ */
+function sailor_preprocess_sailor_service(&$variables) {
+  $entity = $variables['content']['#entity'];
+  $variables['attributes']['id'] = Html::getUniqueId($entity->getEntityType()->id() . '-' . $entity->id());
+}
+
+/**
  * Implmements template_preprocess_region().
  *
  * Add the region name as a class.

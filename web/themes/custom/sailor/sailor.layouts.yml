@@ -159,3 +159,27 @@ sailor_crew_member:
       label: Contact
     main:
       label: Main
+
+sailor_services:
+  label: Services
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-services
+  regions:
+    intro:
+      label: Intro
+    sidebar:
+      label: Sidebar
+    main:
+      label: Main
+
+sailor_service:
+  label: Service
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-service
+  regions:
+    main:
+      label: Main
