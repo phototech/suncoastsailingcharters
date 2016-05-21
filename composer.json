@@ -16,7 +16,8 @@
     "drupal/config_installer": "^8.1.2",
     "sailvenice/patches": "~1.0",
     "drupal/stage_file_proxy": "^8.1.0",
-    "drupal/contact_link": "^8.1.0-alpha1"
+    "drupal/contact_link": "^8.1.0-alpha1",
+    "drupal/display_field_copy": "~8.1.0-alpha1"
   },
   "require-dev": {
     "drush/drush": "~8.0",
