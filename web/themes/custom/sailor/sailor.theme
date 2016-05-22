@@ -201,6 +201,9 @@ function sailor_preprocess_form_element(&$variables) {
  * Add the full-width class.
  */
 function sailor_preprocess_container(&$variables) {
+  if (!empty($variables['element']['administration_menu'])) {
+    return;
+  }
   if (!$variables['has_parent'] || $variables['element']['#type'] == 'actions' || !empty($variables['element']['widget'])) {
     $variables['attributes']['class'][] = 'full-width';
   }
