@@ -1061,15 +1061,15 @@
         },
         {
             "name": "drupal/display_field_copy",
-            "version": "8.1.0-alpha1",
+            "version": "8.1.0-alpha3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/display_field_copy.git",
-                "reference": "3c078a03ee768adce409fdc290dd1e18b6f7c0f2"
+                "reference": "d2eda3cac9d3fe3d4931c149cefb52c68e8689b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/display_field_copy-8.x-1.0-alpha1.zip",
+                "url": "https://ftp.drupal.org/files/projects/display_field_copy-8.x-1.0-alpha3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1089,7 +1089,7 @@
             ],
             "description": "Copies the display so it can be shown multiple times on a page.",
             "homepage": "https://www.drupal.org/project/display_field_copy",
-            "time": "2016-05-21 16:05:17"
+            "time": "2016-05-22 02:35:36"
         },
         {
             "name": "drupal/ds",

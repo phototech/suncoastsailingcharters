@@ -452,6 +452,14 @@ function sailor_preprocess_sailor_service(&$variables) {
 }
 
 /**
+ * Implmements template_preprocess_sailor_service_list_item().
+ */
+function sailor_preprocess_sailor_service_list_item(&$variables) {
+  $entity = $variables['content']['#entity'];
+  $variables['link'] = '#' . Html::cleanCssIdentifier($entity->getEntityType()->id() . '-' . $entity->id());
+}
+
+/**
  * Implmements template_preprocess_region().
  *
  * Add the region name as a class.

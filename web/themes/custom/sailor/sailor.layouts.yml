@@ -183,3 +183,13 @@ sailor_service:
   regions:
     main:
       label: Main
+
+sailor_service_list_item:
+  label: Service List Item
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-service-list-item
+  regions:
+    main:
+      label: Main
