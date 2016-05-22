@@ -193,3 +193,13 @@ sailor_service_list_item:
   regions:
     main:
       label: Main
+
+sailor_call_to_action_small:
+  label: Call to Action (Small)
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-call-to-action-small
+  regions:
+    main:
+      label: Main
