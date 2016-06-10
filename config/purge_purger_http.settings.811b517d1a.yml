@@ -1,0 +1,25 @@
+uuid: 9ca426d4-07ba-44a4-bae6-82174c832629
+langcode: en
+status: true
+dependencies: {  }
+id: 811b517d1a
+name: Varnish
+invalidationtype: tag
+hostname: localhost
+port: 80
+path: /
+request_method: BAN
+scheme: http
+verify: '1'
+headers:
+  -
+    field: Purge-Cache-Tags
+    value: '[invalidation:expression]'
+body: ''
+body_content_type: text/plain
+runtime_measurement: true
+timeout: !!float 1
+connect_timeout: !!float 1
+cooldown_time: !!float 0
+max_requests: 100
+http_errors: true
