@@ -43,7 +43,7 @@
       "package": {
         "type": "metapackage",
         "name": "sailvenice/patches",
-        "version": "1.4.1",
+        "version": "1.5.0",
         "require": {
           "netresearch/composer-patches-plugin": "^1.2.1"
         },
@@ -54,6 +54,12 @@
                 "title": "Issue #2629630: When no Redirect Page is specified; redirect to parent entity",
                 "url": "https://www.drupal.org/files/issues/contact_storage-default_redirect-2629630-2.patch",
                 "args": "-F 0"
+              }
+            ],
+            "drupal/purge": [
+              {
+                "title": "Issue #2699897: Test method \"testHelper\" in test class \"Drupal\\Tests\\purge\\Unit\\Logger\\LoggerChannelPartTest\" is not public",
+                "url": "https://www.drupal.org/files/issues/test_helper-2699897-2.patch"
               }
             ]
           }

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ead9d38ef7255ed79cef5b7c6d0afcac",
-    "content-hash": "46c67c6bd3ccb6136bfea73f69ef29f6",
+    "hash": "5088738d0fd69d53dc17921a97a50161",
+    "content-hash": "1be3b3d7be71e874ac3466601ffec873",
     "packages": [
         {
             "name": "commerceguys/addressing",
@@ -2070,7 +2070,7 @@
         },
         {
             "name": "sailvenice/patches",
-            "version": "1.4.1",
+            "version": "1.5.0",
             "require": {
                 "netresearch/composer-patches-plugin": "^1.2.1"
             },
@@ -2082,6 +2082,12 @@
                             "title": "Issue #2629630: When no Redirect Page is specified; redirect to parent entity",
                             "url": "https://www.drupal.org/files/issues/contact_storage-default_redirect-2629630-2.patch",
                             "args": "-F 0"
+                        }
+                    ],
+                    "drupal/purge": [
+                        {
+                            "title": "Issue #2699897: Test method \"testHelper\" in test class \"Drupal\\Tests\\purge\\Unit\\Logger\\LoggerChannelPartTest\" is not public",
+                            "url": "https://www.drupal.org/files/issues/test_helper-2699897-2.patch"
                         }
                     ]
                 }
