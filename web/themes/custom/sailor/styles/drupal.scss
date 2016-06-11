@@ -150,6 +150,21 @@ footer.footer a[href*="drupal.org"] {
   @extend .fa-fw;
 }
 
+footer.footer a[href*="tripadvisor.com"] {
+  @extend .circle;
+  @extend .fa;
+  /* Trip Advisor icon doesn't exist in 4.3.0 */
+  @extend .fa-tripadvisor !optional;
+  @extend .fa-fw;
+}
+
+footer.footer a[href*="yelp.com"] {
+  @extend .circle;
+  @extend .fa;
+  @extend .fa-yelp;
+  @extend .fa-fw;
+}
+
 /**
  * Form
  */
