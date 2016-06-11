@@ -1,0 +1,16 @@
+uuid: 3979ffae-5b43-4b47-bc71-495db7478c6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.homepage
+  module:
+    - user
+id: node.homepage.default
+targetEntityType: node
+bundle: homepage
+mode: default
+content:
+  links:
+    weight: 100
+hidden: {  }
