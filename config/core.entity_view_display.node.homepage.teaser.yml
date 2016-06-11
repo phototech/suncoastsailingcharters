@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.homepage.field_hero_buton
+    - field.field.node.homepage.field_hero_image
+    - field.field.node.homepage.field_hero_title
     - node.type.homepage
   module:
     - user
@@ -14,4 +17,7 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden: {  }
+hidden:
+  field_hero_buton: true
+  field_hero_image: true
+  field_hero_title: true

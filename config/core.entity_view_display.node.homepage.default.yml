@@ -3,14 +3,70 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.homepage.field_hero_buton
+    - field.field.node.homepage.field_hero_image
+    - field.field.node.homepage.field_hero_title
     - node.type.homepage
   module:
+    - ds
+    - image
+    - link
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_home
+      path: themes/custom/sailor
+      library: ''
+      disable_css: false
+      settings:
+        wrappers:
+          hero: div
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      hero:
+        - field_hero_image
+        - field_hero_title
+        - field_hero_buton
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
 mode: default
 content:
+  field_hero_buton:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_hero_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_hero_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   links:
-    weight: 100
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

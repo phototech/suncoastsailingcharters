@@ -184,6 +184,18 @@ sailor_service:
     main:
       label: Main
 
+sailor_home:
+  label: Home
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-home
+  regions:
+    hero:
+      label: Hero
+    main:
+      label: Main
+
 sailor_service_list_item:
   label: Service List Item
   category: Sailor
