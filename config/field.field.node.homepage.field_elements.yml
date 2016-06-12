@@ -1,0 +1,39 @@
+uuid: c7a6f7f0-0eef-41ae-a7dd-a5811f584318
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_elements
+    - node.type.homepage
+    - paragraphs.paragraphs_type.quote
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_elements
+field_name: field_elements
+entity_type: node
+bundle: homepage
+label: Elements
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      quote: quote
+    target_bundles_drag_drop:
+      faq:
+        weight: 5
+        enabled: false
+      faq_set:
+        weight: 6
+        enabled: false
+      quote:
+        enabled: true
+        weight: 7
+      service:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

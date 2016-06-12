@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.homepage.field_elements
     - field.field.node.homepage.field_hero_buton
     - field.field.node.homepage.field_hero_image
     - field.field.node.homepage.field_hero_title
@@ -12,6 +13,7 @@ dependencies:
     - field_group
     - image
     - link
+    - paragraphs
     - path
 third_party_settings:
   field_group:
@@ -38,6 +40,16 @@ content:
     type: datetime_timestamp
     weight: 4
     settings: {  }
+    third_party_settings: {  }
+  field_elements:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
     third_party_settings: {  }
   field_hero_buton:
     weight: 10
@@ -86,7 +98,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60

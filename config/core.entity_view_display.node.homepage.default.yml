@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.homepage.field_elements
     - field.field.node.homepage.field_hero_buton
     - field.field.node.homepage.field_hero_image
     - field.field.node.homepage.field_hero_title
@@ -10,6 +11,7 @@ dependencies:
     - node.type.homepage
   module:
     - ds
+    - entity_reference_revisions
     - image
     - link
     - user
@@ -35,11 +37,21 @@ third_party_settings:
         - field_hero_image
         - field_hero_title
         - field_hero_buton
+      main:
+        - field_elements
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
 mode: default
 content:
+  field_elements:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_hero_buton:
     weight: 2
     label: hidden
@@ -107,7 +119,7 @@ content:
             fi-def-at: false
     type: string
   links:
-    weight: 4
+    weight: 12
     settings: {  }
     third_party_settings: {  }
 hidden: {  }
