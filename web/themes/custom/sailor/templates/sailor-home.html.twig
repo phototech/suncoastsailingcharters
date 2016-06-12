@@ -1,8 +1,8 @@
 {{ title_suffix.contextual_links }}
 
 {% if hero %}
-	<div class="hero">
-		<article{{ hero.attributes }}>
+	<div{{ hero.attributes.addClass('hero') }}>
+		<article>
 			{{ hero }}
 		</article>
 	</div>
