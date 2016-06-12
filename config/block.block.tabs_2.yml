@@ -27,6 +27,7 @@ visibility:
       crew: crew
       error: error
       faq: faq
+      homepage: homepage
       services: services
     negate: false
     context_mapping:
