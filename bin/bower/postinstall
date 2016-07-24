@@ -1,8 +1,9 @@
 rm -v web/themes/custom/sailor/vendor
 ln -sv ../../../../web/vendor web/themes/custom/sailor/vendor
 
+rm -v web/themes/custom/sailor/fonts
+ln -sv ../../../../web/vendor/sailor-html/HTML/fonts web/themes/custom/sailor/fonts
+
 mkdir -v web/themes/custom/sailor/compiled
 rm -v web/themes/custom/sailor/compiled/images
 ln -sv ../../../../../web/vendor/sailor-html/HTML/images web/themes/custom/sailor/compiled/images
-rm -v web/themes/custom/sailor/compiled/fonts
-ln -sv ../../../../../web/vendor/sailor-html/HTML/fonts web/themes/custom/sailor/compiled/fonts
