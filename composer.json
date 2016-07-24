@@ -26,6 +26,7 @@
     "drupal/coder": "~8.2.5",
     "mikey179/vfsStream": "~1.2",
     "phpunit/phpunit": "~4.8",
+    "behat/mink": "~1.7",
     "drupal/console": "^0.10.13"
   },
   "replace": {

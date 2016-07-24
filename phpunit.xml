@@ -1,38 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<phpunit bootstrap="web/core/tests/bootstrap.php" colors="true">
+<phpunit bootstrap="web/core/tests/bootstrap.php" colors="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutChangesToGlobalState="true"
+         checkForUnintentionallyCoveredCode="false">
   <php>
     <!-- Set error reporting to E_ALL. -->
     <ini name="error_reporting" value="32767"/>
     <!-- Do not limit the amount of memory tests take to run. -->
     <ini name="memory_limit" value="-1"/>
+    <!-- Example SIMPLETEST_BASE_URL value: http://localhost -->
+    <env name="SIMPLETEST_BASE_URL" value=""/>
+    <!-- Example SIMPLETEST_DB value: mysql://username:password@localhost/databasename#table_prefix -->
+    <env name="SIMPLETEST_DB" value=""/>
+    <!-- Example BROWSERTEST_OUTPUT_DIRECTORY value: /path/to/webroot/sites/simpletest/browser_output -->
+    <env name="BROWSERTEST_OUTPUT_DIRECTORY" value=""/>
   </php>
+  <groups>
+    <exclude>
+      <!-- The Composer tests fail when not using ./docroot/composer.json -->
+      <group>Composer</group>
+      <!-- ContainerAwareEventDispatcherTest::testGetListenerPriority()
+           is marked as a "risky" test because it doesn't make any assertions -->
+      <group>EventDispatcher</group>
+    </exclude>
+</groups>
   <testsuites>
     <testsuite name="unit">
-      <directory>./web/core/tests/Drupal/Tests</directory>
-      <directory>./web/core/modules/*/tests/src/Unit</directory>
-      <directory>./web/modules/*/*/tests/src/Unit</directory>
-      <directory>./web/sites/*/modules/*/tests/src/Unit</directory>
-      <!-- Exclude Composer's vendor directory so we don't run tests there. -->
-      <exclude>./vendor</exclude>
-      <!-- Exclude Drush tests. -->
-      <exclude>./drush/tests</exclude>
-      <!-- Exclude the Composer tests -->
-      <exclude>./web/core/tests/Drupal/Tests/ComposerIntegrationTest.php</exclude>
+      <file>./web/core/tests/TestSuites/UnitTestSuite.php</file>
+    </testsuite>
+    <testsuite name="kernel">
+      <file>./web/core/tests/TestSuites/KernelTestSuite.php</file>
+    </testsuite>
+    <testsuite name="functional">
+      <file>./web/core/tests/TestSuites/FunctionalTestSuite.php</file>
+    </testsuite>
+    <testsuite name="functional-javascript">
+      <file>./web/core/tests/TestSuites/FunctionalJavascriptTestSuite.php</file>
     </testsuite>
   </testsuites>
   <listeners>
-    <listener class="\Drupal\Tests\Standards\DrupalStandardsListener">
+    <listener class="\Drupal\Tests\Listeners\DrupalStandardsListener">
     </listener>
   </listeners>
   <!-- Filter for coverage reports. -->
   <filter>
     <whitelist>
-      <directory>./web/core/includes</directory>
-      <directory>./web/core/lib</directory>
-      <directory>./web/core/modules</directory>
-      <directory>./web/modules</directory>
-      <directory>./web/sites</directory>
+      <directory>./web/modules/custom</directory>
+      <directory>./web/themes/custom</directory>
       <!-- By definition test classes have no tests. -->
       <exclude>
         <directory suffix="Test.php">./</directory>
