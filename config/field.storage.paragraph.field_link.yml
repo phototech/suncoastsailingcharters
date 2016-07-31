@@ -1,13 +1,13 @@
-uuid: c98fafeb-29d0-4d1c-bc5d-0bdb2a0a9c04
+uuid: d3f65923-42a4-4e41-b0ea-00e57b882a0f
 langcode: en
 status: true
 dependencies:
   module:
     - link
-    - node
-id: node.field_hero_buton
-field_name: field_hero_buton
-entity_type: node
+    - paragraphs
+id: paragraph.field_link
+field_name: field_link
+entity_type: paragraph
 type: link
 settings: {  }
 module: link

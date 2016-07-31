@@ -130,6 +130,16 @@ sailor_quote:
     main:
       label: Main
 
+sailor_hero:
+  label: Hero
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-hero
+  regions:
+    main:
+      label: Main
+
 sailor_crew:
   label: Crew
   category: Sailor

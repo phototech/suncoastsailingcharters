@@ -1,16 +1,16 @@
-uuid: 8345ce95-c300-484b-ae64-de0ac85c45c7
+uuid: c20b8355-97aa-42e5-8ce3-84356f3a8388
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_hero_image
-    - node.type.homepage
+    - field.storage.paragraph.field_image
+    - paragraphs.paragraphs_type.hero
   module:
     - image
-id: node.homepage.field_hero_image
-field_name: field_hero_image
-entity_type: node
-bundle: homepage
+id: paragraph.hero.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: hero
 label: Image
 description: ''
 required: false
@@ -23,7 +23,7 @@ settings:
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
+  alt_field: true
   alt_field_required: false
   title_field: false
   title_field_required: false

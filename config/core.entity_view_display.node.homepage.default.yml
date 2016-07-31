@@ -4,16 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.homepage.field_elements
-    - field.field.node.homepage.field_hero_buton
-    - field.field.node.homepage.field_hero_image
-    - field.field.node.homepage.field_hero_title
-    - image.style.hero
     - node.type.homepage
   module:
     - ds
     - entity_reference_revisions
-    - image
-    - link
     - user
 third_party_settings:
   ds:
@@ -52,72 +46,6 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-  field_hero_buton:
-    weight: 2
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: '0'
-      target: '0'
-    third_party_settings:
-      ds:
-        ft:
-          id: reset
-          settings:
-            lb: ''
-    type: link
-  field_hero_image:
-    weight: 0
-    label: hidden
-    settings:
-      image_style: hero
-      image_link: ''
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: image
-  field_hero_title:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: h1
-            fi-cl: 'wow fadeInDown'
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
-    type: string
   links:
     weight: 12
     settings: {  }

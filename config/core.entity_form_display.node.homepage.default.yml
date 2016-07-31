@@ -4,15 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.homepage.field_elements
-    - field.field.node.homepage.field_hero_buton
-    - field.field.node.homepage.field_hero_image
-    - field.field.node.homepage.field_hero_title
-    - image.style.thumbnail
     - node.type.homepage
   module:
     - field_group
-    - image
-    - link
     - paragraphs
     - path
 third_party_settings:
@@ -51,27 +45,6 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
-  field_hero_buton:
-    weight: 10
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-  field_hero_image:
-    weight: 8
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-  field_hero_title:
-    weight: 9
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   path:
     type: path
     weight: 7

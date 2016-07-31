@@ -5,9 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.homepage.field_elements
-    - field.field.node.homepage.field_hero_buton
-    - field.field.node.homepage.field_hero_image
-    - field.field.node.homepage.field_hero_title
     - node.type.homepage
   module:
     - user
@@ -20,6 +17,3 @@ content:
     weight: 100
 hidden:
   field_elements: true
-  field_hero_buton: true
-  field_hero_image: true
-  field_hero_title: true
