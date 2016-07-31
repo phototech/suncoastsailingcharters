@@ -6,10 +6,34 @@ dependencies:
     - field.field.paragraph.hero.field_image
     - field.field.paragraph.hero.field_link
     - field.field.paragraph.hero.field_title
+    - image.style.hero
     - paragraphs.paragraphs_type.hero
   module:
+    - ds
     - image
     - link
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_hero
+      path: themes/custom/sailor
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      main:
+        - field_image
+        - field_title
+        - field_link
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -17,15 +41,22 @@ mode: default
 content:
   field_image:
     weight: 0
-    label: above
+    label: hidden
     settings:
-      image_style: ''
+      image_style: hero
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: image
   field_link:
     weight: 2
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -36,10 +67,38 @@ content:
     type: link
   field_title:
     weight: 1
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h1
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
     type: string
 hidden:
   created: true

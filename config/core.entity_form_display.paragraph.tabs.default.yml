@@ -1,0 +1,45 @@
+uuid: cd9cd2fa-ca17-4e1e-a4d0-fe213f219fb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs.field_body
+    - field.field.paragraph.tabs.field_image
+    - field.field.paragraph.tabs.field_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - image
+    - link
+    - text
+id: paragraph.tabs.default
+targetEntityType: paragraph
+bundle: tabs
+mode: default
+content:
+  field_body:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+hidden:
+  created: true
+  status: true
+  uid: true
