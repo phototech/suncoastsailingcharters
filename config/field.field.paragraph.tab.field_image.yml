@@ -1,19 +1,19 @@
-uuid: 268ff933-51a1-4d10-9299-680d2e8a3ed4
+uuid: 2f2e1edc-15ab-413c-aef6-06838f51af67
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_image
-    - paragraphs.paragraphs_type.tabs
+    - paragraphs.paragraphs_type.tab
   module:
     - image
-id: paragraph.tabs.field_image
+id: paragraph.tab.field_image
 field_name: field_image
 entity_type: paragraph
-bundle: tabs
+bundle: tab
 label: Icon
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

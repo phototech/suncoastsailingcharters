@@ -5,6 +5,7 @@
  * Preprocessing for the Sailor Theme.
  */
 
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Render\Element;
@@ -195,6 +196,33 @@ function sailor_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 function sailor_preprocess_form_element(&$variables) {
   if (isset($variables['element']['#parents']) && count($variables['element']['#parents']) == 1) {
     $variables['attributes']['class'][] = 'full-width';
+  }
+}
+
+/**
+ * Impelements template_preprocess_html().
+ *
+ * Add the proper body class.
+ */
+function sailor_preprocess_html(&$variables) {
+  $request = \Drupal::request();
+  if ($request->attributes->has('_route')) {
+    $route_name = $request->attributes->get('_route');
+    $pieces = explode('.', $route_name);
+    if (isset($pieces[1]) && $request->attributes->has($pieces[1])) {
+      $entity_type = $pieces[1];
+      $entity = $request->attributes->get($entity_type);
+      if ($entity instanceof ContentEntityInterface) {
+        $storage = \Drupal::entityTypeManager()->getStorage('entity_view_display');
+        if ($display = $storage->load($entity_type . '.' . $entity->bundle() . '.default')) {
+          if ($settings = $display->getThirdPartySetting('ds', 'layout')) {
+            if ($settings['id'] == 'sailor_home') {
+              $variables['attributes']['class'][] = 'home';
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -540,6 +568,49 @@ function sailor_preprocess_sailor_call_to_action_small(&$variables) {
       $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'full';
       $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'small';
       $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'white';
+    }
+  }
+}
+
+/**
+ * Implmements template_preprocess_tab_set().
+ *
+ * Add the proper classes to the tab set.
+ */
+function sailor_preprocess_sailor_tab_set(&$variables) {
+  $variables['attributes']['class'][] = 'tabs';
+  $variables['attributes']['role'] = 'navigation';
+  if (!empty($variables['content']['tabs'][0]['#items'])) {
+    $items = $variables['content']['tabs'][0]['#items'];
+    if ($items instanceof \Countable) {
+      $variables['attributes']['class'][] = sailor_number_converter($items->count());
+    }
+  }
+}
+
+/**
+ * Implmements template_preprocess_tab().
+ *
+ * Add the link to the tab.
+ */
+function sailor_preprocess_sailor_tab(&$variables) {
+  // Remove the attributes from the images.
+  foreach ($variables['content']['main'] as $data) {
+    if (isset($data['#field_type']) && $data['#field_type'] == 'image') {
+      foreach (Element::children($data) as $delta) {
+        $image = $data[$delta]['#item'];
+        $image->set('width', NULL);
+        $image->set('height', NULL);
+      }
+    }
+  }
+
+  // Wrap all of main in the link.
+  if (!empty($variables['content']['link'][0][0])) {
+    if ($variables['content']['link'][0]['#field_type'] == 'link') {
+      $link = $variables['content']['link'][0][0];
+      $link['#title'] = $variables['content']['main'];
+      $variables['content']['main'] = $link;
     }
   }
 }

@@ -1,16 +1,16 @@
-uuid: d7b253eb-ef85-4751-b833-19ef1e1e2f08
+uuid: 38c36fd3-6b30-4adc-89b9-7149bce139ce
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_body
-    - paragraphs.paragraphs_type.tabs
+    - paragraphs.paragraphs_type.tab
   module:
     - text
-id: paragraph.tabs.field_body
+id: paragraph.tab.field_body
 field_name: field_body
 entity_type: paragraph
-bundle: tabs
+bundle: tab
 label: Body
 description: ''
 required: false

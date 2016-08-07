@@ -201,8 +201,6 @@ sailor_home:
   type: partial
   template: templates/sailor-home
   regions:
-    hero:
-      label: Hero
     main:
       label: Main
 
@@ -225,3 +223,25 @@ sailor_call_to_action_small:
   regions:
     main:
       label: Main
+
+sailor_tab_set:
+  label: Tab Set
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-tab-set
+  regions:
+    tabs:
+      label: Tabs
+
+sailor_tab:
+  label: Tab
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-tab
+  regions:
+    main:
+      label: Main
+    link:
+      label: Link

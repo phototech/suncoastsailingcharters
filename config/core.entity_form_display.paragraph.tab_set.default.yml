@@ -1,0 +1,28 @@
+uuid: a426144f-2daa-4797-a25e-b37d8cef465f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_set.field_tab
+    - paragraphs.paragraphs_type.tab_set
+  module:
+    - paragraphs
+id: paragraph.tab_set.default
+targetEntityType: paragraph
+bundle: tab_set
+mode: default
+content:
+  field_tab:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Tab
+      title_plural: Tabs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true
