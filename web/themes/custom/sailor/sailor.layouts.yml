@@ -140,6 +140,20 @@ sailor_hero:
     main:
       label: Main
 
+sailor_photo:
+  label: Photo
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-photo
+  regions:
+    background:
+      label: Background
+    main:
+      label: Main
+    button:
+      label: Button
+
 sailor_crew:
   label: Crew
   category: Sailor

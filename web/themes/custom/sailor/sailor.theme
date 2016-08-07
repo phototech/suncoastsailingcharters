@@ -357,6 +357,61 @@ function sailor_preprocess_sailor_hero(array &$variables) {
 }
 
 /**
+ * Implments template_preprocess_sailor_photo().
+ */
+function sailor_preprocess_sailor_photo(array &$variables) {
+  // Get the image for the hero.
+  $image = NULL;
+  foreach (Element::children($variables['content']['background']) as $key) {
+    if (!empty($variables['content']['background'][$key]['#field_type'])) {
+      if ($variables['content']['background'][$key]['#field_type'] == 'image') {
+        $image = $variables['content']['background'][$key];
+        unset($variables['content']['background'][$key]);
+        break;
+      }
+    }
+  }
+
+  // Get the Image URL.
+  if (!empty($image)) {
+    if ($file = $image[0]['#item']->entity) {
+      $uri = $file->getFileUri();
+
+      if ($image[0]['#image_style']) {
+        $style = ImageStyle::load($image[0]['#image_style']);
+        $url = $style->buildUrl($uri);
+      }
+      else {
+        $url = $file->url();
+      }
+
+    }
+  }
+
+  // Add the image as the background.
+  if ($url) {
+    // For some reason, an underscore in the variable name does not work.
+    $variables['attributes'] = new Attribute([
+      'style' => 'background-image: url("' . $url . '");',
+    ]);
+  }
+
+  // Add the classes to the hero button.
+  foreach (Element::children($variables['content']['button']) as $key) {
+    if (!empty($variables['content']['button'][$key]['#formatter'])) {
+      if ($variables['content']['button'][$key]['#formatter'] == 'link') {
+        foreach (Element::children($variables['content']['button'][$key]) as $delta) {
+          $item = &$variables['content']['button'][$key][$delta];
+          $item['#attributes']['class'][] = 'button';
+          $item['#attributes']['class'][] = 'white';
+          $item['#attributes']['class'][] = 'medium';
+        }
+      }
+    }
+  }
+}
+
+/**
  * Implments template_preprocess_sailor_follow_block().
  *
  * Remove the title from link fields, since the title messes up the display of
