@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "517b44c71836873d47c496657c8fce06",
-    "content-hash": "6108c04621cf32a36e5daa95c93207b6",
+    "hash": "3956ca958772c4964a16b0b46286da06",
+    "content-hash": "958e0632c50f63e9c874a9cfe2c2a349",
     "packages": [
         {
             "name": "commerceguys/addressing",
@@ -2283,13 +2283,20 @@
         },
         {
             "name": "sailvenice/patches",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "require": {
                 "netresearch/composer-patches-plugin": "^1.2.1"
             },
             "type": "metapackage",
             "extra": {
                 "patches": {
+                    "drupal/core": [
+                        {
+                            "title": "Issue #2776367: Drupal\\Tests\\Core\\PageCache\\CommandLineOrUnsafeMethodTest::testHttpMethod Failed asserting that null is identical to 'deny'",
+                            "url": "https://www.drupal.org/files/issues/options_trace_error-2776367-3.patch",
+                            "args": "--directory=../"
+                        }
+                    ],
                     "drupal/contact_storage": [
                         {
                             "title": "Issue #2629630: When no Redirect Page is specified; redirect to parent entity",
@@ -4134,7 +4141,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/klausi/coder/zipball/6d717e1a5a5dd592ebbeaafad11746849fb52532",
-                "reference": null,
+                "reference": "6d717e1a5a5dd592ebbeaafad11746849fb52532",
                 "shasum": null
             },
             "require": {

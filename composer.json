@@ -43,12 +43,19 @@
       "package": {
         "type": "metapackage",
         "name": "sailvenice/patches",
-        "version": "1.5.0",
+        "version": "1.6.0",
         "require": {
           "netresearch/composer-patches-plugin": "^1.2.1"
         },
         "extra": {
           "patches": {
+            "drupal/core": [
+              {
+                "title": "Issue #2776367: Drupal\\Tests\\Core\\PageCache\\CommandLineOrUnsafeMethodTest::testHttpMethod Failed asserting that null is identical to 'deny'",
+                "url": "https://www.drupal.org/files/issues/options_trace_error-2776367-3.patch",
+                "args": "--directory=../"
+              }
+            ],
             "drupal/contact_storage": [
               {
                 "title": "Issue #2629630: When no Redirect Page is specified; redirect to parent entity",
