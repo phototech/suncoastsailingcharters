@@ -214,15 +214,21 @@ sailor_service_list_item:
     main:
       label: Main
 
-sailor_call_to_action_small:
-  label: Call to Action (Small)
+sailor_call_to_action:
+  label: Call to Action
   category: Sailor
   class: \Drupal\ds\Plugin\DsLayout
   type: partial
-  template: templates/sailor-call-to-action-small
+  template: templates/sailor-call-to-action
   regions:
+    color:
+      label: Color
+    title:
+      label: Title
     main:
       label: Main
+    button:
+      label: Button
 
 sailor_tab_set:
   label: Tab Set

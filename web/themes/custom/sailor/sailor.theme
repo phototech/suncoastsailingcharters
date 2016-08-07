@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\TypedData\TypedDataInterface;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Render\Element;
@@ -552,24 +553,72 @@ function sailor_preprocess_sailor_service_list_item(&$variables) {
 }
 
 /**
- * Implmements template_preprocess_sailor_call_to_action_small().
+ * Implmements template_preprocess_sailor_call_to_action().
  *
  * Add the proper classes to the link(s).
  */
-function sailor_preprocess_sailor_call_to_action_small(&$variables) {
-  foreach (Element::children($variables['content']['main']) as $key) {
-    if ($variables['content']['main'][$key]['#field_type'] != 'link') {
+function sailor_preprocess_sailor_call_to_action(&$variables) {
+  $variables['attributes']['class'][] = 'cta';
+
+  // Get the color(s) from the color position and add them as classes.
+  foreach (Element::children($variables['content']['color']) as $key) {
+    if (empty($variables['content']['color'][$key]['#items'])) {
       continue;
     }
 
-    foreach (Element::children($variables['content']['main'][$key]) as $delta) {
-      $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'trigger';
-      $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'button';
-      $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'full';
-      $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'small';
-      $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'white';
+    $items = $variables['content']['color'][$key]['#items'];
+
+    if (!$items instanceof TypedDataInterface) {
+      continue;
+    }
+
+    foreach ($items as $item) {
+      if (!$item instanceof TypedDataInterface) {
+        continue;
+      }
+
+      $variables['attributes']['class'][] = Html::cleanCssIdentifier($item->getString());
     }
   }
+
+  foreach (Element::children($variables['content']['title']) as $key) {
+    $item = &$variables['content']['title'][$key];
+    $item['#theme'] = 'field__cta_title';
+    if (!sailor_region_is_empty($variables['content']['main'])) {
+      $item['#field_element'] = 'h2';
+
+    }
+    else {
+      $item['#field_element'] = 'h3';
+    }
+  }
+
+  // Add the classes to the buttons.
+  foreach (Element::children($variables['content']['button']) as $key) {
+    if ($variables['content']['button'][$key]['#field_type'] != 'link') {
+      continue;
+    }
+
+    foreach (Element::children($variables['content']['button'][$key]) as $delta) {
+      $classes = &$variables['content']['button'][$key][$delta]['#attributes']['class'];
+      $classes[] = 'button';
+      $classes[] = 'medium';
+      $classes[] = 'white';
+
+      if (sailor_region_is_empty($variables['content']['main'])) {
+        $classes[] = 'right';
+      }
+    }
+  }
+}
+
+/**
+ * Implmements template_preprocess_field__cta_title().
+ *
+ * Add the field element variable.
+ */
+function sailor_preprocess_field__cta_title(&$variables) {
+  $variables['field_element'] = $variables['element']['#field_element'];
 }
 
 /**
@@ -705,4 +754,23 @@ function sailor_get_title() {
   $request = \Drupal::request();
   $route_match = \Drupal::routeMatch();
   return \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+}
+
+/**
+ * Determine if a Display Suite Region is empty.
+ */
+function sailor_region_is_empty($region) {
+  if (empty($region)) {
+    return TRUE;
+  }
+
+  if (count($region) === 1) {
+    if (!empty($region[0])) {
+      if (array_keys($region[0]) === ['#cache', '#weight']) {
+        return TRUE;
+      }
+    }
+  }
+
+  return FALSE;
 }
