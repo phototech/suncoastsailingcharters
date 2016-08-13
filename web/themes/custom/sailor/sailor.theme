@@ -334,7 +334,7 @@ function sailor_preprocess_sailor_hero(array &$variables) {
   if ($url) {
     // For some reason, an underscore in the variable name does not work.
     $variables['attributes'] = new Attribute([
-      'style' => 'background-image: url("' . $url . '");',
+      'style' => 'background-image: url("' . file_url_transform_relative($url) . '");',
     ]);
   }
 
@@ -392,7 +392,7 @@ function sailor_preprocess_sailor_photo(array &$variables) {
   if ($url) {
     // For some reason, an underscore in the variable name does not work.
     $variables['attributes'] = new Attribute([
-      'style' => 'background-image: url("' . $url . '");',
+      'style' => 'background-image: url("' . file_url_transform_relative($url) . '");',
     ]);
   }
 
