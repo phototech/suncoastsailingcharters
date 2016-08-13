@@ -10,9 +10,12 @@ install:
   - composer self-update
   - composer config -g github-oauth.github.com $GITHUB_API_TOKEN
   - composer install --no-interaction
+  - mkdir -p build/logs
 script:
   - ./vendor/bin/phpcs --report=summary -np .
-  - ./vendor/bin/phpunit --testsuite unit
+  - ./vendor/bin/phpunit --testsuite unit --coverage-clover build/logs/clover.xml
+after_success:
+  - travis_retry php vendor/bin/coveralls -v
 deploy:
   provider: script
   skip_cleanup: true

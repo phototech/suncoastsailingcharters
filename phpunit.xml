@@ -48,6 +48,9 @@
     <whitelist>
       <directory>./web/modules/custom</directory>
       <directory>./web/themes/custom</directory>
+      <!-- Also include contributed modules that we maintain. -->
+      <directory>./web/modules/contrib/display_field_copy</directory>
+      <directory>./web/modules/contrib/contact_link</directory>
       <!-- By definition test classes have no tests. -->
       <exclude>
         <directory suffix="Test.php">./</directory>
