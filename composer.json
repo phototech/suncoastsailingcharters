@@ -18,7 +18,8 @@
     "drupal/contact_link": "~1.0-alpha1",
     "drupal/display_field_copy": "~1.0-alpha1",
     "drupal/purge": "~3.0-beta4",
-    "drupal/purge_purger_http": "~1.0-beta3"
+    "drupal/purge_purger_http": "~1.0-beta3",
+    "drupal/imagemagick": "^1.0.0-alpha2"
   },
   "require-dev": {
     "drush/drush": "~8.0",

@@ -21,6 +21,7 @@ module:
   filter: 0
   help: 0
   image: 0
+  imagemagick: 0
   layout_plugin: 0
   link: 0
   menu_link_content: 0
