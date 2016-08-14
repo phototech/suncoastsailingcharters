@@ -613,55 +613,60 @@ function sailor_preprocess_sailor_service_list_item(&$variables) {
  * Add the proper classes to the link(s).
  */
 function sailor_preprocess_sailor_call_to_action(&$variables) {
-  $variables['attributes']['class'][] = 'cta';
 
   // Get the color(s) from the color position and add them as classes.
-  foreach (Element::children($variables['content']['color']) as $key) {
-    if (empty($variables['content']['color'][$key]['#items'])) {
-      continue;
-    }
-
-    $items = $variables['content']['color'][$key]['#items'];
-
-    if (!$items instanceof TypedDataInterface) {
-      continue;
-    }
-
-    foreach ($items as $item) {
-      if (!$item instanceof TypedDataInterface) {
+  if (!empty($variables['content']['color'])) {
+    foreach (Element::children($variables['content']['color']) as $key) {
+      if (empty($variables['content']['color'][$key]['#items'])) {
         continue;
       }
 
-      $variables['attributes']['class'][] = Html::cleanCssIdentifier($item->getString());
+      $items = $variables['content']['color'][$key]['#items'];
+
+      if (!$items instanceof TypedDataInterface) {
+        continue;
+      }
+
+      foreach ($items as $item) {
+        if (!$item instanceof TypedDataInterface) {
+          continue;
+        }
+
+        $variables['attributes']['class'][] = Html::cleanCssIdentifier($item->getString());
+      }
     }
   }
 
-  foreach (Element::children($variables['content']['title']) as $key) {
-    $item = &$variables['content']['title'][$key];
-    $item['#theme'] = 'field__cta_title';
-    if (!sailor_region_is_empty($variables['content']['main'])) {
-      $item['#field_element'] = 'h2';
+  if (!empty($variables['content']['title'])) {
+    foreach (Element::children($variables['content']['title']) as $key) {
+      $item = &$variables['content']['title'][$key];
+      $item['#theme'] = 'field__cta_title';
+      if (!sailor_region_is_empty($variables['content']['main'])) {
+        $item['#field_element'] = 'h2';
 
-    }
-    else {
-      $item['#field_element'] = 'h3';
+      }
+      else {
+        $item['#field_element'] = 'h3';
+      }
     }
   }
 
   // Add the classes to the buttons.
-  foreach (Element::children($variables['content']['button']) as $key) {
-    if ($variables['content']['button'][$key]['#field_type'] != 'link') {
-      continue;
-    }
+  if (!empty($variables['content']['button'])) {
+    foreach (Element::children($variables['content']['button']) as $key) {
+      if ($variables['content']['button'][$key]['#field_type'] != 'link') {
+        continue;
+      }
 
-    foreach (Element::children($variables['content']['button'][$key]) as $delta) {
-      $classes = &$variables['content']['button'][$key][$delta]['#attributes']['class'];
-      $classes[] = 'button';
-      $classes[] = 'medium';
-      $classes[] = 'white';
+      foreach (Element::children($variables['content']['button'][$key]) as $delta) {
+        $classes = &$variables['content']['button'][$key][$delta]['#attributes']['class'];
+        $classes[] = 'button';
+        $classes[] = 'medium';
+        $classes[] = 'white';
 
-      if (sailor_region_is_empty($variables['content']['main'])) {
-        $classes[] = 'right';
+        if (sailor_region_is_empty($variables['content']['main'])) {
+          $classes[] = 'right';
+        }
       }
     }
   }
