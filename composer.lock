@@ -819,21 +819,26 @@
         },
         {
             "name": "drupal/contact_link",
-            "version": "1.0.0-alpha2",
+            "version": "1.0.0-alpha3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/contact_link",
-                "reference": "8.x-1.0-alpha2"
+                "reference": "8.x-1.0-alpha3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/contact_link-8.x-1.0-alpha2.zip",
-                "reference": "8.x-1.0-alpha2",
-                "shasum": "42e3617b501716978eb4c03134d996c374718b72"
+                "url": "https://ftp.drupal.org/files/projects/contact_link-8.x-1.0-alpha3.zip",
+                "reference": null,
+                "shasum": "25eeec1fcec30a6b99ff38ee51864d66ed7c3019"
             },
             "require": {
                 "drupal/core": "~8.0",
-                "drupal/ds": "*"
+                "drupal/ds": "^2.0.0",
+                "drupal/layout_plugin": "^1.0.0-alpha22"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8",
+                "satooshi/php-coveralls": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
@@ -841,8 +846,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha2",
-                    "datestamp": "1459722239"
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1471197839"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -851,11 +856,12 @@
             ],
             "authors": [
                 {
-                    "name": "davidwbarratt",
-                    "homepage": "https://www.drupal.org/user/411675"
+                    "name": "David Barratt",
+                    "homepage": "https://www.drupal.org/user/411675",
+                    "email": "david@davidwbarratt.com"
                 }
             ],
-            "description": "Provides a Display Suite Field for a link to the personal contact form.",
+            "description": "Customizable link from User Profiles to Personal Contact Forms.",
             "homepage": "https://www.drupal.org/project/contact_link",
             "support": {
                 "source": "http://cgit.drupalcode.org/contact_link"
@@ -1377,57 +1383,61 @@
         },
         {
             "name": "drupal/layout_plugin",
-            "version": "8.1.0-alpha22",
+            "version": "1.0.0-alpha22",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/layout_plugin",
-                "reference": "90be55a68dd33d3564c26fab77573b62f6cda77e"
+                "reference": "8.x-1.0-alpha22"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha22.zip",
                 "reference": null,
-                "shasum": null
+                "shasum": "2befadd2effba621c9390461c1d1590cdca727e8"
             },
             "require": {
-                "drupal/core": "8.*"
-            },
-            "replace": {
-                "drupal/block_page_layout": "self.version",
-                "drupal/layout_plugin_example": "self.version"
+                "drupal/core": "~8.0"
             },
             "suggest": {
-                "drupal/core": "Required by drupal/block_page_layout, drupal/layout_plugin_example",
                 "drupal/page_manager": "Required by drupal/block_page_layout"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha22",
+                    "datestamp": "1452531539"
                 }
             },
-            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0+"
             ],
             "authors": [
                 {
-                    "name": "David Snopek"
+                    "name": "David Snopek",
+                    "homepage": "https://www.drupal.org/user/172527"
                 },
                 {
-                    "name": "Bram Goffings"
+                    "name": "Bram Goffings",
+                    "homepage": "https://www.drupal.org/user/266527"
                 },
                 {
-                    "name": "Fredrik Lassen"
+                    "name": "Fredrik Lassen",
+                    "homepage": "https://www.drupal.org/user/243377"
                 }
             ],
-            "description": "A registry for layout plugins.",
+            "description": "An API module to hold the Drupal 8 plugin manager for layouts.",
             "homepage": "https://www.drupal.org/project/layout_plugin",
             "keywords": [
                 "layout",
                 "php"
             ],
-            "time": "2016-01-11 16:56:15"
+            "support": {
+                "source": "http://cgit.drupalcode.org/layout_plugin"
+            }
         },
         {
             "name": "drupal/name",
