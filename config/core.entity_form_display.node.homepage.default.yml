@@ -8,6 +8,22 @@ dependencies:
   module:
     - paragraphs
     - path
+third_party_settings:
+  field_group:
+    group_hero:
+      children:
+        - field_hero_image
+        - field_hero_title
+        - field_hero_buton
+      parent_name: ''
+      weight: 1
+      label: Hero
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage

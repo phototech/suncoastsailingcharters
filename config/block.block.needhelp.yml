@@ -10,8 +10,8 @@ dependencies:
     - sailor
 id: needhelp
 theme: sailor
-region: footer_third
-weight: -3
+region: footer_second
+weight: -4
 provider: null
 plugin: 'system_menu_block:need-help'
 settings:

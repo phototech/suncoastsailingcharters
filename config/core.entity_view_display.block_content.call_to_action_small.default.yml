@@ -13,7 +13,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: sailor_call_to_action
+      id: sailor_call_to_action_small
       path: themes/custom/sailor
       library: ''
       disable_css: false
