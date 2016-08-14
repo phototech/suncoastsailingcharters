@@ -1,7 +1,9 @@
 uuid: 638169c0-ae1d-484f-831c-2876271ae454
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - token_filter
 name: 'Plain text'
 format: plain_text
 weight: -10
@@ -22,6 +24,12 @@ filters:
   filter_autop:
     id: filter_autop
     provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  token_filter:
+    id: token_filter
+    provider: token_filter
     status: true
     weight: 0
     settings: {  }
