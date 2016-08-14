@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "287ec4c2b3c30ee044cbc6fe011d8c67",
-    "content-hash": "5219d3d29bf4deb03cdaf82d37adc57a",
+    "hash": "acf9e09050887439545d279036a8b84b",
+    "content-hash": "4ae2a776f56d48ad2b24570d230dc124",
     "packages": [
         {
             "name": "commerceguys/addressing",
@@ -2490,7 +2490,7 @@
         },
         {
             "name": "sailvenice/patches",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "require": {
                 "netresearch/composer-patches-plugin": "^1.2.1"
             },
@@ -2501,6 +2501,11 @@
                         {
                             "title": "Issue #2776367: Drupal\\Tests\\Core\\PageCache\\CommandLineOrUnsafeMethodTest::testHttpMethod Failed asserting that null is identical to 'deny'",
                             "url": "https://www.drupal.org/files/issues/options_trace_error-2776367-3.patch",
+                            "args": "--directory=../"
+                        },
+                        {
+                            "title": "Issue #2070559: Harmonize PHPUnit and run-tests to both scan for themes",
+                            "url": "https://www.drupal.org/files/issues/2070559_6.patch",
                             "args": "--directory=../"
                         }
                     ],
