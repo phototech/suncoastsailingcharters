@@ -562,17 +562,6 @@ function sailor_preprocess_form__one_half_modal(array &$variables) {
 }
 
 /**
- * Implmeents template_preprocess_form().
- *
- * Add an id to the contact form.
- */
-function sailor_preprocess_form(array &$variables) {
-  if (strpos($variables['element']['#form_id'], 'contact_message') !== FALSE) {
-    $variables['attributes']['id'] = Html::getUniqueId('contactform');
-  }
-}
-
-/**
  * Implmements template_preprocess_menu_local_tasks__tabs().
  *
  * Count number of tabs and add class.
