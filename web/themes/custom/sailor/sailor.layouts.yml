@@ -244,6 +244,16 @@ sailor_call_to_action:
     button:
       label: Button
 
+sailor_call_to_action_small:
+  label: Call to Action (Small)
+  category: Sailor
+  class: \Drupal\ds\Plugin\DsLayout
+  type: partial
+  template: templates/sailor-call-to-action-small
+  regions:
+    main:
+      label: Main
+
 sailor_tab_set:
   label: Tab Set
   category: Sailor

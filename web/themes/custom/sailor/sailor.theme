@@ -812,6 +812,27 @@ function sailor_get_title() {
 }
 
 /**
+ * Implmements template_preprocess_sailor_call_to_action_small().
+ *
+ * Add the proper classes to the link(s).
+ */
+function sailor_preprocess_sailor_call_to_action_small(&$variables) {
+  foreach (Element::children($variables['content']['main']) as $key) {
+    if ($variables['content']['main'][$key]['#field_type'] != 'link') {
+      continue;
+    }
+
+    foreach (Element::children($variables['content']['main'][$key]) as $delta) {
+      $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'trigger';
+      $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'button';
+      $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'full';
+      $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'small';
+      $variables['content']['main'][$key][$delta]['#attributes']['class'][] = 'white';
+    }
+  }
+}
+
+/**
  * Determine if a Display Suite Region is empty.
  */
 function sailor_region_is_empty($region) {
