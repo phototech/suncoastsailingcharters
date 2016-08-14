@@ -1,7 +1,9 @@
 uuid: 4b4002a1-0e0e-4579-831d-29cc4fe49c40
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - token_filter
 name: 'Restricted HTML'
 format: restricted_html
 weight: -9
@@ -28,3 +30,9 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: 0
+    settings: {  }
