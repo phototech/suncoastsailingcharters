@@ -6,6 +6,7 @@ web/profiles/contrib
 node_modules
 vendor
 /tmp
+.well-known
 
 # Ignore configuration files that may contain sensitive information.
 web/sites/*/settings*.php
