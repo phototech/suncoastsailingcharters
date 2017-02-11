@@ -812,6 +812,9 @@ function sailor_get_title() {
  */
 function sailor_preprocess_sailor_call_to_action_small(&$variables) {
   foreach (Element::children($variables['content']['main']) as $key) {
+    if (!isset($variables['content']['main'][$key]['#field_type'])) {
+      continue;
+    }
     if ($variables['content']['main'][$key]['#field_type'] != 'link') {
       continue;
     }
