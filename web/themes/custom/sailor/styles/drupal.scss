@@ -72,6 +72,9 @@ ul.toolbar-menu {
     &[href*="twitter.com"] {
       @extend .fa-twitter;
     }
+    &[href*="instagram.com"] {
+      @extend .fa-instagram;
+    }
     &[href*="plus.google.com"] {
       @extend .fa-google-plus;
     }
@@ -111,6 +114,13 @@ footer.footer a[href*="twitter.com"] {
   @extend .circle;
   @extend .fa;
   @extend .fa-twitter;
+  @extend .fa-fw;
+}
+
+footer.footer a[href*="instagram.com"] {
+  @extend .circle;
+  @extend .fa;
+  @extend .fa-instagram;
   @extend .fa-fw;
 }
 

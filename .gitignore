@@ -5,6 +5,7 @@ web/themes/contrib
 web/profiles/contrib
 node_modules
 vendor
+/tmp
 
 # Ignore configuration files that may contain sensitive information.
 web/sites/*/settings*.php
