@@ -13,9 +13,10 @@ install:
   - mkdir -p build/logs
 script:
   - ./vendor/bin/phpcs --report=summary -np .
-  - ./vendor/bin/phpunit --testsuite unit --coverage-clover build/logs/clover.xml
-after_success:
-  - travis_retry php vendor/bin/coveralls -v
+  - ./vendor/bin/phpunit --testsuite unit --coverage-clover=coverage.clover
+after_script:
+    - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
+    - travis_retry php coveralls.phar -v
 deploy:
   provider: script
   skip_cleanup: true
