@@ -46,9 +46,9 @@
   <!-- Filter for coverage reports. -->
   <filter>
     <whitelist>
-      <directory>./web/modules/custom</directory>
+      <directory suffix=".php">./web/modules/custom</directory>
       <directory suffix=".module">./web/modules/custom</directory>
-      <directory>./web/themes/custom</directory>
+      <directory suffix=".php">./web/themes/custom</directory>
       <directory suffix=".theme">./web/themes/custom</directory>
       <!-- By definition test classes have no tests. -->
       <exclude>

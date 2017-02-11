@@ -46,7 +46,7 @@
       "package": {
         "type": "metapackage",
         "name": "sailvenice/patches",
-        "version": "2.0.0",
+        "version": "2.0.2",
         "require": {
           "netresearch/composer-patches-plugin": "^1.2.1"
         },
@@ -54,13 +54,13 @@
           "patches": {
             "drupal/core": [
               {
-                "title": "Issue #2776367: Drupal\\Tests\\Core\\PageCache\\CommandLineOrUnsafeMethodTest::testHttpMethod Failed asserting that null is identical to 'deny'",
-                "url": "https://www.drupal.org/files/issues/options_trace_error-2776367-3.patch",
+                "title": "Issue #2070559: Harmonize PHPUnit and run-tests to both scan for themes",
+                "url": "https://www.drupal.org/files/issues/2070559_6.patch",
                 "args": "--directory=../"
               },
               {
-                "title": "Issue #2070559: Harmonize PHPUnit and run-tests to both scan for themes",
-                "url": "https://www.drupal.org/files/issues/2070559_6.patch",
+                "title": "Issue #2613926: The Pecl UUID implementation can return invalid uuids",
+                "url": "https://www.drupal.org/files/issues/pecl-uuid-2613926-2.patch",
                 "args": "--directory=../"
               }
             ]

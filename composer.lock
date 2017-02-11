@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "338334d6304fef5c717603bd4e012fb3",
+    "content-hash": "581188bf7933d7fd46da63f0dd0706f0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2562,7 +2562,7 @@
         },
         {
             "name": "sailvenice/patches",
-            "version": "2.0.0",
+            "version": "2.0.2",
             "require": {
                 "netresearch/composer-patches-plugin": "^1.2.1"
             },
@@ -2571,13 +2571,13 @@
                 "patches": {
                     "drupal/core": [
                         {
-                            "title": "Issue #2776367: Drupal\\Tests\\Core\\PageCache\\CommandLineOrUnsafeMethodTest::testHttpMethod Failed asserting that null is identical to 'deny'",
-                            "url": "https://www.drupal.org/files/issues/options_trace_error-2776367-3.patch",
+                            "title": "Issue #2070559: Harmonize PHPUnit and run-tests to both scan for themes",
+                            "url": "https://www.drupal.org/files/issues/2070559_6.patch",
                             "args": "--directory=../"
                         },
                         {
-                            "title": "Issue #2070559: Harmonize PHPUnit and run-tests to both scan for themes",
-                            "url": "https://www.drupal.org/files/issues/2070559_6.patch",
+                            "title": "Issue #2613926: The Pecl UUID implementation can return invalid uuids",
+                            "url": "https://www.drupal.org/files/issues/pecl-uuid-2613926-2.patch",
                             "args": "--directory=../"
                         }
                     ]
