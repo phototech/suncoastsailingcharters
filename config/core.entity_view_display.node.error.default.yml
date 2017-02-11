@@ -1,0 +1,42 @@
+uuid: 4abfdbb5-15f8-4e6c-a240-64db163a16e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.error.body
+    - node.type.error
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_error
+      path: themes/custom/sailor
+      library: ''
+      disable_css: false
+      settings: {  }
+    regions:
+      main:
+        - node_title
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.error.default
+targetEntityType: node
+bundle: error
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true

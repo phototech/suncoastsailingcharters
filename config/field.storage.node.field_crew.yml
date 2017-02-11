@@ -1,0 +1,20 @@
+uuid: 383296e3-b45e-46e9-9c31-492c069cf2fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_crew
+field_name: field_crew
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

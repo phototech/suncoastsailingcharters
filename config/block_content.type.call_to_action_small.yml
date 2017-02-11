@@ -1,0 +1,8 @@
+uuid: d77e1907-4790-4a30-9bc2-47979ad7af58
+langcode: en
+status: true
+dependencies: {  }
+id: call_to_action_small
+label: 'Call to Action (Small)'
+revision: 1
+description: ''

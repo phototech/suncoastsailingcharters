@@ -1,0 +1,13 @@
+{{ title_suffix.contextual_links }}
+
+{% if avatar %}
+  <div class="avatar left-pic">
+    {{ avatar }}
+  </div>
+{% endif %}
+{% if main %}
+  <div>
+    <h6>{{ 'About the author'|t }}</h6>
+    {{ main }}
+  </div>
+{% endif %}

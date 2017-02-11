@@ -1,0 +1,20 @@
+uuid: 3473b2c6-7409-4372-b600-bd877e97d5d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sailor
+id: messages
+theme: sailor
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

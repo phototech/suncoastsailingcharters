@@ -1,0 +1,118 @@
+uuid: 67213537-33ca-425f-9b9c-d3487acb8829
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.photo.field_body
+    - field.field.paragraph.photo.field_image
+    - field.field.paragraph.photo.field_link
+    - field.field.paragraph.photo.field_title
+    - image.style.hero
+    - paragraphs.paragraphs_type.photo
+  module:
+    - ds
+    - image
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_photo
+      path: themes/custom/sailor
+      library: ''
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        wrappers:
+          background: div
+          main: div
+          button: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      background:
+        - field_image
+      main:
+        - field_title
+        - field_body
+      button:
+        - field_link
+id: paragraph.photo.default
+targetEntityType: paragraph
+bundle: photo
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: hero
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+hidden:
+  created: true
+  uid: true

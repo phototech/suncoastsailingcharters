@@ -1,0 +1,13 @@
+{
+  "classPrefix": "modernizr-",
+  "options": [
+    "addTest",
+    "prefixes",
+    "testStyles"
+  ],
+  "feature-detects": [
+    "elem/details",
+    "inputtypes",
+    "touchevents"
+  ]
+}

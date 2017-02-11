@@ -1,0 +1,17 @@
+uuid: 042e9fbf-1bce-4ccf-8600-e0e660f10040
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access user profiles'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'access comments'
+  - 'access site-wide contact form'
+  - 'submitcontact eform'
+  - 'access user contact forms'

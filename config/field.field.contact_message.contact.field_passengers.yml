@@ -1,0 +1,23 @@
+uuid: 7b3889a4-a7bb-4a09-a462-98563ba68651
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.storage.contact_message.field_passengers
+id: contact_message.contact.field_passengers
+field_name: field_passengers
+entity_type: contact_message
+bundle: contact
+label: 'Number of Passengers'
+description: 'Including Yourself'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

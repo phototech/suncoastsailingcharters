@@ -1,0 +1,25 @@
+uuid: e66dddcd-cafd-4be5-ac5c-92da70d59fb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.faq.field_answer
+    - field.field.paragraph.faq.field_question
+    - paragraphs.paragraphs_type.faq
+id: paragraph.faq.preview
+targetEntityType: paragraph
+bundle: faq
+mode: preview
+content:
+  field_question:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  field_answer: true
+  uid: true

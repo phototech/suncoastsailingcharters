@@ -1,0 +1,14 @@
+{% set main = main|render %}
+{{ title_suffix.contextual_links }}
+<section{{ attributes.addClass('cta') }}>
+  <div class="wrap {% if main %}center{% endif %}">
+    {% if not main %}
+      {{ button }}
+    {% endif %}
+    {{ title }}
+    {{ main }}
+    {% if main %}
+      {{ button }}
+    {% endif %}
+  </div>
+</section>

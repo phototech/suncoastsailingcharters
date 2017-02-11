@@ -1,0 +1,10 @@
+uuid: 084450da-e682-4c11-be94-82c4d79dcb8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_form.token
+label: Token
+targetEntityType: contact_form
+cache: true

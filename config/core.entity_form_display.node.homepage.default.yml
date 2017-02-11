@@ -1,0 +1,79 @@
+uuid: 21e07d7b-e1a2-424d-b08a-80f211638800
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage.field_elements
+    - node.type.homepage
+  module:
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_hero:
+      children:
+        - field_hero_image
+        - field_hero_title
+        - field_hero_buton
+      parent_name: ''
+      weight: 1
+      label: Hero
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: node.homepage.default
+targetEntityType: node
+bundle: homepage
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  field_elements:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Element
+      title_plural: Elements
+      edit_mode: closed
+      add_mode: button
+      form_display_mode: default
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

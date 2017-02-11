@@ -1,0 +1,17 @@
+uuid: 84bb5b92-9691-4a09-8b08-8c2f0726afa9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Crew
+type: crew
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

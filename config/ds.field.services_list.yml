@@ -1,0 +1,9 @@
+id: services_list
+label: 'Services List'
+ui_limit: 'services|*'
+properties:
+  field_id: node.services.field_services
+type: display_field_copy
+type_label: 'Copy field'
+entities:
+  node: node

@@ -1,0 +1,25 @@
+{{ title_suffix.contextual_links }}
+
+{% if intro %}
+  <header class="intro">
+    <div class="wrap">
+      {{ intro }}
+    </div>
+  </header>
+{% endif %}
+
+<div class="content static">
+  <div class="wrap">
+    <div class="row">
+      {% if sidebar %}
+        <aside class="one-fourth sidebar sidebar-left">
+          {{ sidebar }}
+        </aside>
+      {% endif %}
+
+      <div class="{% if sidebar %}three-fourth{% else %}full-width{% endif %}">
+        {{ main }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+uuid: 58afa8d9-b101-400a-96ff-1370cf02614d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.homepage.field_elements
+    - node.type.homepage
+  module:
+    - user
+id: node.homepage.teaser
+targetEntityType: node
+bundle: homepage
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_elements: true

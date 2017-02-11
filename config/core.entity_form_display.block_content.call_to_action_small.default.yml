@@ -1,0 +1,39 @@
+uuid: 76bfd18f-0fb6-4850-8875-fb3da13684b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_small
+    - field.field.block_content.call_to_action_small.body
+    - field.field.block_content.call_to_action_small.field_link
+  module:
+    - link
+    - text
+id: block_content.call_to_action_small.default
+targetEntityType: block_content
+bundle: call_to_action_small
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="content static">
+  <div class="wrap center">
+    <div class="row">
+      <div class="one-half modal">
+        <div class="box-white">
+          <form{{ attributes }}>
+            <fieldset>
+              <h3>{{ title }}</h3>
+              <div class="row">
+                {{ children }}
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

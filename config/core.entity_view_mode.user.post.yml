@@ -1,0 +1,10 @@
+uuid: b8ee1bf1-88df-4579-8c00-0bdfcdcc268c
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.post
+label: Post
+targetEntityType: user
+cache: true

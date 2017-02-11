@@ -1,0 +1,17 @@
+{
+  "name": "sailvenice",
+  "description": "Sail Venice Website",
+  "dependencies": {
+    "modernizr": "^3.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phototech/sailvenice.git"
+  },
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/phototech/sailvenice/issues"
+  },
+  "homepage": "http://sailvenice.com"
+}

@@ -1,0 +1,42 @@
+sailor.phone_landscape:
+  label: phone_landscape
+  mediaQuery: 'screen and (max-width: 480px)'
+  weight: 1
+  multipliers:
+    - 1x
+sailor.tablet_smaller:
+  label: tablet_smaller
+  mediaQuery: 'screen and (max-width: 670px)'
+  weight: 1
+  multipliers:
+    - 1x
+sailor.tablet_small:
+  label: tablet_small
+  mediaQuery: 'screen and (max-width: 840px)'
+  weight: 1
+  multipliers:
+    - 1x
+sailor.tablet:
+  label: tablet
+  mediaQuery: 'screen and (max-width: 980px)'
+  weight: 1
+  multipliers:
+    - 1x
+sailor.normal:
+  label: normal
+  mediaQuery: 'screen and (max-width: 1040px)'
+  weight: 1
+  multipliers:
+    - 1x
+sailor.slight:
+  label: slight
+  mediaQuery: 'screen and (max-width: 1200px)'
+  weight: 1
+  multipliers:
+    - 1x
+sailor.full:
+  label: full
+  mediaQuery: 'screen and (max-width: 1400px)'
+  weight: 0
+  multipliers:
+    - 1x
