@@ -15,3 +15,5 @@ recipients:
   - sailvenice@gmail.com
 reply: 'Your submissions has been received. We will contact you soon.'
 weight: 0
+message: 'Your message has been sent.'
+redirect: ''

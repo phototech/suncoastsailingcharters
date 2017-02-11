@@ -52,3 +52,5 @@ image_formats:
     enabled: false
 _core:
   default_config_hash: 8YUfHsWK8qPraWXrNicuAvsP8qWQZRlCrSzi4RmEhMY
+locale: en_US.UTF-8
+log_warnings: true
