@@ -23,7 +23,7 @@ class SailorThemeTest extends UnitTestCase {
    * Test the footer region.
    */
   public function testFooterRegions() {
-    $regions = \sailor_footer_regions();
+    $regions = sailor_footer_regions();
 
     $this->assertInternalType('array', $regions);
 
