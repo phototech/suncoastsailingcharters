@@ -52,7 +52,6 @@ module:
   views: 0
   views_ui: 0
   ds: 1
-  minimal: 1000
 theme:
   classy: 0
   seven: 0
