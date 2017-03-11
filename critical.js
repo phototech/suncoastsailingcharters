@@ -17,7 +17,7 @@ Promise.all([
       headers: headers,
   }),
   request({
-      uri: 'http://127.0.0.1:8080/contact',
+      uri: 'http://127.0.0.1:8080/crew',
       headers: headers,
   }),
   request({
