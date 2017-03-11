@@ -1,6 +1,6 @@
 css_adjust_sort_browsers: false
 css_adjust_sort_external: false
-css_defer: 3
+css_defer: 7
 css_defer_admin: false
 css_defer_js_code: 2
 css_preprocess: false
