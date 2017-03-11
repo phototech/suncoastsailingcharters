@@ -1,7 +1,9 @@
 uuid: 9dd561ee-3969-4937-9272-6ca532a5b38e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 name: hero_cutter_x2
 label: 'Hero (Cutter X2)'
 effects:
@@ -13,3 +15,23 @@ effects:
       width: 960
       height: null
       upscale: false
+  0e53315d-8303-4ddd-9455-9fd7154ed552:
+    uuid: 0e53315d-8303-4ddd-9455-9fd7154ed552
+    id: image_effects_strip_metadata
+    weight: 2
+    data: {  }
+  96b85f00-411c-4a44-be1b-e736ae733437:
+    uuid: 96b85f00-411c-4a44-be1b-e736ae733437
+    id: image_effects_interlace
+    weight: 3
+    data:
+      type: Plane
+  e403e5a2-b3a0-44e8-b880-307a1d1c15d4:
+    uuid: e403e5a2-b3a0-44e8-b880-307a1d1c15d4
+    id: image_effects_imagemagick_arguments
+    weight: 4
+    data:
+      command_line: '-gaussian-blur 0.05'
+      dimensions_method: keep
+      width: ''
+      height: ''

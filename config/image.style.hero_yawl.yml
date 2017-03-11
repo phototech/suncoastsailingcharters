@@ -1,7 +1,9 @@
 uuid: e16447a3-262a-4c6e-8491-5439f07365da
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 name: hero_yawl
 label: 'Hero (Yawl)'
 effects:
@@ -13,3 +15,23 @@ effects:
       width: 670
       height: null
       upscale: false
+  b22b30e6-d4c5-4fcc-a43b-eaf4d5358b30:
+    uuid: b22b30e6-d4c5-4fcc-a43b-eaf4d5358b30
+    id: image_effects_strip_metadata
+    weight: 2
+    data: {  }
+  a356d66e-2355-4fb1-ac79-b9be7776ca8b:
+    uuid: a356d66e-2355-4fb1-ac79-b9be7776ca8b
+    id: image_effects_interlace
+    weight: 3
+    data:
+      type: Plane
+  aeda98c3-f522-4a33-b236-a3dff992f313:
+    uuid: aeda98c3-f522-4a33-b236-a3dff992f313
+    id: image_effects_imagemagick_arguments
+    weight: 4
+    data:
+      command_line: '-gaussian-blur 0.05'
+      dimensions_method: keep
+      width: ''
+      height: ''

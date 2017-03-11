@@ -1,7 +1,9 @@
 uuid: e12fd0a4-1afe-43f2-af58-fe0006d0995e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 name: hero_brig_x2
 label: 'Hero (Brig X2)'
 effects:
@@ -13,3 +15,23 @@ effects:
       width: 2400
       height: null
       upscale: false
+  aee26a3c-68d7-4da3-8c6f-e21088550d0d:
+    uuid: aee26a3c-68d7-4da3-8c6f-e21088550d0d
+    id: image_effects_strip_metadata
+    weight: 2
+    data: {  }
+  464e5d53-c81d-4390-b1b2-264e7e8e6438:
+    uuid: 464e5d53-c81d-4390-b1b2-264e7e8e6438
+    id: image_effects_interlace
+    weight: 3
+    data:
+      type: Plane
+  883a19b7-534d-4476-b5b7-87923fcc9af4:
+    uuid: 883a19b7-534d-4476-b5b7-87923fcc9af4
+    id: image_effects_imagemagick_arguments
+    weight: 4
+    data:
+      command_line: '-gaussian-blur 0.05'
+      dimensions_method: keep
+      width: ''
+      height: ''

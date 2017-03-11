@@ -1,7 +1,9 @@
 uuid: add8120c-2acd-4237-ab86-cee184a32015
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 name: hero_snow_x2
 label: 'Hero (Snow X2)'
 effects:
@@ -13,3 +15,23 @@ effects:
       width: 2800
       height: null
       upscale: false
+  992fedd5-f8ce-4290-a919-5f521842c57d:
+    uuid: 992fedd5-f8ce-4290-a919-5f521842c57d
+    id: image_effects_strip_metadata
+    weight: 2
+    data: {  }
+  2fbbefb7-b2f8-4565-abeb-79ce36abcd15:
+    uuid: 2fbbefb7-b2f8-4565-abeb-79ce36abcd15
+    id: image_effects_interlace
+    weight: 3
+    data:
+      type: Plane
+  4b2440ad-b02e-403f-a98e-29b1a1311a1d:
+    uuid: 4b2440ad-b02e-403f-a98e-29b1a1311a1d
+    id: image_effects_imagemagick_arguments
+    weight: 4
+    data:
+      command_line: '-gaussian-blur 0.05'
+      dimensions_method: keep
+      width: ''
+      height: ''

@@ -1,7 +1,9 @@
 uuid: feaf0456-44d5-4476-997b-531064cc658e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 name: hero_brig
 label: 'Hero (Brig)'
 effects:
@@ -13,3 +15,23 @@ effects:
       width: 1200
       height: null
       upscale: false
+  18a9fef2-6122-406a-ba4f-58d1d9ffece1:
+    uuid: 18a9fef2-6122-406a-ba4f-58d1d9ffece1
+    id: image_effects_strip_metadata
+    weight: 2
+    data: {  }
+  4b0f60af-45c2-4aee-93e6-cd2fbf1a8c63:
+    uuid: 4b0f60af-45c2-4aee-93e6-cd2fbf1a8c63
+    id: image_effects_interlace
+    weight: 3
+    data:
+      type: Plane
+  58d086d4-11a4-4b29-acf5-75dc2b31a3b8:
+    uuid: 58d086d4-11a4-4b29-acf5-75dc2b31a3b8
+    id: image_effects_imagemagick_arguments
+    weight: 4
+    data:
+      command_line: '-gaussian-blur 0.05'
+      dimensions_method: keep
+      width: ''
+      height: ''

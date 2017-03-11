@@ -1,7 +1,9 @@
 uuid: 73471e3f-5cf8-4ee8-a261-a1080d04bda5
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 name: hero_schooner_x2
 label: 'Hero (Schooner X2)'
 effects:
@@ -13,3 +15,23 @@ effects:
       width: 1960
       height: null
       upscale: false
+  61cf4708-a86f-49a7-9e12-36076f113cbe:
+    uuid: 61cf4708-a86f-49a7-9e12-36076f113cbe
+    id: image_effects_strip_metadata
+    weight: 2
+    data: {  }
+  60960caf-2605-41af-a4ff-80ba0ada5ae4:
+    uuid: 60960caf-2605-41af-a4ff-80ba0ada5ae4
+    id: image_effects_interlace
+    weight: 3
+    data:
+      type: Plane
+  cf7eead2-db12-44eb-b69d-6f281ef7096d:
+    uuid: cf7eead2-db12-44eb-b69d-6f281ef7096d
+    id: image_effects_imagemagick_arguments
+    weight: 4
+    data:
+      command_line: '-gaussian-blur 0.05'
+      dimensions_method: keep
+      width: ''
+      height: ''
