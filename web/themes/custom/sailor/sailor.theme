@@ -329,6 +329,29 @@ function sailor_background_image(array &$variables) {
       $responsive = ResponsiveImageStyle::load($image[0]['#responsive_image_style_id']);
       $mappings = $responsive->getImageStyleMappings();
       $breakpoints = \Drupal::service('breakpoint.manager')->getBreakpointsByGroup($responsive->getBreakpointGroup());
+
+      // CSS Styles need a different order than picture tags.
+      usort($mappings, function ($a, $b) use ($breakpoints) {
+        $a_m = (int) trim($a['multiplier'], 'x');
+        $b_m = (int) trim($b['multiplier'], 'x');
+
+        $breakpoint_id = $a['breakpoint_id'];
+        $a_b = $breakpoints[$breakpoint_id];
+
+        $breakpoint_id = $b['breakpoint_id'];
+        $b_b = $breakpoints[$breakpoint_id];
+
+        if ($a_b->getWeight() == $b_b->getWeight()) {
+          if ($a_m == $b_m) {
+              return 0;
+          }
+
+          return ($a_m < $b_m) ? -1 : 1;
+        }
+
+        return ($a_b->getWeight() < $b_b->getWeight()) ? -1 : 1;
+      });
+
       $css = array_map(function ($data) use ($file, $breakpoints, $id) {
         $style = ImageStyle::load($data['image_mapping']);
         $url = $style->buildUrl($file->getFileUri());
@@ -346,7 +369,6 @@ function sailor_background_image(array &$variables) {
           . '} }';
       }, $mappings);
 
-      $css = array_reverse($css);
       $variables['css'] = implode("\n", $css);
     }
     else {

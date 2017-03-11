@@ -1,11 +1,11 @@
-quality: 100
+quality: 85
 binaries: imagemagick
 path_to_binaries: /usr/bin/
 prepend: ''
 debug: false
 use_identify: true
 advanced:
-  density: 0
+  density: 1
   colorspace: '0'
   profile: ''
 image_formats:
