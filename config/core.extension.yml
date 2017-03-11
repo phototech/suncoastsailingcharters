@@ -3,6 +3,7 @@ module:
   advagg: 0
   advagg_css_minify: 0
   advagg_js_minify: 0
+  advagg_mod: 0
   block: 0
   block_content: 0
   breakpoint: 0
