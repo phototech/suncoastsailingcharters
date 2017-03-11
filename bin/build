@@ -21,3 +21,9 @@ npm install
 
 # Import Drupal's Config.
 ./vendor/bin/drush --root=$(pwd)/web/ config-import --yes
+
+# Generate the ciritcal css
+(cd $(pwd)/web/ && php index.php | sed 's/:.\//\//' | ../node_modules/.bin/critical --minify --src / > ./themes/custom/sailor/compiled/critical.css)
+
+# Clear Drupal's cache.
+./vendor/bin/drush --root=$(pwd)/web/ cr
