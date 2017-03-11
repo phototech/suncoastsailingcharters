@@ -1,7 +1,9 @@
 uuid: 07c7fb5b-5209-4f97-87e8-e3e58d6094ee
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 name: hero_ketch_x2
 label: 'Hero (Ketch X2)'
 effects:
@@ -13,3 +15,23 @@ effects:
       width: 1680
       height: null
       upscale: false
+  d6a2024c-53c5-4f8e-9899-d804d36cae15:
+    uuid: d6a2024c-53c5-4f8e-9899-d804d36cae15
+    id: image_effects_strip_metadata
+    weight: 2
+    data: {  }
+  19f22290-140a-4624-abb7-2cff477ba36a:
+    uuid: 19f22290-140a-4624-abb7-2cff477ba36a
+    id: image_effects_interlace
+    weight: 3
+    data:
+      type: Plane
+  484ad265-fdf6-426e-bda5-1dd210d79a4a:
+    uuid: 484ad265-fdf6-426e-bda5-1dd210d79a4a
+    id: image_effects_imagemagick_arguments
+    weight: 4
+    data:
+      command_line: '-gaussian-blur 0.05'
+      dimensions_method: keep
+      width: ''
+      height: ''
