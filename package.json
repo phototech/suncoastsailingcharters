@@ -4,7 +4,9 @@
   "dependencies": {
     "modernizr": "^3.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "critical": "^0.8.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/phototech/sailvenice.git"

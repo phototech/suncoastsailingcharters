@@ -28,12 +28,9 @@
   <head>
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
+    <style type="text/css">{{ source(directory ~ '/compiled/critical.css') }}</style>
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
-    <script type="text/javascript">
-      // Prevent Flash of Unstyled Content.
-      document.documentElement.style.display = 'none';
-    </script>
   </head>
   <body{{ attributes }}>
     {#
@@ -46,21 +43,6 @@
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
-    <script type="text/javascript">
-      // Prevent Flash of Unstyled Content.
-      document.documentElement.style.display = 'block';
-
-      // When there is a hash and it's tabbed contnet, scroll the user back to
-      // the top right after the browser tries to move the user down.
-      if (window.location.hash && document.querySelector('.content .tab-content')) {
-        window.addEventListener('load', function() {
-          window.scrollTo(0, 0);
-        });
-      }
-    </script>
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
-    <script type="text/javascript">
-      // @TODO add the existing scripts.
-    </script>
   </body>
 </html>
