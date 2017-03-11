@@ -20,7 +20,8 @@
     "drupal/purge": "~3.0-beta4",
     "drupal/purge_purger_http": "~1.0-beta3",
     "drupal/imagemagick": "^1.0.0-alpha2",
-    "drupal/token_filter": "^1.0.0-beta1"
+    "drupal/token_filter": "^1.0.0-beta1",
+    "drupal/advagg": "^2.3.0"
   },
   "require-dev": {
     "drush/drush": "~8.0",
