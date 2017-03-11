@@ -7,17 +7,28 @@ const headers = {
   'X-Forwarded-Proto': 'https',
 }
 
-const home = {
-    uri: 'http://127.0.0.1:8080',
-    headers: headers,
-};
-
-const services = {
-    uri: 'http://127.0.0.1:8080/services',
-    headers: headers,
-};
-
-Promise.all([request(home), request(services)]).then(responses => {
+Promise.all([
+  request({
+      uri: 'http://127.0.0.1:8080',
+      headers: headers,
+  }),
+  request({
+      uri: 'http://127.0.0.1:8080/services',
+      headers: headers,
+  }),
+  request({
+      uri: 'http://127.0.0.1:8080/contact',
+      headers: headers,
+  }),
+  request({
+      uri: 'http://127.0.0.1:8080/faq',
+      headers: headers,
+  }),
+  request({
+      uri: 'http://127.0.0.1:8080/contact',
+      headers: headers,
+  }),
+]).then(responses => {
   const css = responses.map((response) => {
     return Critical.generate({
       inline: false,
