@@ -8,6 +8,7 @@
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\TypedData\TypedDataInterface;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\responsive_image\Entity\ResponsiveImageStyle;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Render\Element;
 use Drupal\Core\Form\FormStateInterface;
@@ -299,44 +300,79 @@ function sailor_preprocess_block(array &$variables) {
 }
 
 /**
- * Implments template_preprocess_sailor_hero().
+ * Adds background image to an element.
  */
-function sailor_preprocess_sailor_hero(array &$variables) {
+function sailor_background_image(array &$variables) {
+  $attributes = $variables['attributes'];
+  $id = $attributes->toArray()['id'];
+
   // Get the image for the hero.
   $image = NULL;
-  foreach (Element::children($variables['content']['main']) as $key) {
-    if (!empty($variables['content']['main'][$key]['#field_type'])) {
-      if ($variables['content']['main'][$key]['#field_type'] == 'image') {
-        $image = $variables['content']['main'][$key];
-        unset($variables['content']['main'][$key]);
+  foreach (Element::children($variables['content']['background']) as $key) {
+    if (!empty($variables['content']['background'][$key]['#field_type'])) {
+      if ($variables['content']['background'][$key]['#field_type'] == 'image') {
+        $image = $variables['content']['background'][$key];
+        unset($variables['content']['background'][$key]);
         break;
       }
     }
   }
 
   // Get the Image URL.
-  if (!empty($image)) {
-    if ($file = $image[0]['#item']->entity) {
-      $uri = $file->getFileUri();
+  $url = NULL;
+  if (!empty($image) && $file = $image[0]['#item']->entity) {
+    if (isset($image[0]['#image_style'])) {
+      $style = ImageStyle::load($image[0]['#image_style']);
+      $url = $style->buildUrl($file->getFileUri());
+    }
+    elseif (isset($image[0]['#responsive_image_style_id'])) {
+      $responsive = ResponsiveImageStyle::load($image[0]['#responsive_image_style_id']);
+      $mappings = $responsive->getImageStyleMappings();
+      $breakpoints = \Drupal::service('breakpoint.manager')->getBreakpointsByGroup($responsive->getBreakpointGroup());
+      $css = array_map(function ($data) use ($file, $breakpoints, $id) {
+        $style = ImageStyle::load($data['image_mapping']);
+        $url = $style->buildUrl($file->getFileUri());
 
-      if ($image[0]['#image_style']) {
-        $style = ImageStyle::load($image[0]['#image_style']);
-        $url = $style->buildUrl($uri);
-      }
-      else {
-        $url = $file->url();
-      }
+        $multiplier = (int) trim($data['multiplier'], 'x');
 
+        $breakpoint_id = $data['breakpoint_id'];
+        $breakpoint = $breakpoints[$breakpoint_id];
+
+        return '@media '
+          . $breakpoint->getMediaQuery()
+          . ' and (min-resolution: ' . $multiplier * 96 . 'dpi) { #'
+          . $id
+          . ' { background-image: url("' . file_url_transform_relative($url) . '"); '
+          . '} }';
+      }, $mappings);
+      $variables['css'] = implode("\n", $css);
+    }
+    else {
+      $url = $file->url();
     }
   }
 
   // Add the image as the background.
   if ($url) {
     // For some reason, an underscore in the variable name does not work.
-    $variables['attributes'] = new Attribute([
-      'style' => 'background-image: url("' . file_url_transform_relative($url) . '");',
-    ]);
+    $attributes->setAttribute('style', 'background-image: url("' . file_url_transform_relative($url) . '");');
   }
+}
+
+/**
+ * Implments template_preprocess_sailor_hero().
+ */
+function sailor_preprocess_sailor_hero(array &$variables) {
+  $entity_type = $variables['content']['#entity_type'];
+  $entity = $variables['content']['#entity'];
+  $id = Html::getUniqueId($entity_type . '-' . $entity->id());
+  $attributes = new Attribute([
+    'id' => $id,
+  ]);
+  $variables['attributes'] = $attributes;
+  $variables['css'] = '';
+
+  sailor_background_image($variables);
 
   // Add the classes to the hero button.
   foreach (Element::children($variables['content']['main']) as $key) {
@@ -360,41 +396,16 @@ function sailor_preprocess_sailor_hero(array &$variables) {
  * Implments template_preprocess_sailor_photo().
  */
 function sailor_preprocess_sailor_photo(array &$variables) {
-  // Get the image for the hero.
-  $image = NULL;
-  foreach (Element::children($variables['content']['background']) as $key) {
-    if (!empty($variables['content']['background'][$key]['#field_type'])) {
-      if ($variables['content']['background'][$key]['#field_type'] == 'image') {
-        $image = $variables['content']['background'][$key];
-        unset($variables['content']['background'][$key]);
-        break;
-      }
-    }
-  }
+  $entity_type = $variables['content']['#entity_type'];
+  $entity = $variables['content']['#entity'];
+  $id = Html::getUniqueId($entity_type . '-' . $entity->id());
+  $attributes = new Attribute([
+    'id' => $id,
+  ]);
+  $variables['attributes'] = $attributes;
+  $variables['css'] = '';
 
-  // Get the Image URL.
-  if (!empty($image)) {
-    if ($file = $image[0]['#item']->entity) {
-      $uri = $file->getFileUri();
-
-      if ($image[0]['#image_style']) {
-        $style = ImageStyle::load($image[0]['#image_style']);
-        $url = $style->buildUrl($uri);
-      }
-      else {
-        $url = $file->url();
-      }
-
-    }
-  }
-
-  // Add the image as the background.
-  if ($url) {
-    // For some reason, an underscore in the variable name does not work.
-    $variables['attributes'] = new Attribute([
-      'style' => 'background-image: url("' . file_url_transform_relative($url) . '");',
-    ]);
-  }
+  sailor_background_image($variables);
 
   // Add the classes to the hero button.
   foreach (Element::children($variables['content']['button']) as $key) {

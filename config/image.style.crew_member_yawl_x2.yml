@@ -1,0 +1,14 @@
+uuid: 6e0fab81-6d3c-4afe-84a0-a6419bb6bfd9
+langcode: en
+status: true
+dependencies: {  }
+name: crew_member_yawl_x2
+label: 'Crew Member (Yawl X2)'
+effects:
+  67472eda-d295-489e-a8d7-f7353ec2796a:
+    uuid: 67472eda-d295-489e-a8d7-f7353ec2796a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1340
+      height: 1340

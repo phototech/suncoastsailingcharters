@@ -1,0 +1,15 @@
+uuid: 73471e3f-5cf8-4ee8-a261-a1080d04bda5
+langcode: en
+status: true
+dependencies: {  }
+name: hero_schooner_x2
+label: 'Hero (Schooner X2)'
+effects:
+  c1aad738-9e18-42ca-90a1-7528fd29aeaa:
+    uuid: c1aad738-9e18-42ca-90a1-7528fd29aeaa
+    id: image_scale
+    weight: 1
+    data:
+      width: 1960
+      height: null
+      upscale: false

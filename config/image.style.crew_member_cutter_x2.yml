@@ -1,0 +1,14 @@
+uuid: f1996efe-b4d9-49bf-95f9-f5c08cf28af1
+langcode: en
+status: true
+dependencies: {  }
+name: crew_member_cutter_x2
+label: 'Crew Member (Cutter X2)'
+effects:
+  e4b5f087-ec69-4468-b688-75d4115e3559:
+    uuid: e4b5f087-ec69-4468-b688-75d4115e3559
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 960

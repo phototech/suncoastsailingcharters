@@ -7,12 +7,12 @@ dependencies:
     - field.field.paragraph.photo.field_image
     - field.field.paragraph.photo.field_link
     - field.field.paragraph.photo.field_title
-    - image.style.hero
     - paragraphs.paragraphs_type.photo
+    - responsive_image.styles.hero
   module:
     - ds
-    - image
     - link
+    - responsive_image
     - text
 third_party_settings:
   ds:
@@ -56,7 +56,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: hero
+      responsive_image_style: hero
       image_link: ''
     third_party_settings:
       ds:
@@ -66,7 +66,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: image
+    type: responsive_image
   field_link:
     weight: 3
     label: hidden

@@ -1,42 +1,63 @@
-sailor.phone_landscape:
-  label: phone_landscape
-  mediaQuery: 'screen and (max-width: 480px)'
-  weight: 1
-  multipliers:
-    - 1x
-sailor.tablet_smaller:
-  label: tablet_smaller
-  mediaQuery: 'screen and (max-width: 670px)'
-  weight: 1
-  multipliers:
-    - 1x
-sailor.tablet_small:
-  label: tablet_small
-  mediaQuery: 'screen and (max-width: 840px)'
-  weight: 1
-  multipliers:
-    - 1x
-sailor.tablet:
-  label: tablet
-  mediaQuery: 'screen and (max-width: 980px)'
-  weight: 1
-  multipliers:
-    - 1x
-sailor.normal:
-  label: normal
-  mediaQuery: 'screen and (max-width: 1040px)'
-  weight: 1
-  multipliers:
-    - 1x
-sailor.slight:
-  label: slight
-  mediaQuery: 'screen and (max-width: 1200px)'
-  weight: 1
-  multipliers:
-    - 1x
-sailor.full:
-  label: full
-  mediaQuery: 'screen and (max-width: 1400px)'
+sailor.barque:
+  label: Barque
+  mediaQuery: 'screen and (min-width: 1401px)'
   weight: 0
   multipliers:
     - 1x
+    - 2x
+
+sailor.snow:
+  label: Snow
+  mediaQuery: 'screen and (max-width: 1400px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+sailor.brig:
+  label: Brig
+  mediaQuery: 'screen and (max-width: 1200px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+
+sailor.bilander:
+  label: Bilander
+  mediaQuery: 'screen and (max-width: 1040px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+
+sailor.schooner:
+  label: Schooner
+  mediaQuery: 'screen and (max-width: 980px)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x
+
+sailor.ketch:
+  label: Ketch
+  mediaQuery: 'screen and (max-width: 840px)'
+  weight: 5
+  multipliers:
+    - 1x
+    - 2x
+
+sailor.yawl:
+  label: Yawl
+  mediaQuery: 'screen and (max-width: 670px)'
+  weight: 6
+  multipliers:
+    - 1x
+    - 2x
+
+sailor.cutter:
+  label: Cutter
+  mediaQuery: 'screen and (max-width: 480px)'
+  weight: 7
+  multipliers:
+    - 1x
+    - 2x

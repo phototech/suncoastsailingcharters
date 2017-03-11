@@ -1,0 +1,15 @@
+uuid: 9dd561ee-3969-4937-9272-6ca532a5b38e
+langcode: en
+status: true
+dependencies: {  }
+name: hero_cutter_x2
+label: 'Hero (Cutter X2)'
+effects:
+  0084fe44-6e5b-4d05-b2e6-e63d0d12f417:
+    uuid: 0084fe44-6e5b-4d05-b2e6-e63d0d12f417
+    id: image_scale
+    weight: 1
+    data:
+      width: 960
+      height: null
+      upscale: false

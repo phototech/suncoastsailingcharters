@@ -1,0 +1,15 @@
+uuid: b6bdf22f-a3bd-4ae3-a5db-8ab8666999ef
+langcode: en
+status: true
+dependencies: {  }
+name: hero_ketch
+label: 'Hero (Ketch)'
+effects:
+  023fcfff-c765-4588-94f6-871dc5305551:
+    uuid: 023fcfff-c765-4588-94f6-871dc5305551
+    id: image_scale
+    weight: 1
+    data:
+      width: 840
+      height: null
+      upscale: false

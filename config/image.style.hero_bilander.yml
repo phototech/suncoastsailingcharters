@@ -1,0 +1,15 @@
+uuid: b868317b-d158-46c2-aaec-3690a0dc6475
+langcode: en
+status: true
+dependencies: {  }
+name: hero_bilander
+label: 'Hero (Bilander)'
+effects:
+  29f58f72-ad20-4f3a-998c-de0af9d459ed:
+    uuid: 29f58f72-ad20-4f3a-998c-de0af9d459ed
+    id: image_scale
+    weight: 1
+    data:
+      width: 1040
+      height: null
+      upscale: false
