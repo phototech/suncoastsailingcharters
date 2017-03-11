@@ -345,6 +345,8 @@ function sailor_background_image(array &$variables) {
           . ' { background-image: url("' . file_url_transform_relative($url) . '"); '
           . '} }';
       }, $mappings);
+
+      $css = array_reverse($css);
       $variables['css'] = implode("\n", $css);
     }
     else {
