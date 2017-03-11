@@ -23,7 +23,7 @@ npm install
 ./vendor/bin/drush --root=$(pwd)/web/ config-import --yes
 
 # Generate the ciritcal css
-(cd $(pwd)/web/ && curl -vs -H "Host: sailvenice.com" -H "X-Forwarded-Proto: https" http://127.0.0.1:8080/ 2>&1 | ../node_modules/.bin/critical --minify --src / --ignore="@font-face" > ./themes/custom/sailor/compiled/critical.css)
+node critical.js > ./web/themes/custom/sailor/compiled/critical.css
 
 # Clear Drupal's cache.
 ./vendor/bin/drush --root=$(pwd)/web/ cr
