@@ -1,0 +1,46 @@
+uuid: 9cacf824-71c9-4d7d-b838-5dc5c3d08f19
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.crew_member
+    - image.style.crew_member_cutter
+    - image.style.crew_member_cutter_x2
+    - image.style.crew_member_yawl_x2
+  theme:
+    - sailor
+id: crew_member
+label: 'Crew Member'
+image_style_mappings:
+  -
+    breakpoint_id: sailor.cutter
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: crew_member_cutter
+  -
+    breakpoint_id: sailor.cutter
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: crew_member_cutter_x2
+  -
+    breakpoint_id: sailor.snow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: crew_member
+  -
+    breakpoint_id: sailor.snow
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: crew_member_yawl_x2
+  -
+    breakpoint_id: sailor.barque
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: crew_member
+  -
+    breakpoint_id: sailor.barque
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: crew_member_yawl_x2
+breakpoint_group: sailor
+fallback_image_style: crew_member

@@ -1,0 +1,15 @@
+uuid: add8120c-2acd-4237-ab86-cee184a32015
+langcode: en
+status: true
+dependencies: {  }
+name: hero_snow_x2
+label: 'Hero (Snow X2)'
+effects:
+  9da04a30-edb6-48d9-b013-b3281d1ffff0:
+    uuid: 9da04a30-edb6-48d9-b013-b3281d1ffff0
+    id: image_scale
+    weight: 1
+    data:
+      width: 2800
+      height: null
+      upscale: false

@@ -1,5 +1,8 @@
 {{ title_suffix.contextual_links }}
 
+{% if css %}
+  <style type="text/css">{{ css|raw }}</style>
+{% endif %}
 <div{{ attributes.addClass('hero') }}>
 	<article>
 		{{ main }}

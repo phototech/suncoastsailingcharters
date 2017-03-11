@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies: {  }
 name: crew_member
-label: 'Crew Member'
+label: 'Crew Member (Yawl)'
 effects:
   7ce375dd-739e-460a-922d-455f33e15b76:
     uuid: 7ce375dd-739e-460a-922d-455f33e15b76
     id: image_scale_and_crop
     weight: 1
     data:
-      width: 600
-      height: 600
+      width: 670
+      height: 670

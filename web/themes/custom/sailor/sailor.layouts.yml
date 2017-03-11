@@ -137,6 +137,8 @@ sailor_hero:
   type: partial
   template: templates/sailor-hero
   regions:
+    background:
+      label: Background
     main:
       label: Main
 

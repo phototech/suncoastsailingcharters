@@ -1,4 +1,4 @@
 ---
+BUNDLE_BIN: ".bundle/vendor/bin"
 BUNDLE_PATH: ".bundle/vendor"
 BUNDLE_DISABLE_SHARED_GEMS: "true"
-BUNDLE_BIN: ".bundle/vendor/bin"

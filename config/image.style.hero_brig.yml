@@ -1,0 +1,15 @@
+uuid: feaf0456-44d5-4476-997b-531064cc658e
+langcode: en
+status: true
+dependencies: {  }
+name: hero_brig
+label: 'Hero (Brig)'
+effects:
+  28a96f2f-2c09-420e-9cd2-8b184699f623:
+    uuid: 28a96f2f-2c09-420e-9cd2-8b184699f623
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: false

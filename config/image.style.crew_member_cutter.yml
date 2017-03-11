@@ -1,0 +1,14 @@
+uuid: 7b896f32-b778-434c-a442-a5184a90795a
+langcode: en
+status: true
+dependencies: {  }
+name: crew_member_cutter
+label: 'Crew Member (Cutter)'
+effects:
+  33c725d5-86c6-48f3-b07d-990bcf51208b:
+    uuid: 33c725d5-86c6-48f3-b07d-990bcf51208b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 480

@@ -1,0 +1,15 @@
+uuid: a89aa87b-55cd-4f53-ab3c-eefc3420afdd
+langcode: en
+status: true
+dependencies: {  }
+name: hero_barque_x2
+label: 'Hero (Barque X2)'
+effects:
+  8cedf36f-18a0-471a-965f-88aeaf6dac32:
+    uuid: 8cedf36f-18a0-471a-965f-88aeaf6dac32
+    id: image_scale
+    weight: 1
+    data:
+      width: 3840
+      height: null
+      upscale: false

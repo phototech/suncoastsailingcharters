@@ -9,12 +9,12 @@ dependencies:
     - field.field.user.user.field_picture
     - field.field.user.user.field_social
     - field.field.user.user.field_title
-    - image.style.crew_member
+    - responsive_image.styles.crew_member
   module:
     - ds
-    - image
     - link
     - name
+    - responsive_image
     - telephone
     - user
 third_party_settings:
@@ -24,6 +24,7 @@ third_party_settings:
       path: themes/custom/sailor
       library: ''
       disable_css: false
+      entity_classes: all_classes
       settings:
         wrappers:
           image: div
@@ -82,6 +83,7 @@ content:
       multiple_delimiter_precedes_last: never
       multiple_el_al_min: '3'
       multiple_el_al_first: '1'
+      markup: false
     third_party_settings:
       ds:
         ft:
@@ -127,7 +129,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: crew_member
+      responsive_image_style: crew_member
       image_link: ''
     third_party_settings:
       ds:
@@ -135,7 +137,7 @@ content:
           id: reset
           settings:
             lb: ''
-    type: image
+    type: responsive_image
   field_social:
     type: link
     weight: 4
@@ -188,8 +190,5 @@ content:
             fis: false
             fis-def-at: false
             fi-def-at: false
-  member_for:
-    weight: 8
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  member_for: true

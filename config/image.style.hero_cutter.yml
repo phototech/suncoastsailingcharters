@@ -1,0 +1,15 @@
+uuid: 6672015f-d2f4-4d94-957f-07e7656a19da
+langcode: en
+status: true
+dependencies: {  }
+name: hero_cutter
+label: 'Hero (Cutter)'
+effects:
+  9ff5b5e9-2754-4e85-af52-d9470cdba33c:
+    uuid: 9ff5b5e9-2754-4e85-af52-d9470cdba33c
+    id: image_scale
+    weight: 1
+    data:
+      width: 480
+      height: null
+      upscale: false

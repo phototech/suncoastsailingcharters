@@ -1,0 +1,15 @@
+uuid: e16447a3-262a-4c6e-8491-5439f07365da
+langcode: en
+status: true
+dependencies: {  }
+name: hero_yawl
+label: 'Hero (Yawl)'
+effects:
+  280f9905-081c-4ffa-bd39-c0704bfbdc74:
+    uuid: 280f9905-081c-4ffa-bd39-c0704bfbdc74
+    id: image_scale
+    weight: 1
+    data:
+      width: 670
+      height: null
+      upscale: false

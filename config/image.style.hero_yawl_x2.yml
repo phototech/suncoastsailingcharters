@@ -1,0 +1,15 @@
+uuid: 23552961-3801-4cf0-bec5-1c41d8566682
+langcode: en
+status: true
+dependencies: {  }
+name: hero_yawl_x2
+label: 'Hero (Yawl X2)'
+effects:
+  d3e5d5a7-ffae-470d-848c-0c16c46f8eff:
+    uuid: d3e5d5a7-ffae-470d-848c-0c16c46f8eff
+    id: image_scale
+    weight: 1
+    data:
+      width: 1340
+      height: null
+      upscale: false

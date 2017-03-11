@@ -6,12 +6,12 @@ dependencies:
     - field.field.paragraph.hero.field_image
     - field.field.paragraph.hero.field_link
     - field.field.paragraph.hero.field_title
-    - image.style.hero
     - paragraphs.paragraphs_type.hero
+    - responsive_image.styles.hero
   module:
     - ds
-    - image
     - link
+    - responsive_image
 third_party_settings:
   ds:
     layout:
@@ -22,6 +22,7 @@ third_party_settings:
       entity_classes: all_classes
       settings:
         wrappers:
+          background: div
           main: div
         outer_wrapper: div
         attributes: ''
@@ -30,8 +31,9 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
-      main:
+      background:
         - field_image
+      main:
         - field_title
         - field_link
 id: paragraph.hero.default
@@ -43,7 +45,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: hero
+      responsive_image_style: hero
       image_link: ''
     third_party_settings:
       ds:
@@ -53,7 +55,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: image
+    type: responsive_image
   field_link:
     weight: 2
     label: hidden

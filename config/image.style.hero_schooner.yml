@@ -1,0 +1,15 @@
+uuid: 07ccf4b7-bdd7-46fe-8d4e-26b3c573e39b
+langcode: en
+status: true
+dependencies: {  }
+name: hero_schooner
+label: 'Hero (Schooner)'
+effects:
+  48129ec2-ed6b-48d0-9fd3-ff7c9fbe65ba:
+    uuid: 48129ec2-ed6b-48d0-9fd3-ff7c9fbe65ba
+    id: image_scale
+    weight: 1
+    data:
+      width: 980
+      height: null
+      upscale: false

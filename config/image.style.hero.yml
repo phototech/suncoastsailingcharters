@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: hero
-label: Hero
+label: 'Hero (Barque)'
 effects:
   5db0fd6a-281e-4986-8de4-e77289f2d83c:
     uuid: 5db0fd6a-281e-4986-8de4-e77289f2d83c

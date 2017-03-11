@@ -1,0 +1,15 @@
+uuid: 11f66243-f78e-44a8-a91c-2191b99e7d85
+langcode: en
+status: true
+dependencies: {  }
+name: hero_snow
+label: 'Hero (Snow)'
+effects:
+  c3c5a15b-47e2-4d49-b74a-54d8bc1198ae:
+    uuid: c3c5a15b-47e2-4d49-b74a-54d8bc1198ae
+    id: image_scale
+    weight: 1
+    data:
+      width: 1400
+      height: null
+      upscale: false
