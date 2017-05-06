@@ -45,6 +45,7 @@ content:
       past_format: '@interval ago'
       granularity: 2
     third_party_settings: {  }
+    region: content
   field_faq:
     type: entity_reference_revisions_entity_view
     weight: 1
@@ -59,6 +60,7 @@ content:
           id: reset
           settings:
             lb: ''
+    region: accordion
   field_title:
     weight: 0
     label: hidden
@@ -94,6 +96,7 @@ content:
             fis-def-at: false
             fi-def-at: false
     type: string
+    region: intro
   uid:
     type: entity_reference_entity_view
     weight: 2
@@ -102,4 +105,5 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
 hidden: {  }

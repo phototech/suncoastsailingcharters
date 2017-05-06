@@ -45,6 +45,7 @@ content:
       past_format: '@interval ago'
       granularity: 2
     third_party_settings: {  }
+    region: content
   field_answer:
     weight: 1
     label: hidden
@@ -56,6 +57,7 @@ content:
           settings:
             lb: ''
     type: text_default
+    region: answer
   field_question:
     weight: 0
     label: hidden
@@ -68,6 +70,7 @@ content:
           settings:
             lb: ''
     type: string
+    region: question
   uid:
     type: entity_reference_entity_view
     weight: 2
@@ -76,4 +79,5 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
 hidden: {  }

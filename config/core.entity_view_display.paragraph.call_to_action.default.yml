@@ -58,12 +58,14 @@ content:
           settings:
             lb: ''
     type: text_default
+    region: main
   field_color:
     weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: color
   field_link:
     weight: 3
     label: hidden
@@ -80,6 +82,7 @@ content:
           settings:
             lb: ''
     type: link
+    region: button
   field_title:
     weight: 1
     label: hidden
@@ -94,6 +97,7 @@ content:
             lb-col: false
             classes: {  }
     type: string
+    region: title
 hidden:
   created: true
   uid: true

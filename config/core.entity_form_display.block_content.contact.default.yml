@@ -21,18 +21,21 @@ content:
       default_country: US
     third_party_settings: {  }
     type: address_default
+    region: content
   field_email:
     weight: 5
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: email_default
+    region: content
   field_phone:
     weight: 4
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
+    region: content
   info:
     type: string_textfield
     weight: -5
@@ -40,4 +43,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden: {  }

@@ -24,11 +24,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea_with_summary
+    region: content
   field_color:
     weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
   field_link:
     weight: 3
     settings:
@@ -36,6 +38,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   field_title:
     weight: 1
     settings:
@@ -43,6 +46,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
 hidden:
   created: true
   status: true

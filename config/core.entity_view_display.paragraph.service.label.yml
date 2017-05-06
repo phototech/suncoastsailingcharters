@@ -43,12 +43,14 @@ content:
       past_format: '@interval ago'
       granularity: 2
     third_party_settings: {  }
+    region: content
   field_body:
     weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_title:
     weight: 0
     label: hidden
@@ -61,6 +63,7 @@ content:
           settings:
             lb: ''
     type: string
+    region: main
   uid:
     type: entity_reference_entity_view
     weight: 2
@@ -69,4 +72,5 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
 hidden: {  }

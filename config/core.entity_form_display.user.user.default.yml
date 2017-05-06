@@ -8,6 +8,7 @@ dependencies:
     - field.field.user.user.field_picture
     - field.field.user.user.field_social
     - field.field.user.user.field_title
+    - image.style.thumbnail
   module:
     - image
     - link
@@ -23,21 +24,25 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
   contact:
     weight: 6
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_name:
     weight: 0
     settings: {  }
     third_party_settings: {  }
     type: name_default
+    region: content
   field_phone:
     weight: 2
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
+    region: content
   field_picture:
     type: image_image
     weight: 5
@@ -45,6 +50,7 @@ content:
       progress_indicator: bar
       preview_image_style: thumbnail
     third_party_settings: {  }
+    region: content
   field_social:
     weight: 3
     settings:
@@ -52,6 +58,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   field_title:
     weight: 1
     settings:
@@ -59,6 +66,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
 hidden:
   language: true
   timezone: true
