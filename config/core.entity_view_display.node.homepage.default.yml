@@ -49,5 +49,6 @@ content:
           id: reset
           settings:
             lb: ''
+    region: main
 hidden:
   links: true

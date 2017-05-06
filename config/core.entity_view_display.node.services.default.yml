@@ -132,6 +132,7 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: intro
   field_services:
     type: entity_reference_revisions_entity_view
     weight: 4
@@ -146,8 +147,10 @@ content:
           id: reset
           settings:
             lb: ''
+    region: main
   links:
     weight: 12
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

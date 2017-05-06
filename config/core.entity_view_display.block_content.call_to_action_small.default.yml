@@ -41,6 +41,7 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: main
   field_link:
     weight: 1
     label: hidden
@@ -59,4 +60,5 @@ content:
             lb-col: false
             classes: {  }
     type: link
+    region: main
 hidden: {  }

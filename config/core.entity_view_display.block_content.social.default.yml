@@ -43,6 +43,7 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: main
   field_social:
     weight: 1
     label: hidden
@@ -54,4 +55,5 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: links
 hidden: {  }

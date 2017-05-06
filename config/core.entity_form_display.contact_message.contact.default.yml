@@ -20,22 +20,26 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
   field_passengers:
     weight: 4
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   field_phone:
     weight: 2
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
+    region: content
   mail:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   message:
     type: string_textarea
     weight: 6
@@ -43,10 +47,15 @@ content:
       rows: 12
       placeholder: ''
     third_party_settings: {  }
+    region: content
   name:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
+  preview:
+    weight: 50
+    region: content
   subject:
     type: string_textfield
     weight: 5
@@ -54,5 +63,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   copy: true

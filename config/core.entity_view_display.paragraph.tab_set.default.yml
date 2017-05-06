@@ -47,6 +47,7 @@ content:
           id: reset
           settings:
             lb: ''
+    region: tabs
 hidden:
   created: true
   uid: true

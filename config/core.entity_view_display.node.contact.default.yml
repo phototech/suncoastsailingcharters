@@ -63,6 +63,7 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: intro
   field_contact:
     weight: 4
     label: hidden
@@ -71,12 +72,14 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: main
   field_description:
     weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: main
   field_map:
     weight: 5
     label: hidden
@@ -86,12 +89,13 @@ content:
       iframe_height: '1000'
       link_text: 'View larger map'
       zoom_level: '17'
-      information_bubble: '1'
       map_type: m
       langcode: en
       include_static_map: 0
       include_link: 0
       include_text: 0
+      static_scale: 1
+      apikey: ''
     third_party_settings:
       ds:
         ft:
@@ -101,6 +105,7 @@ content:
             lb-col: false
             classes: {  }
     type: simple_gmap
+    region: map
   field_title:
     weight: 2
     label: hidden
@@ -136,8 +141,10 @@ content:
             fis-def-at: false
             fi-def-at: false
     type: string
+    region: main
   links:
     weight: 13
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

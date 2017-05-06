@@ -41,12 +41,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: address_default
+    region: main
   field_email:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: email_mailto
+    region: main
   field_phone:
     weight: 1
     label: hidden
@@ -54,4 +56,5 @@ content:
       title: ''
     third_party_settings: {  }
     type: telephone_link
+    region: main
 hidden: {  }

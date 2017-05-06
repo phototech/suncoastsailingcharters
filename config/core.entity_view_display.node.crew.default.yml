@@ -60,6 +60,7 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: intro
   field_crew:
     weight: 2
     label: hidden
@@ -74,8 +75,10 @@ content:
           settings:
             lb: ''
     type: entity_reference_entity_view
+    region: main
   links:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

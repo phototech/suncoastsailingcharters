@@ -45,6 +45,7 @@ content:
       past_format: '@interval ago'
       granularity: 2
     third_party_settings: {  }
+    region: content
   field_attribution:
     weight: 2
     label: hidden
@@ -80,6 +81,7 @@ content:
             fis-def-at: false
             fi-def-at: false
     type: string
+    region: main
   field_quote:
     weight: 1
     label: hidden
@@ -93,6 +95,7 @@ content:
             lb-col: false
             classes: {  }
     type: text_default
+    region: main
   field_subject:
     weight: 0
     label: hidden
@@ -128,6 +131,7 @@ content:
             fis-def-at: false
             fi-def-at: false
     type: string
+    region: main
   uid:
     type: entity_reference_entity_view
     weight: 0
@@ -136,4 +140,5 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
 hidden: {  }
