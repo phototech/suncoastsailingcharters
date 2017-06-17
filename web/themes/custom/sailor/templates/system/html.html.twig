@@ -31,6 +31,14 @@
     <style type="text/css">{{ source(directory ~ '/compiled/critical.css') }}</style>
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
+    <script type="text/javascript">
+      // Prevent hash scroll.
+      window.onload = function () {
+          if (location.hash) {
+              window.scrollTo(0, 0);
+          }
+      };
+    </script>
   </head>
   <body{{ attributes }}>
     {#
