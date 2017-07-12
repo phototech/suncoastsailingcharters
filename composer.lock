@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3ebd882ae6cf4f63753d684edf55985",
+    "content-hash": "ceb00cef84b1e1087e9aca75e573561f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -832,17 +832,17 @@
         },
         {
             "name": "drupal/advagg",
-            "version": "2.4.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/advagg",
-                "reference": "8.x-2.4"
+                "reference": "8.x-3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/advagg-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "b3a0eb8739d940b7171718227ec30e8ef4ccbb1b"
+                "url": "https://ftp.drupal.org/files/projects/advagg-8.x-3.0.zip",
+                "reference": null,
+                "shasum": "d22955cff0af573d58b13a5014ba6e9557b14c6c"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -850,11 +850,11 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-2.x": "2.x-dev"
+                    "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1493949188"
+                    "version": "8.x-3.0",
+                    "datestamp": "1499487842"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

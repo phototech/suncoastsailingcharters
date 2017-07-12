@@ -21,7 +21,7 @@
     "drupal/purge_purger_http": "~1.0-beta3",
     "drupal/imagemagick": "^1.0.0-alpha2",
     "drupal/token_filter": "^1.0.0-beta1",
-    "drupal/advagg": "^2.3.0",
+    "drupal/advagg": "^3.0.0",
     "drupal/image_effects": "^1.0.0",
     "drupal/layout_plugin": "^1.0.0"
   },
