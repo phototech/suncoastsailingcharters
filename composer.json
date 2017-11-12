@@ -23,13 +23,9 @@
     "drupal/token_filter": "^1.0.0-beta1",
     "drupal/advagg": "^2.3.0",
     "drupal/image_effects": "^1.0.0",
-    "drupal/layout_plugin": "^1.0.0"
-  },
-  "require-dev": {
+    "drupal/layout_plugin": "^1.0.0",
+    "drupal/sailor": "^1.0",
     "drush/drush": "~8.0",
-    "drupal/coder": "~8.2.5",
-    "mikey179/vfsStream": "~1.2",
-    "phpunit/phpunit": "~4.8",
     "drupal/console": "~1.0"
   },
   "replace": {
@@ -71,13 +67,14 @@
   },
   "extra": {
     "installer-paths": {
-      "web/core": ["type:drupal-core"],
-      "web/modules/contrib/{$name}": ["type:drupal-module"],
-      "web/profiles/contrib/{$name}": ["type:drupal-profile"]
+      "html/core": ["type:drupal-core"],
+      "html/modules/contrib/{$name}": ["type:drupal-module"],
+      "html/themes/contrib/{$name}": ["type:drupal-theme"],
+      "html/profiles/contrib/{$name}": ["type:drupal-profile"]
     }
   },
   "scripts": {
-    "drupal": "drupal --root=web",
-    "serve": "drupal --root=web server"
+    "drupal": "drupal --root=html",
+    "serve": "drupal --root=html server"
   }
 }

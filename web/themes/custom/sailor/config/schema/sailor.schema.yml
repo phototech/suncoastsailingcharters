@@ -1,5 +1,0 @@
-# Schema for the configuration files of the Sailor theme.
-
-sailor.settings:
-  type: theme_settings
-  label: 'Sailor settings'

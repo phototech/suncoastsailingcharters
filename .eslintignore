@@ -1,8 +1,0 @@
-web/core/assets/vendor/**/*
-web/core/modules/locale/tests/locale_test.js
-web/vendor/**/*
-web/sites/**/files/**/*
-web/libraries/**/*
-web/sites/**/libraries/**/*
-web/profiles/**/libraries/**/*
-web/**/js_test_files/**/*
