@@ -18,13 +18,15 @@
     "drupal/display_field_copy": "~1.0-alpha1",
     "drupal/purge": "~3.0-beta4",
     "drupal/purge_purger_http": "~1.0-beta3",
-    "drupal/imagemagick": "^1.0.0-alpha2",
+    "drupal/imagemagick": "^2.2.0",
     "drupal/token_filter": "^1.0.0-beta1",
-    "drupal/image_effects": "^1.0.0",
+    "drupal/image_effects": "^2.0.0",
     "drupal/layout_plugin": "^1.0.0",
     "drupal/sailor": "^1.0",
     "drush/drush": "~8.0",
-    "drupal/console": "~1.0"
+    "drupal/console": "^1.2.0",
+    "drupal/swiftmailer": "^1.0",
+    "drupal/advagg": "^3.4"
   },
   "replace": {
     "drupal/drupal": "~8.0"

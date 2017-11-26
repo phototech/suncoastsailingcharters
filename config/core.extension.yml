@@ -1,9 +1,5 @@
 module:
   address: 0
-  advagg: 0
-  advagg_css_minify: 0
-  advagg_js_minify: 0
-  advagg_mod: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -23,6 +19,9 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
+  file_mdm: 0
+  file_mdm_exif: 0
+  file_mdm_font: 0
   filter: 0
   help: 0
   image: 0
@@ -30,6 +29,7 @@ module:
   imagemagick: 0
   layout_discovery: 0
   link: 0
+  mailsystem: 0
   menu_link_content: 0
   menu_ui: 0
   name: 0
@@ -47,6 +47,7 @@ module:
   responsive_image: 0
   search: 0
   simple_gmap: 0
+  swiftmailer: 0
   system: 0
   telephone: 0
   text: 0

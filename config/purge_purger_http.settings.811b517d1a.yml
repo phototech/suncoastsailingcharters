@@ -5,7 +5,7 @@ dependencies: {  }
 id: 811b517d1a
 name: Varnish
 invalidationtype: tag
-hostname: localhost
+hostname: cache
 port: 80
 path: /
 request_method: BAN

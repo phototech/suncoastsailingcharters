@@ -8,26 +8,17 @@ services:
     image: phototech/sailvenice
     env_file:
       - .env
-    links:
-      - database
     volumes:
-      - ./config:/var/www/config:cached
       - ./html/sites/default:/var/www/html/sites/default:cached
-      - ./html/themes:/var/www/html/themes:cached
-      - ./html/modules:/var/www/html/modules:cached
   cache:
-    image: phototech/varnish
+    image: davidbarratt/varnish
     ports:
       - 8888:80
     links:
       - web:backend
-  database:
-    image: mariadb:10.3
+  cron:
+    image: davidbarratt/cron
     env_file:
       - .env
-    ports:
-      - 3306:3306
-    volumes:
-      - db-data:/var/lib/mysql
-volumes:
-  db-data:
+    links:
+      - web

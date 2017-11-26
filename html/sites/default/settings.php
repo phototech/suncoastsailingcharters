@@ -626,6 +626,23 @@ if ($settings['hash_salt']) {
 # $config['user.settings']['anonymous'] = 'Visitor';
 if ($_SERVER['APP_DEBUG'] ?? false) {
   $config['system.logging']['error_level'] = 'verbose';
+  $config['system.performance']['cache']['page']['max_age'] = 0;
+  $config['system.performance']['css']['preprocess'] = false;
+  $config['system.performance']['js']['preprocess'] = false;
+}
+
+$swiftmailer = [
+  'smtp_host',
+  'smtp_port',
+  'smtp_encryption',
+  'smtp_username',
+  'smtp_password',
+];
+
+foreach ($swiftmailer as $key) {
+  if (isset($_SERVER[strtoupper($key)])) {
+    $config['swiftmailer.transport'][$key] = $_SERVER[strtoupper($key)];
+  }
 }
 
 /**
