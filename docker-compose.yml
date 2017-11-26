@@ -12,8 +12,8 @@ services:
       - ./html/sites/default:/var/www/html/sites/default:cached
   cache:
     image: davidbarratt/varnish
-    ports:
-      - 8888:80
+    environment:
+      - VIRTUAL_HOST=sailvenice.com,origin.sailvenice.com,www.sailvenice.com
     links:
       - web:backend
   cron:

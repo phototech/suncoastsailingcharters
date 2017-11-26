@@ -4,6 +4,9 @@ services:
     links:
       - database
       - smtp
+  cache:
+    ports:
+      - 8888:80
   database:
     image: mariadb:10.2
     env_file:
