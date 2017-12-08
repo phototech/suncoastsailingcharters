@@ -2773,21 +2773,20 @@
         },
         {
             "name": "drupal/sailor",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/sailor",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sailor-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "04fa685dac49b467723780a822ee2db65b60bf0d"
+                "url": "https://ftp.drupal.org/files/projects/sailor-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "e1efb8b4aa3c296b18070587d4182fd3ea058f1e"
             },
             "require": {
-                "drupal/core": "~8.0",
-                "eloquent/composer-npm-bridge": "^4.0"
+                "drupal/core": "~8.0"
             },
             "type": "drupal-theme",
             "extra": {
@@ -2795,8 +2794,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1512762784",
+                    "version": "8.x-1.2",
+                    "datestamp": "1512767585",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3356,63 +3355,6 @@
                 "validator"
             ],
             "time": "2017-02-03T22:48:59+00:00"
-        },
-        {
-            "name": "eloquent/composer-npm-bridge",
-            "version": "4.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/eloquent/composer-npm-bridge.git",
-                "reference": "4e6346a0162a228caf30bc10ab8442cb6be87db0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/eloquent/composer-npm-bridge/zipball/4e6346a0162a228caf30bc10ab8442cb6be87db0",
-                "reference": "4e6346a0162a228caf30bc10ab8442cb6be87db0",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1",
-                "php": ">=7"
-            },
-            "require-dev": {
-                "composer/composer": "dev-master",
-                "eloquent/phony-phpunit": "^2",
-                "errors/exceptions": "^0.2",
-                "phpunit/phpunit": "^6"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Eloquent\\Composer\\NpmBridge\\NpmBridgePlugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Eloquent\\Composer\\NpmBridge\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Erin Millard",
-                    "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/"
-                }
-            ],
-            "description": "NPM integration for Composer packages.",
-            "homepage": "https://github.com/eloquent/composer-npm-bridge",
-            "keywords": [
-                "Bridge",
-                "composer",
-                "composer-plugin",
-                "integration",
-                "npm",
-                "package",
-                "plugin"
-            ],
-            "time": "2017-09-19T10:05:43+00:00"
         },
         {
             "name": "gabordemooij/redbean",
