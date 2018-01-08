@@ -5,7 +5,7 @@ services:
       context: ./
       args:
         - NPM_CONFIG_ENVATO_TOKEN
-    image: phototech/sailvenice
+    image: docker.davidwbarratt.com/phototech/sailvenice
     env_file:
       - .env
     volumes:
