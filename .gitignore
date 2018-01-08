@@ -1,6 +1,7 @@
 .well-known
 .env
 node_modules
+/files
 /tmp
 vendor
 /html/core

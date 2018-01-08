@@ -9,11 +9,12 @@ services:
     env_file:
       - .env
     volumes:
-      - ./html/sites/default:/var/www/html/sites/default:cached
+      - files:/var/www/html/sites/default/files
   cache:
     image: davidbarratt/varnish
     environment:
-      - VIRTUAL_HOST=sailvenice.com,origin.sailvenice.com,www.sailvenice.com
+      VIRTUAL_HOST: sailvenice.com,origin.sailvenice.com,www.sailvenice.com
+      LETSENCRYPT_HOST: sailvenice.com,origin.sailvenice.com,www.sailvenice.com
     links:
       - web:backend
   cron:
@@ -22,3 +23,5 @@ services:
       - .env
     links:
       - web
+volumes:
+  files:
