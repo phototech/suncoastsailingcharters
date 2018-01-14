@@ -10,6 +10,7 @@ services:
       - .env
     volumes:
       - files:/var/www/html/sites/default/files
+      - tmp:/var/www/tmp
   cache:
     image: davidbarratt/varnish
     environment:
@@ -25,3 +26,4 @@ services:
       - web
 volumes:
   files:
+  tmp:
