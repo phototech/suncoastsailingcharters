@@ -54,3 +54,4 @@ _core:
   default_config_hash: 8YUfHsWK8qPraWXrNicuAvsP8qWQZRlCrSzi4RmEhMY
 locale: en_US.UTF-8
 log_warnings: true
+prepend_pre_source: false

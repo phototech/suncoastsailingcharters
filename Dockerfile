@@ -6,7 +6,7 @@ FROM composer as composer
 
 COPY ./ /app
 
-RUN composer --no-dev install
+RUN composer --no-dev --ignore-platform-reqs install
 
 #
 # Builder
