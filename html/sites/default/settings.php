@@ -635,8 +635,6 @@ $swiftmailer = [
   'smtp_host',
   'smtp_port',
   'smtp_encryption',
-  'smtp_username',
-  'smtp_password',
 ];
 
 foreach ($swiftmailer as $key) {
@@ -644,6 +642,9 @@ foreach ($swiftmailer as $key) {
     $config['swiftmailer.transport'][$key] = $_SERVER[strtoupper($key)];
   }
 }
+
+$config['swiftmailer.transport']['swiftmailer']['username'] = $_SERVER['SMTP_USERNAME'];
+$config['swiftmailer.transport']['swiftmailer']['password'] = $_SERVER['SMTP_PASSWORD'];
 
 /**
  * Fast 404 pages:
