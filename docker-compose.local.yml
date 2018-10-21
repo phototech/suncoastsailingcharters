@@ -4,6 +4,8 @@ services:
     links:
       - database
       - smtp
+    volumes:
+      - ./html:/var/www/html:cached
   cache:
     ports:
       - 8888:80
