@@ -5,7 +5,7 @@ services:
       context: ./
       args:
         - NPM_CONFIG_ENVATO_TOKEN
-    image: docker.davidwbarratt.com/phototech/sailvenice
+    image: docker.davidwbarratt.com/phototech/suncoastsailingcharters
     env_file:
       - .env
     volumes:
@@ -14,8 +14,8 @@ services:
   cache:
     image: davidbarratt/varnish
     environment:
-      VIRTUAL_HOST: sailvenice.com,origin.sailvenice.com,www.sailvenice.com
-      LETSENCRYPT_HOST: sailvenice.com,origin.sailvenice.com,www.sailvenice.com
+      VIRTUAL_HOST: suncoastsailingcharters.com,origin.suncoastsailingcharters.com,www.suncoastsailingcharters.com
+      LETSENCRYPT_HOST: suncoastsailingcharters.com,origin.suncoastsailingcharters.com,www.suncoastsailingcharters.com
     links:
       - web:backend
   cron:

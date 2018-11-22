@@ -725,8 +725,8 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  */
 $settings['trusted_host_patterns'] = [
   'localhost',
-  '^sailvenice\.com$',
-  '^.+\.sailvenice\.com$',
+  '^suncoastsailingcharters\.com$',
+  '^.+\.suncoastsailingcharters\.com$',
 ];
 
 /**
