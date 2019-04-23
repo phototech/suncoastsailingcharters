@@ -21,6 +21,11 @@ RUN set -ex \
 	&& docker-php-ext-install -j "$(nproc)" gd exif \
 	&& apt-get purge -y --auto-remove $buildDeps
 
+RUN apt-get update && apt-get install -y \
+    unzip \
+    git \
+  --no-install-recommends && rm -r /var/lib/apt/lists/*
+
 COPY --from=composer:1.7 /usr/bin/composer /usr/bin/composer
 
 COPY ./ /var/www

@@ -5,7 +5,8 @@ services:
       - database
       - smtp
     volumes:
-      - ./html:/var/www/html:cached
+      - ./:/var/www/:cached
+    command: 'sh -c "composer install -d /var/www && apache2-foreground"'
   cache:
     ports:
       - 8888:80
