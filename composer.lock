@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f6565657e39b201855a1edb26181653",
+    "content-hash": "d29ff5093d0625b92e7e006e41677812",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3121,17 +3121,17 @@
         },
         {
             "name": "drupal/sailor",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/sailor.git",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sailor-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "bb5523d650be82d80a6d4971f3712f210a5bd58c"
+                "url": "https://ftp.drupal.org/files/projects/sailor-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "416bbfe98f6d457a084a8c1fdfefaa4f79d9cc53"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -3142,8 +3142,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1540156381",
+                    "version": "8.x-1.5",
+                    "datestamp": "1556062081",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
