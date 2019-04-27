@@ -3,8 +3,6 @@
 #
 FROM davidbarratt/drupal:8 as service
 
-ENV COMPOSER_ALLOW_SUPERUSER 1
-
 # install the PHP extensions we need
 RUN set -ex \
 	&& buildDeps=' \
@@ -20,13 +18,6 @@ RUN set -ex \
     --with-freetype-dir=/usr \
 	&& docker-php-ext-install -j "$(nproc)" gd exif \
 	&& apt-get purge -y --auto-remove $buildDeps
-
-RUN apt-get update && apt-get install -y \
-    unzip \
-    git \
-  --no-install-recommends && rm -r /var/lib/apt/lists/*
-
-COPY --from=composer:1.7 /usr/bin/composer /usr/bin/composer
 
 COPY ./ /var/www
 

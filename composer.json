@@ -26,7 +26,8 @@
     "drush/drush": "~8.0",
     "drupal/console": "^1.2.0",
     "drupal/swiftmailer": "^1.0",
-    "drupal/advagg": "^3.4"
+    "drupal/advagg": "^3.4",
+    "cweagans/composer-patches": "^1.6"
   },
   "replace": {
     "drupal/drupal": "~8.0"
@@ -45,6 +46,11 @@
     "optimize-autoloader": true
   },
   "extra": {
+    "patches": {
+      "drupal/ds": {
+        "Issue #3051145: Add Media 'Name' field like Node's 'Title' field": "https://www.drupal.org/files/issues/2019-04-27/media-label-3051145-2_0.patch"
+      }
+    },
     "installer-paths": {
       "html/core": ["type:drupal-core"],
       "html/modules/contrib/{$name}": ["type:drupal-module"],
