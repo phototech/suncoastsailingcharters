@@ -17,8 +17,7 @@ mode: default
 content:
   field_address:
     weight: 3
-    settings:
-      default_country: US
+    settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content

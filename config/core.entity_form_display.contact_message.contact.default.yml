@@ -56,6 +56,8 @@ content:
   preview:
     weight: 50
     region: content
+    settings: {  }
+    third_party_settings: {  }
   subject:
     type: string_textfield
     weight: 5

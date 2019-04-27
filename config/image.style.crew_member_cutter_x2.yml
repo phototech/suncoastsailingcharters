@@ -14,6 +14,7 @@ effects:
     data:
       width: 960
       height: 960
+      anchor: center-center
   517e2284-bd98-4405-942d-8fbf55634af7:
     uuid: 517e2284-bd98-4405-942d-8fbf55634af7
     id: image_effects_strip_metadata

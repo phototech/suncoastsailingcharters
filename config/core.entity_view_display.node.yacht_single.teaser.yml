@@ -1,17 +1,17 @@
-uuid: 4448b7da-3682-4986-9539-57c499e4ece8
+uuid: 733333e9-b250-4031-9545-41786d49b45a
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.error.body
-    - node.type.error
+    - field.field.node.yacht_single.body
+    - node.type.yacht_single
   module:
     - text
     - user
-id: node.error.teaser
+id: node.yacht_single.teaser
 targetEntityType: node
-bundle: error
+bundle: yacht_single
 mode: teaser
 content:
   body:
@@ -24,7 +24,7 @@ content:
     region: content
   links:
     weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

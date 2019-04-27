@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+    - system
   theme:
     - sailor
 id: tabs_2
@@ -20,15 +20,8 @@ settings:
   primary: true
   secondary: false
 visibility:
-  node_type:
-    id: node_type
-    bundles:
-      contact: contact
-      crew: crew
-      error: error
-      faq: faq
-      homepage: homepage
-      services: services
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/user\r\n/user/*"
+    negate: true
+    context_mapping: {  }
