@@ -1,0 +1,23 @@
+uuid: 806df8bc-15ef-428d-8618-1edf67f71d4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact
+    - paragraphs.paragraphs_type.yaht_single_contact_broker
+id: paragraph.yaht_single_contact_broker.field_contact
+field_name: field_contact
+entity_type: paragraph
+bundle: yaht_single_contact_broker
+label: Contact
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:contact_form'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

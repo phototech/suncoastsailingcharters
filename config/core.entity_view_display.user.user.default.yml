@@ -14,14 +14,15 @@ dependencies:
     - image
     - link
     - name
+    - telephone
     - user
 third_party_settings:
   ds:
     layout:
       id: sailor_account
-      path: themes/custom/sailor
-      library: ''
+      library: null
       disable_css: false
+      entity_classes: all_classes
       settings:
         wrappers:
           intro: div
@@ -37,14 +38,17 @@ third_party_settings:
       intro:
         - field_picture
         - field_name
+        - field_title
       sidebar_left:
         - 'dynamic_block_field:user-primary_tabs'
       main:
         - member_for
+        - field_phone
+        - field_social
     fields:
       'dynamic_block_field:user-primary_tabs':
         plugin_id: 'dynamic_block_field:user-primary_tabs'
-        weight: 2
+        weight: 3
         label: hidden
         formatter: default
 id: user.user.default
@@ -99,10 +103,39 @@ content:
   field_phone:
     weight: 5
     label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
+    settings:
+      title: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: label
+            lbw-at: ''
+            ow-el: div
+            ow-cl: box-white
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: telephone_link
+    region: main
   field_picture:
     weight: 0
     label: hidden
@@ -126,22 +159,79 @@ content:
       trim_length: 80
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: label
+            lbw-at: ''
+            ow-el: div
+            ow-cl: box-white
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
     type: link
-    region: content
+    region: main
   field_title:
-    weight: 4
-    label: above
+    weight: 2
+    label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: p
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
     type: string
-    region: content
+    region: intro
   member_for:
-    weight: 3
+    weight: 4
+    region: main
     settings: {  }
     third_party_settings: {  }
-    region: main
 hidden: {  }

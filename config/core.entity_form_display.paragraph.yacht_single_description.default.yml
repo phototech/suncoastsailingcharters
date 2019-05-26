@@ -1,0 +1,46 @@
+uuid: b34fd453-e306-4522-a949-2ede0aa88c7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.yacht_single_description.field_body
+    - field.field.paragraph.yacht_single_description.field_image
+    - field.field.paragraph.yacht_single_description.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.yacht_single_description
+  module:
+    - image
+    - text
+id: paragraph.yacht_single_description.default
+targetEntityType: paragraph
+bundle: yacht_single_description
+mode: default
+content:
+  field_body:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

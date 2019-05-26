@@ -1,0 +1,67 @@
+uuid: 18c73ce6-3e38-4625-ac0e-792483ac23f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_specification
+    - paragraphs.paragraphs_type.specification
+    - paragraphs.paragraphs_type.specification_set
+  module:
+    - entity_reference_revisions
+id: paragraph.specification_set.field_specification
+field_name: field_specification
+entity_type: paragraph
+bundle: specification_set
+label: Specifications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      specification: specification
+    target_bundles_drag_drop:
+      call_to_action:
+        weight: 14
+        enabled: false
+      faq:
+        weight: 15
+        enabled: false
+      faq_set:
+        weight: 16
+        enabled: false
+      hero:
+        weight: 17
+        enabled: false
+      photo:
+        weight: 18
+        enabled: false
+      quote:
+        weight: 19
+        enabled: false
+      service:
+        weight: 20
+        enabled: false
+      specification:
+        enabled: true
+        weight: 21
+      specification_set:
+        weight: 22
+        enabled: false
+      tab:
+        weight: 23
+        enabled: false
+      tab_set:
+        weight: 24
+        enabled: false
+      yacht_single_description:
+        weight: 25
+        enabled: false
+      yaht_single_specifications:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

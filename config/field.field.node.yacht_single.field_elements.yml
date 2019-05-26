@@ -1,0 +1,82 @@
+uuid: 7e5e6184-ff86-4efa-ab25-63c3e5fbbe24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_elements
+    - node.type.yacht_single
+    - paragraphs.paragraphs_type.yacht_single_description
+    - paragraphs.paragraphs_type.yaht_single_contact_broker
+    - paragraphs.paragraphs_type.yaht_single_equipment
+    - paragraphs.paragraphs_type.yaht_single_specifications
+  module:
+    - entity_reference_revisions
+id: node.yacht_single.field_elements
+field_name: field_elements
+entity_type: node
+bundle: yacht_single
+label: Tabs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      yacht_single_description: yacht_single_description
+      yaht_single_specifications: yaht_single_specifications
+      yaht_single_equipment: yaht_single_equipment
+      yaht_single_contact_broker: yaht_single_contact_broker
+    target_bundles_drag_drop:
+      call_to_action:
+        weight: 10
+        enabled: false
+      faq:
+        weight: 11
+        enabled: false
+      faq_set:
+        weight: 12
+        enabled: false
+      hero:
+        weight: 13
+        enabled: false
+      photo:
+        weight: 14
+        enabled: false
+      quote:
+        weight: 15
+        enabled: false
+      service:
+        weight: 16
+        enabled: false
+      equipment_set:
+        weight: 17
+        enabled: false
+      tab:
+        weight: 17
+        enabled: false
+      tab_set:
+        weight: 18
+        enabled: false
+      yacht_single_description:
+        enabled: true
+        weight: 20
+      yaht_single_specifications:
+        enabled: true
+        weight: 22
+      specification:
+        weight: 24
+        enabled: false
+      specification_set:
+        weight: 25
+        enabled: false
+      yaht_single_equipment:
+        enabled: true
+        weight: 29
+      yaht_single_contact_broker:
+        enabled: true
+        weight: 30
+field_type: entity_reference_revisions

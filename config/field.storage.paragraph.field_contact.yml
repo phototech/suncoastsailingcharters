@@ -1,16 +1,16 @@
-uuid: 58d76e4f-3c18-44db-a104-4c54f387163e
+uuid: ed22926b-0b29-4109-9712-56abc44a531b
 langcode: en
 status: true
 dependencies:
   module:
     - contact
-id: contact_message.field_passengers
-field_name: field_passengers
-entity_type: contact_message
-type: integer
+    - paragraphs
+id: paragraph.field_contact
+field_name: field_contact
+entity_type: paragraph
+type: entity_reference
 settings:
-  unsigned: false
-  size: normal
+  target_type: contact_form
 module: core
 locked: false
 cardinality: 1

@@ -1,0 +1,22 @@
+uuid: c1f83a85-887c-4fca-9b46-d9d0929145dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.yacht_single_description
+  module:
+    - text
+id: paragraph.yacht_single_description.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: yacht_single_description
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

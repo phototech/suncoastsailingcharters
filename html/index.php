@@ -13,9 +13,9 @@ use Symfony\Component\HttpFoundation\Request;
 
 $autoloader = require_once 'autoload.php';
 
-if ($_SERVER['APP_DEBUG'] ?? false) {
-    // Disable OpCache
-    ini_set('opcache.enable', 0);
+if ($_SERVER['APP_DEBUG'] ?? FALSE) {
+  // Disable OpCache.
+  ini_set('opcache.enable', 0);
 }
 
 $kernel = new DrupalKernel('prod', $autoloader);

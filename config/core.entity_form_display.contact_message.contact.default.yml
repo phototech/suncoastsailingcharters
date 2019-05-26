@@ -4,30 +4,14 @@ status: true
 dependencies:
   config:
     - contact.form.contact
-    - field.field.contact_message.contact.field_date
-    - field.field.contact_message.contact.field_passengers
     - field.field.contact_message.contact.field_phone
   module:
-    - datetime
     - telephone
 id: contact_message.contact.default
 targetEntityType: contact_message
 bundle: contact
 mode: default
 content:
-  field_date:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_passengers:
-    weight: 4
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
   field_phone:
     weight: 2
     settings:

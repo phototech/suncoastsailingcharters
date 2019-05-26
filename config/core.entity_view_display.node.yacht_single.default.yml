@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.yacht_single.body
+    - field.field.node.yacht_single.field_button
+    - field.field.node.yacht_single.field_elements
     - field.field.node.yacht_single.field_gallery
     - node.type.yacht_single
   module:
     - ds
+    - entity_reference_revisions
     - text
     - user
 third_party_settings:
@@ -20,8 +23,9 @@ third_party_settings:
       settings:
         wrappers:
           intro: div
+          button: div
           gallery: div
-          main: div
+          tabs: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
@@ -32,8 +36,12 @@ third_party_settings:
       intro:
         - node_title
         - body
+      button:
+        - field_button
       gallery:
         - field_gallery
+      tabs:
+        - field_elements
     fields:
       node_title:
         plugin_id: node_title
@@ -61,10 +69,45 @@ content:
     region: intro
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_button:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: string
+    region: button
+  field_elements:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    region: tabs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
   field_gallery:
     type: entity_reference_entity_view
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: gallery

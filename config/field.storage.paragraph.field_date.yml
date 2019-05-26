@@ -1,13 +1,13 @@
-uuid: e9bb1d07-0487-4dd7-b608-083d86bb41ef
+uuid: 38941c00-9155-4034-9fbc-885f141e4b5c
 langcode: en
 status: true
 dependencies:
   module:
-    - contact
     - datetime
-id: contact_message.field_date
+    - paragraphs
+id: paragraph.field_date
 field_name: field_date
-entity_type: contact_message
+entity_type: paragraph
 type: datetime
 settings:
   datetime_type: date

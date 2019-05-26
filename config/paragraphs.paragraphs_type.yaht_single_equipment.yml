@@ -1,0 +1,9 @@
+uuid: df7d592d-08e0-41f3-9866-d85f02d5fa63
+langcode: en
+status: true
+dependencies: {  }
+id: yaht_single_equipment
+label: Equipment
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: fab18c65-1950-4f8d-886d-7cee343b4bf6
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.vcard
+label: vCard
+targetEntityType: user
+cache: true

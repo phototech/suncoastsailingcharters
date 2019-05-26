@@ -1,0 +1,56 @@
+uuid: 3c3cf651-1b5f-4440-808f-ba7151ccd5b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.yaht_single_equipment.field_equipment
+    - field.field.paragraph.yaht_single_equipment.field_title
+    - paragraphs.paragraphs_type.yaht_single_equipment
+  module:
+    - ds
+    - entity_reference_revisions
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_yacht_single_equipment
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          label: div
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      label:
+        - field_title
+      main:
+        - field_equipment
+id: paragraph.yaht_single_equipment.default
+targetEntityType: paragraph
+bundle: yaht_single_equipment
+mode: default
+content:
+  field_equipment:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: main
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: label
+hidden: {  }

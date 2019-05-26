@@ -1,0 +1,69 @@
+uuid: be1329ed-5a7a-42af-9f1d-a8bdf0583d72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.yaht_single_contact_broker.field_contact
+    - field.field.paragraph.yaht_single_contact_broker.field_title
+    - field.field.paragraph.yaht_single_contact_broker.field_widgets
+    - paragraphs.paragraphs_type.yaht_single_contact_broker
+  module:
+    - ds
+    - entity_reference_revisions
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_yacht_single_contact_broker
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          label: div
+          main: div
+          sidebar: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      label:
+        - field_title
+      main:
+        - field_contact
+      sidebar:
+        - field_widgets
+id: paragraph.yaht_single_contact_broker.default
+targetEntityType: paragraph
+bundle: yaht_single_contact_broker
+mode: default
+content:
+  field_contact:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: main
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: label
+  field_widgets:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: sidebar
+hidden: {  }

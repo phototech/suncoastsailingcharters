@@ -1,6 +1,6 @@
 uuid: bbec4a91-d58a-44cf-abfd-1ffc51193e5e
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.paragraph.label
@@ -9,26 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.service
   module:
     - ds
-    - text
-third_party_settings:
-  ds:
-    layout:
-      id: sailor_service_list_item
-      path: themes/custom/sailor
-      library: ''
-      disable_css: false
-      settings:
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      main:
-        - field_title
 id: paragraph.service.label
 targetEntityType: paragraph
 bundle: service
@@ -44,13 +24,6 @@ content:
       granularity: 2
     third_party_settings: {  }
     region: content
-  field_body:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_title:
     weight: 0
     label: hidden
@@ -63,7 +36,7 @@ content:
           settings:
             lb: ''
     type: string
-    region: main
+    region: content
   uid:
     type: entity_reference_entity_view
     weight: 2
@@ -73,4 +46,5 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_body: true

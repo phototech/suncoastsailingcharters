@@ -4,42 +4,12 @@ status: true
 dependencies:
   config:
     - contact.form.contact
-    - field.field.contact_message.contact.field_date
-    - field.field.contact_message.contact.field_passengers
     - field.field.contact_message.contact.field_phone
-  module:
-    - datetime
-    - ds
 id: contact_message.contact.default
 targetEntityType: contact_message
 bundle: contact
 mode: default
 content:
-  field_date:
-    weight: 1
-    label: inline
-    settings:
-      timezone_override: America/New_York
-      date_format: m/d/Y
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: datetime_custom
-    region: content
-  field_passengers:
-    weight: 2
-    label: inline
-    settings:
-      thousand_separator: ','
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_phone:
     weight: 0
     label: inline

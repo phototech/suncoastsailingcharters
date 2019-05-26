@@ -1,0 +1,105 @@
+uuid: 9ebfbaa6-0904-4c29-bd35-3f7535ce384d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.user_quote.field_body
+    - field.field.paragraph.user_quote.field_date
+    - field.field.paragraph.user_quote.field_user
+    - paragraphs.paragraphs_type.user_quote
+  module:
+    - datetime
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: sailor_widget_user_quote
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          quote: div
+          vcard: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      quote:
+        - field_body
+      vcard:
+        - field_user
+        - field_date
+id: paragraph.user_quote.default
+targetEntityType: paragraph
+bundle: user_quote
+mode: default
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: text_default
+    region: quote
+  field_date:
+    type: datetime_custom
+    weight: 2
+    region: vcard
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F n, Y'
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: span
+            fi-cl: date
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+  field_user:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: vcard
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: vcard
+hidden: {  }

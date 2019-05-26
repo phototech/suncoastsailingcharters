@@ -57,5 +57,8 @@
       "html/themes/contrib/{$name}": ["type:drupal-theme"],
       "html/profiles/contrib/{$name}": ["type:drupal-profile"]
     }
+  },
+  "require-dev": {
+    "drupal/coder": "^8.3.1"
   }
 }

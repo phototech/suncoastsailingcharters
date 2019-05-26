@@ -13,11 +13,12 @@ third_party_settings:
   ds:
     layout:
       id: sailor_service
-      path: themes/custom/sailor
-      library: ''
+      library: null
       disable_css: false
+      entity_classes: all_classes
       settings:
         wrappers:
+          label: div
           main: div
         outer_wrapper: div
         attributes: ''
@@ -26,9 +27,24 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
+      label:
+        - 'display_field_copy:paragraph-label'
       main:
         - field_title
         - field_body
+    fields:
+      'display_field_copy:paragraph-label':
+        plugin_id: 'display_field_copy:paragraph-label'
+        weight: 0
+        label: hidden
+        formatter: string
+        settings:
+          formatter:
+            link_to_entity: 0
+        ft:
+          id: reset
+          settings:
+            lb: ''
 id: paragraph.service.default
 targetEntityType: paragraph
 bundle: service
@@ -45,14 +61,14 @@ content:
     third_party_settings: {  }
     region: content
   field_body:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: main
   field_title:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false

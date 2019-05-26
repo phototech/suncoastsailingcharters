@@ -1,0 +1,44 @@
+uuid: 6a6085ac-6ccd-4f6e-a2d0-0cab6ad4dbc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.user_quote.field_body
+    - field.field.paragraph.user_quote.field_date
+    - field.field.paragraph.user_quote.field_user
+    - paragraphs.paragraphs_type.user_quote
+  module:
+    - datetime
+    - text
+id: paragraph.user_quote.default
+targetEntityType: paragraph
+bundle: user_quote
+mode: default
+content:
+  field_body:
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_user:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

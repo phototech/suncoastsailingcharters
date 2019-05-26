@@ -1,0 +1,9 @@
+uuid: 61800c35-9b9f-41ff-9f56-9b7d84e03aea
+langcode: en
+status: true
+dependencies: {  }
+id: yaht_single_contact_broker
+label: Contact
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

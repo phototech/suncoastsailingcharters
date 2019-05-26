@@ -1,0 +1,49 @@
+uuid: 97e55cb7-739f-45d9-8fe4-0ad56189f217
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.yaht_single_specifications.field_image
+    - field.field.paragraph.yaht_single_specifications.field_specification
+    - field.field.paragraph.yaht_single_specifications.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.yaht_single_specifications
+  module:
+    - image
+    - paragraphs
+id: paragraph.yaht_single_specifications.default
+targetEntityType: paragraph
+bundle: yaht_single_specifications
+mode: default
+content:
+  field_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_specification:
+    weight: 1
+    settings:
+      title: 'Specification Set'
+      title_plural: 'Specification Sets'
+      edit_mode: closed
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: specification_set
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

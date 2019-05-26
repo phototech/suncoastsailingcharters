@@ -1,0 +1,9 @@
+uuid: c8d94079-9a0f-41c9-ac6d-f10e72226b96
+langcode: en
+status: true
+dependencies: {  }
+id: specification_set
+label: 'Specification Set'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

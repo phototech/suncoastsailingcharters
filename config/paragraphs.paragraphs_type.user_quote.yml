@@ -1,0 +1,9 @@
+uuid: 349dbb10-0f2d-4fef-9d6b-da4dd07e54d3
+langcode: en
+status: true
+dependencies: {  }
+id: user_quote
+label: 'User Quote'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

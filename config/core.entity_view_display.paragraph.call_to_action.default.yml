@@ -17,8 +17,7 @@ third_party_settings:
   ds:
     layout:
       id: sailor_call_to_action
-      path: themes/custom/sailor
-      library: ''
+      library: null
       disable_css: false
       entity_classes: no_classes
       settings:
