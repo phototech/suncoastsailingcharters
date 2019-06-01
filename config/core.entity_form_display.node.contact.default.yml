@@ -29,6 +29,7 @@ third_party_settings:
         classes: ''
         id: ''
         required_fields: true
+      region: content
 id: node.contact.default
 targetEntityType: node
 bundle: contact

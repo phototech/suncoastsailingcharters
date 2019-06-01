@@ -1,0 +1,9 @@
+uuid: 15b01c12-7069-486b-a37a-27cc33f1fc94
+langcode: en
+status: true
+dependencies: {  }
+id: rates
+label: Rate
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

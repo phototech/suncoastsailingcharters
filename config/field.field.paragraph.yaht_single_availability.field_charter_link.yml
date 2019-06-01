@@ -1,0 +1,23 @@
+uuid: ef01a011-a97d-4d55-a52b-382fdbd2c25f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_charter_link
+    - paragraphs.paragraphs_type.yaht_single_availability
+  module:
+    - link
+id: paragraph.yaht_single_availability.field_charter_link
+field_name: field_charter_link
+entity_type: paragraph
+bundle: yaht_single_availability
+label: 'Charter Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_elements
     - node.type.yacht_single
     - paragraphs.paragraphs_type.yacht_single_description
+    - paragraphs.paragraphs_type.yaht_single_availability
     - paragraphs.paragraphs_type.yaht_single_contact_broker
     - paragraphs.paragraphs_type.yaht_single_equipment
     - paragraphs.paragraphs_type.yaht_single_specifications
@@ -26,57 +27,64 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      yacht_single_description: yacht_single_description
-      yaht_single_specifications: yaht_single_specifications
-      yaht_single_equipment: yaht_single_equipment
+      yaht_single_availability: yaht_single_availability
       yaht_single_contact_broker: yaht_single_contact_broker
+      yacht_single_description: yacht_single_description
+      yaht_single_equipment: yaht_single_equipment
+      yaht_single_specifications: yaht_single_specifications
     target_bundles_drag_drop:
       call_to_action:
-        weight: 10
+        weight: -37
         enabled: false
       faq:
-        weight: 11
+        weight: -36
         enabled: false
       faq_set:
-        weight: 12
+        weight: -35
         enabled: false
       hero:
-        weight: 13
+        weight: -34
         enabled: false
       photo:
-        weight: 14
+        weight: -33
         enabled: false
       quote:
-        weight: 15
+        weight: -32
         enabled: false
       service:
-        weight: 16
+        weight: -31
         enabled: false
       equipment_set:
-        weight: 17
+        weight: -30
         enabled: false
       tab:
-        weight: 17
+        weight: -29
         enabled: false
       tab_set:
-        weight: 18
+        weight: -28
         enabled: false
-      yacht_single_description:
-        enabled: true
-        weight: 20
-      yaht_single_specifications:
-        enabled: true
-        weight: 22
       specification:
-        weight: 24
+        weight: -27
         enabled: false
       specification_set:
-        weight: 25
+        weight: -26
         enabled: false
-      yaht_single_equipment:
+      user_quote:
+        weight: -25
+        enabled: false
+      yaht_single_availability:
         enabled: true
-        weight: 29
+        weight: -24
       yaht_single_contact_broker:
         enabled: true
-        weight: 30
+        weight: -23
+      yacht_single_description:
+        enabled: true
+        weight: -22
+      yaht_single_equipment:
+        enabled: true
+        weight: -21
+      yaht_single_specifications:
+        enabled: true
+        weight: -20
 field_type: entity_reference_revisions

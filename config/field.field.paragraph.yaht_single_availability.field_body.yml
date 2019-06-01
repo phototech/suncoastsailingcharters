@@ -1,0 +1,22 @@
+uuid: fd18ed3e-bcdc-49d1-99a4-de5a52715315
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.yaht_single_availability
+  module:
+    - text
+id: paragraph.yaht_single_availability.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: yaht_single_availability
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

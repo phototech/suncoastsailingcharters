@@ -1,0 +1,21 @@
+uuid: 7526a77f-b2ee-4618-bd30-2218d427473b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_charter_details
+    - paragraphs.paragraphs_type.yaht_single_availability
+  module:
+    - text
+id: paragraph.yaht_single_availability.field_charter_details
+field_name: field_charter_details
+entity_type: paragraph
+bundle: yaht_single_availability
+label: 'Charter Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

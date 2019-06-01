@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.yacht_single.body
+    - field.field.node.yacht_single.field_button
+    - field.field.node.yacht_single.field_elements
+    - field.field.node.yacht_single.field_gallery
     - node.type.yacht_single
   module:
     - text
@@ -27,4 +30,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_button: true
+  field_elements: true
+  field_gallery: true

@@ -25,6 +25,7 @@ third_party_settings:
         classes: ''
         id: ''
         required_fields: true
+      region: content
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage

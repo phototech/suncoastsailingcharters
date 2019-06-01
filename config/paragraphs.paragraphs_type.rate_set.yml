@@ -1,0 +1,9 @@
+uuid: fd8967b0-596b-4c86-8235-2e0fc93fe378
+langcode: en
+status: true
+dependencies: {  }
+id: rate_set
+label: 'Rate Set'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

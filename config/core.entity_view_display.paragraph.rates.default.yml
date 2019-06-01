@@ -1,11 +1,11 @@
-uuid: 249b6888-eb8b-4af3-af15-d232006fd1cb
+uuid: a1716c39-db17-42fe-b68f-2354db8dc5f2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.specification.field_title
-    - field.field.paragraph.specification.field_value
-    - paragraphs.paragraphs_type.specification
+    - field.field.paragraph.rates.field_title
+    - field.field.paragraph.rates.field_value
+    - paragraphs.paragraphs_type.rates
   module:
     - ds
 third_party_settings:
@@ -16,20 +16,21 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
-        classes: {  }
         wrappers:
           ds_content: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
         link_custom: ''
+        classes:
+          layout_class: {  }
     regions:
       ds_content:
         - field_title
         - field_value
-id: paragraph.specification.default
+id: paragraph.rates.default
 targetEntityType: paragraph
-bundle: specification
+bundle: rates
 mode: default
 content:
   field_title:
@@ -54,7 +55,7 @@ content:
             fis-el: td
             fis-cl: ''
             fis-at: ''
-            fi-el: td
+            fi-el: ''
             fi-cl: ''
             fi-at: ''
             suffix: ''

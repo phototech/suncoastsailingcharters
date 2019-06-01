@@ -1,0 +1,99 @@
+uuid: 0e8515ae-731a-4ac2-ba57-badad7e4684c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.yaht_single_availability.field_body
+    - field.field.paragraph.yaht_single_availability.field_charter_details
+    - field.field.paragraph.yaht_single_availability.field_charter_link
+    - field.field.paragraph.yaht_single_availability.field_charter_rates
+    - field.field.paragraph.yaht_single_availability.field_partner_details
+    - field.field.paragraph.yaht_single_availability.field_partner_link
+    - field.field.paragraph.yaht_single_availability.field_partner_rates
+    - field.field.paragraph.yaht_single_availability.field_title
+    - paragraphs.paragraphs_type.yaht_single_availability
+  module:
+    - link
+    - paragraphs
+    - text
+id: paragraph.yaht_single_availability.default
+targetEntityType: paragraph
+bundle: yaht_single_availability
+mode: default
+content:
+  field_body:
+    weight: 7
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_charter_details:
+    weight: 5
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_charter_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_charter_rates:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: 'Rate Set'
+      title_plural: 'Rate Sets'
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: rate_set
+    third_party_settings: {  }
+    region: content
+  field_partner_details:
+    weight: 2
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_partner_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_partner_rates:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: 'Rate Set'
+      title_plural: 'Rate Sets'
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: rate_set
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

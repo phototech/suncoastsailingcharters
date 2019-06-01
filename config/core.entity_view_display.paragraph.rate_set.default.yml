@@ -1,37 +1,77 @@
-uuid: 249b6888-eb8b-4af3-af15-d232006fd1cb
+uuid: c6cbe016-5f94-49ef-bb0d-4ddac70799a0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.specification.field_title
-    - field.field.paragraph.specification.field_value
-    - paragraphs.paragraphs_type.specification
+    - field.field.paragraph.rate_set.field_rates
+    - field.field.paragraph.rate_set.field_title
+    - paragraphs.paragraphs_type.rate_set
   module:
     - ds
+    - entity_reference_revisions
 third_party_settings:
   ds:
     layout:
-      id: ds_reset
+      id: sailor_rate_set
       library: null
       disable_css: false
       entity_classes: all_classes
       settings:
-        classes: {  }
         wrappers:
-          ds_content: div
+          main: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
         link_custom: ''
+        classes:
+          layout_class: {  }
     regions:
-      ds_content:
+      main:
         - field_title
-        - field_value
-id: paragraph.specification.default
+        - field_rates
+id: paragraph.rate_set.default
 targetEntityType: paragraph
-bundle: specification
+bundle: rate_set
 mode: default
 content:
+  field_rates:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: tr
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    region: main
   field_title:
     weight: 0
     label: hidden
@@ -51,12 +91,13 @@ content:
             ow-cl: ''
             ow-at: ''
             fis: true
-            fis-el: td
+            fis-el: tr
             fis-cl: ''
             fis-at: ''
-            fi-el: td
+            fi: true
+            fi-el: th
             fi-cl: ''
-            fi-at: ''
+            fi-at: 'colspan="2"'
             suffix: ''
             lbw: false
             lb-col: false
@@ -64,44 +105,7 @@ content:
             ow-def-at: false
             ow-def-cl: false
             fis-def-at: false
-            fi: false
             fi-def-at: false
     type: string
-    region: ds_content
-  field_value:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis: true
-            fis-el: td
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
-    type: string
-    region: ds_content
+    region: main
 hidden: {  }
