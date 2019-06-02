@@ -27,7 +27,8 @@
     "drupal/console": "^1.2.0",
     "drupal/swiftmailer": "^1.0",
     "drupal/advagg": "^3.4",
-    "cweagans/composer-patches": "^1.6"
+    "cweagans/composer-patches": "^1.6",
+    "drupal/media_responsive_thumbnail": "^1.0"
   },
   "replace": {
     "drupal/drupal": "~8.0"

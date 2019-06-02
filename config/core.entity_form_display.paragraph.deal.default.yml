@@ -1,0 +1,91 @@
+uuid: 979f5227-c9c1-4e98-b705-894f80fc5950
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.deal.field_berths
+    - field.field.paragraph.deal.field_body
+    - field.field.paragraph.deal.field_button
+    - field.field.paragraph.deal.field_link
+    - field.field.paragraph.deal.field_location
+    - field.field.paragraph.deal.field_price
+    - field.field.paragraph.deal.field_title
+    - field.field.paragraph.deal.field_yaht
+    - paragraphs.paragraphs_type.deal
+  module:
+    - link
+    - text
+id: paragraph.deal.default
+targetEntityType: paragraph
+bundle: deal
+mode: default
+content:
+  field_berths:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_body:
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_button:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_location:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_price:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_yaht:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

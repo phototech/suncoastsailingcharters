@@ -1,0 +1,9 @@
+uuid: 8c11d900-3d1a-48b9-8158-d845b2149a94
+langcode: en
+status: true
+dependencies: {  }
+id: deal
+label: Deal
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

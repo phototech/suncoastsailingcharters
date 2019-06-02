@@ -6,26 +6,8 @@ dependencies:
     - field.field.node.homepage.field_elements
     - node.type.homepage
   module:
-    - field_group
     - paragraphs
     - path
-third_party_settings:
-  field_group:
-    group_hero:
-      children:
-        - field_hero_image
-        - field_hero_title
-        - field_hero_buton
-      parent_name: ''
-      weight: 1
-      label: Hero
-      format_type: fieldset
-      format_settings:
-        description: ''
-        classes: ''
-        id: ''
-        required_fields: true
-      region: content
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
@@ -44,8 +26,9 @@ content:
       title: Element
       title_plural: Elements
       edit_mode: closed
-      add_mode: button
+      add_mode: select
       form_display_mode: default
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
   path:

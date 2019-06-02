@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.yacht_single.field_button
     - field.field.node.yacht_single.field_elements
     - field.field.node.yacht_single.field_gallery
+    - field.field.node.yacht_single.field_image
     - node.type.yacht_single
   module:
     - ds
@@ -121,4 +122,5 @@ content:
             lb: ''
     region: gallery
 hidden:
+  field_image: true
   links: true

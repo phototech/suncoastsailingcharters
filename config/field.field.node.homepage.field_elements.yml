@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_elements
     - node.type.homepage
     - paragraphs.paragraphs_type.call_to_action
+    - paragraphs.paragraphs_type.deal
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.photo
     - paragraphs.paragraphs_type.quote
@@ -25,8 +26,10 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
+    negate: 0
     target_bundles:
       call_to_action: call_to_action
+      deal: deal
       hero: hero
       photo: photo
       quote: quote
@@ -34,29 +37,65 @@ settings:
     target_bundles_drag_drop:
       call_to_action:
         enabled: true
-        weight: -19
+        weight: -43
+      deal:
+        enabled: true
+        weight: -42
       hero:
         enabled: true
-        weight: -18
+        weight: -41
       photo:
         enabled: true
-        weight: -17
+        weight: -40
       quote:
         enabled: true
-        weight: -16
+        weight: -39
       tab_set:
         enabled: true
-        weight: -15
+        weight: -38
       faq:
-        weight: -14
+        weight: -37
         enabled: false
       faq_set:
-        weight: -13
+        weight: -36
         enabled: false
       service:
-        weight: -12
+        weight: -35
         enabled: false
       tab:
-        weight: -11
+        weight: -34
+        enabled: false
+      equipment_set:
+        weight: -33
+        enabled: false
+      rate_set:
+        weight: -32
+        enabled: false
+      rates:
+        weight: -31
+        enabled: false
+      specification:
+        weight: -30
+        enabled: false
+      specification_set:
+        weight: -29
+        enabled: false
+      user_quote:
+        weight: -28
+        enabled: false
+      yacht_single_description:
+        weight: -27
+        enabled: false
+      yaht_single_availability:
+        weight: -26
+        enabled: false
+      yaht_single_contact_broker:
+        weight: -25
+        enabled: false
+      yaht_single_equipment:
+        weight: -24
+        enabled: false
+      yaht_single_specifications:
+        weight: -23
         enabled: false
 field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+uuid: 65e6b9f2-0caa-47a3-9ec7-5340969dfaca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_berths
+    - paragraphs.paragraphs_type.deal
+id: paragraph.deal.field_berths
+field_name: field_berths
+entity_type: paragraph
+bundle: deal
+label: Berths
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
