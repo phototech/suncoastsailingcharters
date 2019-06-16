@@ -21,12 +21,10 @@
     "drupal/imagemagick": "^2.2.0",
     "drupal/token_filter": "^1.0.0-beta1",
     "drupal/image_effects": "^2.0.0",
-    "drupal/layout_plugin": "^1.0.0",
     "drupal/sailor": "^1.5",
     "drush/drush": "~8.0",
     "drupal/console": "^1.2.0",
     "drupal/swiftmailer": "^1.0",
-    "drupal/advagg": "^3.4",
     "cweagans/composer-patches": "^1.6",
     "drupal/media_responsive_thumbnail": "^1.0"
   },
