@@ -1,0 +1,17 @@
+name: Docker
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker build --build-arg NPM_CONFIG_ENVATO_TOKEN=${{ secrets.ENVATO_TOKEN }} --tag docker.pkg.github.com/${GITHUB_REPOSITORY}/suncoastsailingcharters .
+      - run: docker login https://docker.pkg.github.com -u phototech --password ${{ secrets.GITHUB_TOKEN }}
+      - run: docker push docker.pkg.github.com/${GITHUB_REPOSITORY}/suncoastsailingcharters
+

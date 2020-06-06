@@ -1,16 +1,9 @@
 version: '3'
 services:
   web:
-    build:
-      context: ./
-      args:
-        - NPM_CONFIG_ENVATO_TOKEN
-    image: docker.davidwbarratt.com/phototech/suncoastsailingcharters
+    image: docker.pkg.github.com/phototech/suncoastsailingcharters/suncoastsailingcharters
     env_file:
       - .env
-    volumes:
-      - files:/var/www/html/sites/default/files
-      - tmp:/var/www/tmp
   cache:
     image: davidbarratt/varnish
     environment:

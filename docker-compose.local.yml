@@ -1,6 +1,10 @@
 version: '3'
 services:
   web:
+    build:
+      context: ./
+      args:
+        - NPM_CONFIG_ENVATO_TOKEN
     links:
       - database
       - smtp

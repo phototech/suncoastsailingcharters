@@ -5,6 +5,9 @@ services:
     networks:
       - default
       - database
+    volumes:
+      - files:/var/www/html/sites/default/files
+      - tmp:/var/www/tmp
   cache:
     restart: always
     networks:

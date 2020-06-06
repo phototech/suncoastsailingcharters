@@ -1,6 +1,7 @@
 .well-known
 .env
 node_modules
+docker-compose.override.yml
 /files
 /tmp
 vendor
