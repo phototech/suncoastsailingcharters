@@ -22,7 +22,7 @@
     "drupal/token_filter": "^1.0.0-beta1",
     "drupal/image_effects": "^3.0",
     "drupal/sailor": "^1.5",
-    "drush/drush": "~8.0",
+    "drush/drush": "^10.2",
     "drupal/console": "^1.2.0",
     "drupal/swiftmailer": "^1.0",
     "cweagans/composer-patches": "^1.6",
