@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9ae080b50558199b090de72dc0aad0b",
+    "content-hash": "a4a5f6256fb66ba9abc98064da00d21a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3753,17 +3753,17 @@
         },
         {
             "name": "drupal/simple_gmap",
-            "version": "2.0.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_gmap.git",
-                "reference": "8.x-2.0"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_gmap-8.x-2.0.zip",
-                "reference": "8.x-2.0",
-                "shasum": "d218842c311795cded1a75bc93595e95a9e5d701"
+                "url": "https://ftp.drupal.org/files/projects/simple_gmap-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "ad74aaec5a1eec64cc72a8d4a272564c53ee7594"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -3773,12 +3773,9 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.0",
-                    "datestamp": "1579517588",
+                    "version": "3.0.0",
+                    "datestamp": "1591439940",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
