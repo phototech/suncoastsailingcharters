@@ -1,9 +1,0 @@
-uuid: 44c60d81-f6b4-4cc3-b8eb-058f1d279327
-langcode: en
-status: true
-dependencies: {  }
-id: specification
-label: Specification
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

@@ -1,9 +1,0 @@
-uuid: f0ecb064-97a8-4f70-9125-31fa055f13a7
-langcode: en
-status: true
-dependencies: {  }
-id: yacht_single_description
-label: Description
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

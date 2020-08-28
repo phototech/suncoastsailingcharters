@@ -1,9 +1,0 @@
-id: label
-label: Label
-ui_limit: 'service|*'
-properties:
-  field_id: paragraph.service.field_title
-type: display_field_copy
-type_label: 'Copy field'
-entities:
-  paragraph: paragraph

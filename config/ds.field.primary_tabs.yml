@@ -1,9 +1,0 @@
-id: primary_tabs
-label: 'Primary tabs'
-ui_limit: ''
-properties:
-  block: local_tasks_block
-type: block
-type_label: 'Block field'
-entities:
-  user: user

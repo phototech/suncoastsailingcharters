@@ -1,9 +1,0 @@
-uuid: c41ef667-fba9-4bfd-84f3-5a872af6a689
-langcode: en
-status: true
-dependencies: {  }
-id: yaht_single_specifications
-label: Specifications
-icon_uuid: null
-description: ''
-behavior_plugins: {  }
